@@ -1,0 +1,6 @@
+# Cloudflare Pages Routing & Rewrites
+# Enables accessing the portfolio at deepak-bharadwaj.com/portfolio seamlessly
+
+/portfolio              /index.html             200
+/portfolio/             /index.html             200
+/portfolio/*            /:splat                 200

@@ -7,12 +7,13 @@
   <meta name="description" content="Deepak Bharadwaj: Technical Product Manager and systems engineer building reliable, high-throughput B2B platforms across EV charging SaaS, cloud infrastructure, and enterprise software.">
   <meta name="author" content="Deepak Bharadwaj">
   <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://deepak-bharadwaj.com/portfolio">
 
   <!-- Open Graph -->
   <meta property="og:title" content="Deepak Bharadwaj — Technical Product Manager &amp; Systems Engineer">
-  <meta property="og:description" content="Architecting reliable, scalable platforms across EV charging SaaS, enterprise banking connectors, and distributed systems.">
+  <meta property="og:description" content="Turning complex technical problems into reliable products. EV charging SaaS, enterprise banking connectors, and distributed systems.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://deepak-bharadwaj.com">
+  <meta property="og:url" content="https://deepak-bharadwaj.com/portfolio">
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
@@ -43,6 +44,15 @@
   <!-- Bespoke Engineering Drafting Matrix Background Pattern -->
   <div class="bg-grid-pattern" aria-hidden="true"></div>
 
+  <!-- Ambient Luminous Depth & Transient Glow Lighting -->
+  <div class="ambient-glow" aria-hidden="true">
+    <div class="hero-spotlight"></div>
+    <div class="ambient-orb ambient-orb--1"></div>
+    <div class="ambient-orb ambient-orb--2"></div>
+    <div class="ambient-orb ambient-orb--3"></div>
+    <div class="ambient-orb ambient-orb--4"></div>
+  </div>
+
   <!-- Skip link for keyboard accessibility -->
   <a href="#main" class="skip-link">Skip to main content</a>
 
@@ -71,10 +81,10 @@
           <li><a href="#about" class="nav-link">About</a></li>
         </ul>
 
-        <!-- Right Action Items -->
+        <!-- Right Action Items (Compact & visible on mobile just like reference) -->
         <div class="nav-actions">
-          <a href="#contact" class="nav-cta-link">
-            <span>Get in Touch</span>
+          <a href="#contact" class="nav-cta-link" id="nav-contact-btn">
+            <span class="nav-cta-text">Get in Touch</span>
             <span class="nav-cta-arrow">↗</span>
           </a>
 
@@ -135,9 +145,9 @@
 
         <!-- Editorial Headline -->
         <h1 class="hero-title">
-          <span class="hero-title-main">Architecting the world's most reliable</span>
+          <span class="hero-title-main">Turning complex technical problems into</span>
           <span class="hero-title-highlight">
-            <em class="serif-italic">Product Platforms</em>
+            <em class="serif-italic">reliable products.</em>
             <!-- Hand-drawn curved sketch underline SVG -->
             <svg class="sketch-underline" viewBox="0 0 460 22" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
               <path d="M4 16C120 4.5 320 3 454 13" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"/>
@@ -206,96 +216,134 @@
             </svg>
           </div>
 
-          <!-- ═══════════════ TECHNICAL KEYWORD BADGES ═══════════════ -->
-          <!-- Replaced city names with Deepak's core technical capabilities & systems! -->
+          <!-- ═══════════════ TECHNICAL KEYWORD BADGES (RESPONSIVE LABELS) ═══════════════ -->
           <div class="globe-badges-overlay" aria-hidden="true">
 
-            <!-- Kafka Event Streaming -->
-            <div class="geo-pill geo-pill--teal" style="top: 68%; left: 6%;">
+            <!-- Kafka Event Streaming (matches New York berry/plum position) -->
+            <div class="geo-pill geo-pill--kafka geo-pill--berry">
               <span class="geo-pill__dot"></span>
-              <span class="geo-pill__label">KAFKA STREAMING</span>
+              <span class="geo-pill__label">
+                <span class="geo-text-full">KAFKA STREAMING</span>
+                <span class="geo-text-mob">KAFKA</span>
+              </span>
               <span class="geo-pill__tooltip">High-throughput event decoupling for charging events</span>
             </div>
 
-            <!-- Distributed Microservices -->
-            <div class="geo-pill geo-pill--berry" style="top: 46%; left: 21%;">
+            <!-- Distributed Microservices (matches San Francisco gold position) -->
+            <div class="geo-pill geo-pill--microservices geo-pill--gold">
               <span class="geo-pill__dot"></span>
-              <span class="geo-pill__label">DISTRIBUTED MICROSERVICES</span>
+              <span class="geo-pill__label">
+                <span class="geo-text-full">DISTRIBUTED MICROSERVICES</span>
+                <span class="geo-text-mob">SYSTEMS</span>
+              </span>
               <span class="geo-pill__tooltip">Modular services scaled on NestJS &amp; Docker</span>
             </div>
 
-            <!-- Redis Sentinel Caching -->
-            <div class="geo-pill geo-pill--gold" style="top: 66%; left: 26%;">
+            <!-- Redis Sentinel Caching (matches Berlin yellow position) -->
+            <div class="geo-pill geo-pill--redis geo-pill--yellow">
               <span class="geo-pill__dot"></span>
-              <span class="geo-pill__label">REDIS SENTINEL</span>
+              <span class="geo-pill__label">
+                <span class="geo-text-full">REDIS SENTINEL</span>
+                <span class="geo-text-mob">REDIS</span>
+              </span>
               <span class="geo-pill__tooltip">Sub-millisecond driver session lookups</span>
             </div>
 
-            <!-- PostgreSQL Optimization -->
-            <div class="geo-pill geo-pill--blue" style="top: 86%; left: 22%;">
+            <!-- PostgreSQL Optimization (matches Bengaluru blue position) -->
+            <div class="geo-pill geo-pill--postgres geo-pill--blue">
               <span class="geo-pill__dot"></span>
-              <span class="geo-pill__label">POSTGRESQL TUNING</span>
+              <span class="geo-pill__label">
+                <span class="geo-text-full">POSTGRESQL TUNING</span>
+                <span class="geo-text-mob">POSTGRES</span>
+              </span>
               <span class="geo-pill__tooltip">Optimized composite indexing &amp; partition locks</span>
             </div>
 
-            <!-- OCPP 2.0.1 Protocol -->
-            <div class="geo-pill geo-pill--wine" style="top: 62%; left: 44%;">
+            <!-- OCPP 2.0.1 Protocol (matches London wine position) -->
+            <div class="geo-pill geo-pill--ocpp geo-pill--wine">
               <span class="geo-pill__dot"></span>
-              <span class="geo-pill__label">OCPP 2.0.1 PROTOCOL</span>
+              <span class="geo-pill__label">
+                <span class="geo-text-full">OCPP 2.0.1 PROTOCOL</span>
+                <span class="geo-text-mob">OCPP 2.0</span>
+              </span>
               <span class="geo-pill__tooltip">Hardware state machines &amp; device interop</span>
             </div>
 
-            <!-- Dynamic Tariffs Engine -->
-            <div class="geo-pill geo-pill--yellow" style="top: 71%; left: 61%;">
+            <!-- Dynamic Tariffs Engine (matches Miami blue position) -->
+            <div class="geo-pill geo-pill--tariffs geo-pill--blue">
               <span class="geo-pill__dot"></span>
-              <span class="geo-pill__label">DYNAMIC TARIFFS</span>
+              <span class="geo-pill__label">
+                <span class="geo-text-full">DYNAMIC TARIFFS</span>
+                <span class="geo-text-mob">TARIFFS</span>
+              </span>
               <span class="geo-pill__tooltip">Multi-dimensional pricing &amp; host settlements</span>
             </div>
 
-            <!-- OCPI 2.2 Roaming -->
-            <div class="geo-pill geo-pill--forest" style="top: 48%; left: 66%;">
+            <!-- OCPI 2.2 Roaming (matches Warsaw forest position) -->
+            <div class="geo-pill geo-pill--ocpi geo-pill--forest">
               <span class="geo-pill__dot"></span>
-              <span class="geo-pill__label">OCPI 2.2 ROAMING</span>
+              <span class="geo-pill__label">
+                <span class="geo-text-full">OCPI 2.2 ROAMING</span>
+                <span class="geo-text-mob">OCPI</span>
+              </span>
               <span class="geo-pill__tooltip">Cross-network e-mobility synchronization</span>
             </div>
 
-            <!-- Kubernetes EKS Autoscaling -->
-            <div class="geo-pill geo-pill--teal" style="top: 56%; left: 55%;">
+            <!-- Kubernetes EKS Autoscaling (matches Dubai teal position) -->
+            <div class="geo-pill geo-pill--k8s geo-pill--teal">
               <span class="geo-pill__dot"></span>
-              <span class="geo-pill__label">KUBERNETES EKS</span>
+              <span class="geo-pill__label">
+                <span class="geo-text-full">KUBERNETES EKS</span>
+                <span class="geo-text-mob">K8s</span>
+              </span>
               <span class="geo-pill__tooltip">Horizontal Pod Autoscaling with zero downtime</span>
             </div>
 
-            <!-- Bangalore R&D HQ (Home Base) -->
-            <div class="geo-pill geo-pill--navy geo-pill--primary" style="top: 65%; left: 74%;">
+            <!-- Bangalore R&D HQ (matches Melbourne coral position) -->
+            <div class="geo-pill geo-pill--bengaluru geo-pill--coral geo-pill--primary">
               <span class="geo-pill__pulse"></span>
-              <span class="geo-pill__label">BANGALORE HQ</span>
+              <span class="geo-pill__label">
+                <span class="geo-text-full">BANGALORE HQ</span>
+                <span class="geo-text-mob">BANGALORE</span>
+              </span>
               <span class="geo-pill__tooltip">Engineering R&amp;D Hub · Global Product Delivery</span>
             </div>
 
-            <!-- SAP Multi-Bank Connectivity -->
-            <div class="geo-pill geo-pill--navy" style="top: 84%; left: 76%;">
+            <!-- SAP Multi-Bank Connectivity (matches Singapore navy position) -->
+            <div class="geo-pill geo-pill--sap geo-pill--navy">
               <span class="geo-pill__dot"></span>
-              <span class="geo-pill__label">SAP MULTI-BANK</span>
+              <span class="geo-pill__label">
+                <span class="geo-text-full">SAP MULTI-BANK</span>
+                <span class="geo-text-mob">SAP MBC</span>
+              </span>
               <span class="geo-pill__tooltip">115+ international bank integrations · Catalyst Award</span>
             </div>
 
             <!-- Technical PRDs & OKRs -->
-            <div class="geo-pill geo-pill--coral" style="top: 87%; left: 49%;">
+            <div class="geo-pill geo-pill--prds geo-pill--coral">
               <span class="geo-pill__dot"></span>
-              <span class="geo-pill__label">TECHNICAL PRDs &amp; OKRs</span>
+              <span class="geo-pill__label">
+                <span class="geo-text-full">TECHNICAL PRDs &amp; OKRs</span>
+                <span class="geo-text-mob">PRDs &amp; OKRs</span>
+              </span>
               <span class="geo-pill__tooltip">Rigorous product specs bridging code and business</span>
             </div>
 
             <!-- Scale & Production SLA Milestones -->
-            <div class="geo-pill geo-pill--milestone geo-pill--emerald" style="top: 34%; left: 12%;">
+            <div class="geo-pill geo-pill--txns geo-pill--milestone geo-pill--emerald">
               <span class="geo-pill__metric">500K+</span>
-              <span class="geo-pill__label">DAILY TXNS</span>
+              <span class="geo-pill__label">
+                <span class="geo-text-full">DAILY TXNS</span>
+                <span class="geo-text-mob">TXNS</span>
+              </span>
             </div>
 
-            <div class="geo-pill geo-pill--milestone geo-pill--indigo" style="top: 36%; left: 77%;">
+            <div class="geo-pill geo-pill--uptime geo-pill--milestone geo-pill--indigo">
               <span class="geo-pill__metric">99.9%</span>
-              <span class="geo-pill__label">SLA UPTIME</span>
+              <span class="geo-pill__label">
+                <span class="geo-text-full">SLA UPTIME</span>
+                <span class="geo-text-mob">SLA</span>
+              </span>
             </div>
 
           </div>
@@ -332,7 +380,7 @@
     <section class="marquee-section" id="highlights" aria-label="Featured Systems and Architecture Highlights">
       <div class="section-container">
         
-        <!-- Section Header -->
+        <!-- Section Header (Matches Screenshot 2) -->
         <div class="section-center-head">
           <span class="badge-mint">HIGHLIGHTS</span>
           <h2 class="section-title-editorial">
@@ -368,13 +416,12 @@
                 <div class="tech-icon-chip">⚡</div>
                 <span class="tech-metric-highlight">500K+ Txns/Day</span>
               </div>
-              <h3 class="scroll-card__title">Charge Point Management Core (CPMS)</h3>
+              <h3 class="scroll-card__title">Charge Point Management Core</h3>
               <p class="scroll-card__desc">Real-time telemetry orchestration for thousands of EV chargers, driver session states, and remote commands at scale.</p>
               <div class="scroll-card__footer">
                 <span class="tech-pill">Kafka</span>
                 <span class="tech-pill">NestJS</span>
-                <span class="tech-pill">Postgres</span>
-                <a href="#case-platform-scale" class="scroll-card__link">Explore Details ↗</a>
+                <a href="#case-platform-scale" class="scroll-card__link">Details ↗</a>
               </div>
             </article>
 
@@ -382,19 +429,18 @@
             <article class="scroll-card">
               <div class="scroll-card__badge-row">
                 <span class="pill-tag pill-tag--coral">HARDWARE INTEROP</span>
-                <span class="scroll-card__loc">OCPP 1.6 &amp; 2.0.1</span>
+                <span class="scroll-card__loc">OCPP 1.6 &amp; 2.0</span>
               </div>
               <div class="scroll-card__graphic scroll-card__graphic--ocpp">
                 <div class="tech-icon-chip">🔌</div>
-                <span class="tech-metric-highlight">Zero Firmware Drops</span>
+                <span class="tech-metric-highlight">Zero Drops</span>
               </div>
               <h3 class="scroll-card__title">Charger Firmware &amp; Protocol Engine</h3>
               <p class="scroll-card__desc">Resilient state machine handling edge-case device disconnections, boot notifications, and vendor deviations.</p>
               <div class="scroll-card__footer">
-                <span class="tech-pill">WebSockets</span>
-                <span class="tech-pill">OCPP</span>
+                <span class="tech-pill">OCPP 2.0</span>
                 <span class="tech-pill">Redis</span>
-                <a href="#case-ev-interop" class="scroll-card__link">Explore Details ↗</a>
+                <a href="#case-ev-interop" class="scroll-card__link">Details ↗</a>
               </div>
             </article>
 
@@ -406,15 +452,14 @@
               </div>
               <div class="scroll-card__graphic scroll-card__graphic--tariffs">
                 <div class="tech-icon-chip">📊</div>
-                <span class="tech-metric-highlight">100% Audit Precision</span>
+                <span class="tech-metric-highlight">100% Precision</span>
               </div>
-              <h3 class="scroll-card__title">Multi-Dimensional Tariff &amp; Revenue Engine</h3>
+              <h3 class="scroll-card__title">Dynamic Tariff &amp; Revenue Engine</h3>
               <p class="scroll-card__desc">Dynamic billing combining kWh energy, time-of-use pricing, parking idle fees, and multi-party site splits.</p>
               <div class="scroll-card__footer">
-                <span class="tech-pill">Node.js</span>
                 <span class="tech-pill">PostgreSQL</span>
                 <span class="tech-pill">PDF Gen</span>
-                <a href="#case-billing-tariffs" class="scroll-card__link">Explore Details ↗</a>
+                <a href="#case-billing-tariffs" class="scroll-card__link">Details ↗</a>
               </div>
             </article>
 
@@ -426,15 +471,14 @@
               </div>
               <div class="scroll-card__graphic scroll-card__graphic--sap">
                 <div class="tech-icon-chip">🏦</div>
-                <span class="tech-metric-highlight">115+ Global Banks</span>
+                <span class="tech-metric-highlight">115+ Banks</span>
               </div>
               <h3 class="scroll-card__title">SAP Multi-Bank Connectivity Connector</h3>
               <p class="scroll-card__desc">High-throughput payment gateway integrations for enterprise banking and insurance giants with 24/7 reliability.</p>
               <div class="scroll-card__footer">
-                <span class="tech-pill">ABAP</span>
-                <span class="tech-pill">Java</span>
-                <span class="tech-pill">Catalyst Award</span>
-                <a href="#case-enterprise-sap" class="scroll-card__link">Explore Details ↗</a>
+                <span class="tech-pill">Banking API</span>
+                <span class="tech-pill">Catalyst</span>
+                <a href="#case-enterprise-sap" class="scroll-card__link">Details ↗</a>
               </div>
             </article>
 
@@ -446,15 +490,14 @@
               </div>
               <div class="scroll-card__graphic scroll-card__graphic--perf">
                 <div class="tech-icon-chip">🚀</div>
-                <span class="tech-metric-highlight">5&times; Throughput Gain</span>
+                <span class="tech-metric-highlight">5&times; Speedup</span>
               </div>
               <h3 class="scroll-card__title">Sub-Millisecond Cache &amp; Event Stream</h3>
               <p class="scroll-card__desc">Decoupled synchronous request bottlenecks into event-driven Kafka workers backed by Redis Sentinel clusters.</p>
               <div class="scroll-card__footer">
                 <span class="tech-pill">Kafka</span>
-                <span class="tech-pill">Redis Sentinel</span>
-                <span class="tech-pill">Docker</span>
-                <a href="#case-platform-scale" class="scroll-card__link">Explore Details ↗</a>
+                <span class="tech-pill">Redis</span>
+                <a href="#case-platform-scale" class="scroll-card__link">Details ↗</a>
               </div>
             </article>
 
@@ -471,32 +514,30 @@
                 <div class="tech-icon-chip">⚡</div>
                 <span class="tech-metric-highlight">500K+ Txns/Day</span>
               </div>
-              <h3 class="scroll-card__title">Charge Point Management Core (CPMS)</h3>
+              <h3 class="scroll-card__title">Charge Point Management Core</h3>
               <p class="scroll-card__desc">Real-time telemetry orchestration for thousands of EV chargers, driver session states, and remote commands at scale.</p>
               <div class="scroll-card__footer">
                 <span class="tech-pill">Kafka</span>
                 <span class="tech-pill">NestJS</span>
-                <span class="tech-pill">Postgres</span>
-                <a href="#case-platform-scale" class="scroll-card__link">Explore Details ↗</a>
+                <a href="#case-platform-scale" class="scroll-card__link">Details ↗</a>
               </div>
             </article>
 
             <article class="scroll-card">
               <div class="scroll-card__badge-row">
                 <span class="pill-tag pill-tag--coral">HARDWARE INTEROP</span>
-                <span class="scroll-card__loc">OCPP 1.6 &amp; 2.0.1</span>
+                <span class="scroll-card__loc">OCPP 1.6 &amp; 2.0</span>
               </div>
               <div class="scroll-card__graphic scroll-card__graphic--ocpp">
                 <div class="tech-icon-chip">🔌</div>
-                <span class="tech-metric-highlight">Zero Firmware Drops</span>
+                <span class="tech-metric-highlight">Zero Drops</span>
               </div>
               <h3 class="scroll-card__title">Charger Firmware &amp; Protocol Engine</h3>
               <p class="scroll-card__desc">Resilient state machine handling edge-case device disconnections, boot notifications, and vendor deviations.</p>
               <div class="scroll-card__footer">
-                <span class="tech-pill">WebSockets</span>
-                <span class="tech-pill">OCPP</span>
+                <span class="tech-pill">OCPP 2.0</span>
                 <span class="tech-pill">Redis</span>
-                <a href="#case-ev-interop" class="scroll-card__link">Explore Details ↗</a>
+                <a href="#case-ev-interop" class="scroll-card__link">Details ↗</a>
               </div>
             </article>
 
@@ -507,15 +548,14 @@
               </div>
               <div class="scroll-card__graphic scroll-card__graphic--tariffs">
                 <div class="tech-icon-chip">📊</div>
-                <span class="tech-metric-highlight">100% Audit Precision</span>
+                <span class="tech-metric-highlight">100% Precision</span>
               </div>
-              <h3 class="scroll-card__title">Multi-Dimensional Tariff &amp; Revenue Engine</h3>
+              <h3 class="scroll-card__title">Dynamic Tariff &amp; Revenue Engine</h3>
               <p class="scroll-card__desc">Dynamic billing combining kWh energy, time-of-use pricing, parking idle fees, and multi-party site splits.</p>
               <div class="scroll-card__footer">
-                <span class="tech-pill">Node.js</span>
                 <span class="tech-pill">PostgreSQL</span>
                 <span class="tech-pill">PDF Gen</span>
-                <a href="#case-billing-tariffs" class="scroll-card__link">Explore Details ↗</a>
+                <a href="#case-billing-tariffs" class="scroll-card__link">Details ↗</a>
               </div>
             </article>
 
@@ -526,15 +566,14 @@
               </div>
               <div class="scroll-card__graphic scroll-card__graphic--sap">
                 <div class="tech-icon-chip">🏦</div>
-                <span class="tech-metric-highlight">115+ Global Banks</span>
+                <span class="tech-metric-highlight">115+ Banks</span>
               </div>
               <h3 class="scroll-card__title">SAP Multi-Bank Connectivity Connector</h3>
               <p class="scroll-card__desc">High-throughput payment gateway integrations for enterprise banking and insurance giants with 24/7 reliability.</p>
               <div class="scroll-card__footer">
-                <span class="tech-pill">ABAP</span>
-                <span class="tech-pill">Java</span>
-                <span class="tech-pill">Catalyst Award</span>
-                <a href="#case-enterprise-sap" class="scroll-card__link">Explore Details ↗</a>
+                <span class="tech-pill">Banking API</span>
+                <span class="tech-pill">Catalyst</span>
+                <a href="#case-enterprise-sap" class="scroll-card__link">Details ↗</a>
               </div>
             </article>
 
@@ -545,15 +584,14 @@
               </div>
               <div class="scroll-card__graphic scroll-card__graphic--perf">
                 <div class="tech-icon-chip">🚀</div>
-                <span class="tech-metric-highlight">5&times; Throughput Gain</span>
+                <span class="tech-metric-highlight">5&times; Speedup</span>
               </div>
               <h3 class="scroll-card__title">Sub-Millisecond Cache &amp; Event Stream</h3>
               <p class="scroll-card__desc">Decoupled synchronous request bottlenecks into event-driven Kafka workers backed by Redis Sentinel clusters.</p>
               <div class="scroll-card__footer">
                 <span class="tech-pill">Kafka</span>
-                <span class="tech-pill">Redis Sentinel</span>
-                <span class="tech-pill">Docker</span>
-                <a href="#case-platform-scale" class="scroll-card__link">Explore Details ↗</a>
+                <span class="tech-pill">Redis</span>
+                <a href="#case-platform-scale" class="scroll-card__link">Details ↗</a>
               </div>
             </article>
           </div>
@@ -567,19 +605,18 @@
             <article class="scroll-card">
               <div class="scroll-card__badge-row">
                 <span class="pill-tag pill-tag--teal">E-MOBILITY ROAMING</span>
-                <span class="scroll-card__loc">OCPI 2.2 Protocol</span>
+                <span class="scroll-card__loc">OCPI 2.2</span>
               </div>
               <div class="scroll-card__graphic scroll-card__graphic--roaming">
                 <div class="tech-icon-chip">🌐</div>
-                <span class="tech-metric-highlight">Multi-Network Interop</span>
+                <span class="tech-metric-highlight">Multi-Network</span>
               </div>
-              <h3 class="scroll-card__title">Cross-Network Driver Roaming (OCPI)</h3>
+              <h3 class="scroll-card__title">Cross-Network Driver Roaming</h3>
               <p class="scroll-card__desc">Automated clearinghouse synchronization enabling EV drivers to roam seamlessly across partner charge point operators.</p>
               <div class="scroll-card__footer">
                 <span class="tech-pill">OCPI 2.2</span>
-                <span class="tech-pill">REST APIs</span>
-                <span class="tech-pill">Token Auth</span>
-                <a href="#case-ev-interop" class="scroll-card__link">Explore Details ↗</a>
+                <span class="tech-pill">REST</span>
+                <a href="#case-ev-interop" class="scroll-card__link">Details ↗</a>
               </div>
             </article>
 
@@ -587,19 +624,18 @@
             <article class="scroll-card">
               <div class="scroll-card__badge-row">
                 <span class="pill-tag pill-tag--navy">CLOUD INFRASTRUCTURE</span>
-                <span class="scroll-card__loc">AWS EKS Platform</span>
+                <span class="scroll-card__loc">AWS EKS</span>
               </div>
               <div class="scroll-card__graphic scroll-card__graphic--k8s">
                 <div class="tech-icon-chip">☸️</div>
-                <span class="tech-metric-highlight">99.9% Production SLA</span>
+                <span class="tech-metric-highlight">99.9% SLA</span>
               </div>
               <h3 class="scroll-card__title">Zero-Downtime Kubernetes Autoscaling</h3>
               <p class="scroll-card__desc">Horizontal pod autoscaling configured for unpredictable driver charging peaks with zero service degradation.</p>
               <div class="scroll-card__footer">
                 <span class="tech-pill">AWS EKS</span>
                 <span class="tech-pill">HPA</span>
-                <span class="tech-pill">Prometheus</span>
-                <a href="#case-platform-scale" class="scroll-card__link">Explore Details ↗</a>
+                <a href="#case-platform-scale" class="scroll-card__link">Details ↗</a>
               </div>
             </article>
 
@@ -607,19 +643,18 @@
             <article class="scroll-card">
               <div class="scroll-card__badge-row">
                 <span class="pill-tag pill-tag--mint">PRODUCT EXECUTION</span>
-                <span class="scroll-card__loc">PRD to Production</span>
+                <span class="scroll-card__loc">PRD to Prod</span>
               </div>
               <div class="scroll-card__graphic scroll-card__graphic--pm">
                 <div class="tech-icon-chip">📋</div>
-                <span class="tech-metric-highlight">100% Sprint Predictability</span>
+                <span class="tech-metric-highlight">100% OKR Delivery</span>
               </div>
               <h3 class="scroll-card__title">Technical PRDs &amp; Sprint Architecture</h3>
               <p class="scroll-card__desc">Translating complex commercial operator needs into precise engineering contracts, data schemas, and measurable OKRs.</p>
               <div class="scroll-card__footer">
                 <span class="tech-pill">PRD Specs</span>
-                <span class="tech-pill">Jira/Linear</span>
-                <span class="tech-pill">Sprint Gov</span>
-                <a href="#case-product-lifecycle" class="scroll-card__link">Explore Details ↗</a>
+                <span class="tech-pill">Linear</span>
+                <a href="#case-product-lifecycle" class="scroll-card__link">Details ↗</a>
               </div>
             </article>
 
@@ -636,9 +671,9 @@
               <h3 class="scroll-card__title">Smart Load Balancing &amp; Fleet Throttling</h3>
               <p class="scroll-card__desc">Grid-aware power throttling algorithms preventing local transformer overloads during simultaneous multi-vehicle charging.</p>
               <div class="scroll-card__footer">
-                <span class="tech-pill">OCPP Profiles</span>
-                <span class="tech-pill">Energy Telemetry</span>
-                <a href="#ev-domain" class="scroll-card__link">Explore Details ↗</a>
+                <span class="tech-pill">Smart Grid</span>
+                <span class="tech-pill">Telemetry</span>
+                <a href="#ev-domain" class="scroll-card__link">Details ↗</a>
               </div>
             </article>
 
@@ -646,19 +681,18 @@
             <article class="scroll-card">
               <div class="scroll-card__badge-row">
                 <span class="pill-tag pill-tag--coral">OBSERVABILITY</span>
-                <span class="scroll-card__loc">Production Telemetry</span>
+                <span class="scroll-card__loc">APM Metrics</span>
               </div>
               <div class="scroll-card__graphic scroll-card__graphic--apm">
                 <div class="tech-icon-chip">📈</div>
-                <span class="tech-metric-highlight">&minus;60% Incident MTTR</span>
+                <span class="tech-metric-highlight">&minus;60% MTTR</span>
               </div>
               <h3 class="scroll-card__title">Proactive Telemetry &amp; Sentry/OpenSearch</h3>
               <p class="scroll-card__desc">Centralized error tracing, database slow-query alerts, and live operational dashboards for on-call engineers.</p>
               <div class="scroll-card__footer">
                 <span class="tech-pill">OpenSearch</span>
                 <span class="tech-pill">Sentry</span>
-                <span class="tech-pill">Grafana</span>
-                <a href="#capabilities" class="scroll-card__link">Explore Details ↗</a>
+                <a href="#capabilities" class="scroll-card__link">Details ↗</a>
               </div>
             </article>
 
@@ -669,57 +703,54 @@
             <article class="scroll-card">
               <div class="scroll-card__badge-row">
                 <span class="pill-tag pill-tag--teal">E-MOBILITY ROAMING</span>
-                <span class="scroll-card__loc">OCPI 2.2 Protocol</span>
+                <span class="scroll-card__loc">OCPI 2.2</span>
               </div>
               <div class="scroll-card__graphic scroll-card__graphic--roaming">
                 <div class="tech-icon-chip">🌐</div>
-                <span class="tech-metric-highlight">Multi-Network Interop</span>
+                <span class="tech-metric-highlight">Multi-Network</span>
               </div>
-              <h3 class="scroll-card__title">Cross-Network Driver Roaming (OCPI)</h3>
+              <h3 class="scroll-card__title">Cross-Network Driver Roaming</h3>
               <p class="scroll-card__desc">Automated clearinghouse synchronization enabling EV drivers to roam seamlessly across partner charge point operators.</p>
               <div class="scroll-card__footer">
                 <span class="tech-pill">OCPI 2.2</span>
-                <span class="tech-pill">REST APIs</span>
-                <span class="tech-pill">Token Auth</span>
-                <a href="#case-ev-interop" class="scroll-card__link">Explore Details ↗</a>
+                <span class="tech-pill">REST</span>
+                <a href="#case-ev-interop" class="scroll-card__link">Details ↗</a>
               </div>
             </article>
 
             <article class="scroll-card">
               <div class="scroll-card__badge-row">
                 <span class="pill-tag pill-tag--navy">CLOUD INFRASTRUCTURE</span>
-                <span class="scroll-card__loc">AWS EKS Platform</span>
+                <span class="scroll-card__loc">AWS EKS</span>
               </div>
               <div class="scroll-card__graphic scroll-card__graphic--k8s">
                 <div class="tech-icon-chip">☸️</div>
-                <span class="tech-metric-highlight">99.9% Production SLA</span>
+                <span class="tech-metric-highlight">99.9% SLA</span>
               </div>
               <h3 class="scroll-card__title">Zero-Downtime Kubernetes Autoscaling</h3>
               <p class="scroll-card__desc">Horizontal pod autoscaling configured for unpredictable driver charging peaks with zero service degradation.</p>
               <div class="scroll-card__footer">
                 <span class="tech-pill">AWS EKS</span>
                 <span class="tech-pill">HPA</span>
-                <span class="tech-pill">Prometheus</span>
-                <a href="#case-platform-scale" class="scroll-card__link">Explore Details ↗</a>
+                <a href="#case-platform-scale" class="scroll-card__link">Details ↗</a>
               </div>
             </article>
 
             <article class="scroll-card">
               <div class="scroll-card__badge-row">
                 <span class="pill-tag pill-tag--mint">PRODUCT EXECUTION</span>
-                <span class="scroll-card__loc">PRD to Production</span>
+                <span class="scroll-card__loc">PRD to Prod</span>
               </div>
               <div class="scroll-card__graphic scroll-card__graphic--pm">
                 <div class="tech-icon-chip">📋</div>
-                <span class="tech-metric-highlight">100% Sprint Predictability</span>
+                <span class="tech-metric-highlight">100% OKR Delivery</span>
               </div>
               <h3 class="scroll-card__title">Technical PRDs &amp; Sprint Architecture</h3>
               <p class="scroll-card__desc">Translating complex commercial operator needs into precise engineering contracts, data schemas, and measurable OKRs.</p>
               <div class="scroll-card__footer">
                 <span class="tech-pill">PRD Specs</span>
-                <span class="tech-pill">Jira/Linear</span>
-                <span class="tech-pill">Sprint Gov</span>
-                <a href="#case-product-lifecycle" class="scroll-card__link">Explore Details ↗</a>
+                <span class="tech-pill">Linear</span>
+                <a href="#case-product-lifecycle" class="scroll-card__link">Details ↗</a>
               </div>
             </article>
 
@@ -735,28 +766,27 @@
               <h3 class="scroll-card__title">Smart Load Balancing &amp; Fleet Throttling</h3>
               <p class="scroll-card__desc">Grid-aware power throttling algorithms preventing local transformer overloads during simultaneous multi-vehicle charging.</p>
               <div class="scroll-card__footer">
-                <span class="tech-pill">OCPP Profiles</span>
-                <span class="tech-pill">Energy Telemetry</span>
-                <a href="#ev-domain" class="scroll-card__link">Explore Details ↗</a>
+                <span class="tech-pill">Smart Grid</span>
+                <span class="tech-pill">Telemetry</span>
+                <a href="#ev-domain" class="scroll-card__link">Details ↗</a>
               </div>
             </article>
 
             <article class="scroll-card">
               <div class="scroll-card__badge-row">
                 <span class="pill-tag pill-tag--coral">OBSERVABILITY</span>
-                <span class="scroll-card__loc">Production Telemetry</span>
+                <span class="scroll-card__loc">APM Metrics</span>
               </div>
               <div class="scroll-card__graphic scroll-card__graphic--apm">
                 <div class="tech-icon-chip">📈</div>
-                <span class="tech-metric-highlight">&minus;60% Incident MTTR</span>
+                <span class="tech-metric-highlight">&minus;60% MTTR</span>
               </div>
               <h3 class="scroll-card__title">Proactive Telemetry &amp; Sentry/OpenSearch</h3>
               <p class="scroll-card__desc">Centralized error tracing, database slow-query alerts, and live operational dashboards for on-call engineers.</p>
               <div class="scroll-card__footer">
                 <span class="tech-pill">OpenSearch</span>
                 <span class="tech-pill">Sentry</span>
-                <span class="tech-pill">Grafana</span>
-                <a href="#capabilities" class="scroll-card__link">Explore Details ↗</a>
+                <a href="#capabilities" class="scroll-card__link">Details ↗</a>
               </div>
             </article>
           </div>

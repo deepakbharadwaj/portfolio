@@ -211,4 +211,158 @@
     });
   });
 
+  // ─── 9. Odometer / Meter Reading Count-Up Engine ───
+  function initMeterReadings() {
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    // Deceleration easing curve (mechanical odometer spin -> smooth settle)
+    const easeOutExpo = (t) => (t === 1 ? 1 : 1 - Math.pow(2, -10 * t));
+
+    function parseMetric(text) {
+      if (!text) return null;
+      const clean = text
+        .replace(/&minus;/g, '−')
+        .replace(/&times;/g, '×')
+        .replace(/×/g, '×')
+        .trim();
+      const hasMinus = clean.startsWith('−') || clean.startsWith('-');
+      const unsigned = hasMinus ? clean.slice(1) : clean;
+
+      const match = unsigned.match(/^([0-9]+(?:\.[0-9]+)?)(.*)$/);
+      if (!match) return null;
+
+      const numStr = match[1];
+      const suffix = match[2] || '';
+      const numVal = parseFloat(numStr);
+      const decimals = numStr.includes('.') ? numStr.split('.')[1].length : 0;
+
+      return {
+        prefix: hasMinus ? '−' : '',
+        target: numVal,
+        decimals: decimals,
+        suffix: suffix,
+        raw: clean
+      };
+    }
+
+    function animateMeter(el, parsed, options = {}) {
+      if (el.dataset.meterAnimated === 'true') return;
+      el.dataset.meterAnimated = 'true';
+
+      const duration = options.duration || 1400; // ms
+      const delay = options.delay || 0;
+      const parentCard = el.closest('.stat-box') || el.closest('.outcome-stat') || el.closest('.geo-pill');
+
+      if (prefersReducedMotion) {
+        el.textContent = parsed.prefix + (parsed.decimals > 0 ? parsed.target.toFixed(parsed.decimals) : Math.round(parsed.target)) + parsed.suffix;
+        if (parentCard) parentCard.classList.add('is-meter-done');
+        return;
+      }
+
+      setTimeout(() => {
+        if (parentCard) {
+          parentCard.classList.add('is-meter-running');
+          parentCard.style.setProperty('--meter-fill', '0%');
+        }
+        el.classList.add('is-meter-running');
+
+        const startTime = performance.now();
+        const startVal = 0;
+        const targetVal = parsed.target;
+
+        function update(now) {
+          const elapsed = now - startTime;
+          const progress = Math.min(elapsed / duration, 1);
+          const easedProgress = easeOutExpo(progress);
+
+          const currentVal = startVal + (targetVal - startVal) * easedProgress;
+          const formattedVal = parsed.decimals > 0
+            ? currentVal.toFixed(parsed.decimals)
+            : Math.round(currentVal);
+
+          el.textContent = parsed.prefix + formattedVal + parsed.suffix;
+
+          if (parentCard) {
+            parentCard.style.setProperty('--meter-fill', `${(easedProgress * 100).toFixed(1)}%`);
+          }
+
+          if (progress < 1) {
+            requestAnimationFrame(update);
+          } else {
+            // Settle exactly on target
+            el.textContent = parsed.prefix + (parsed.decimals > 0 ? targetVal.toFixed(parsed.decimals) : Math.round(targetVal)) + parsed.suffix;
+            el.classList.remove('is-meter-running');
+            el.classList.add('is-meter-done', 'meter-settle');
+            if (parentCard) {
+              parentCard.classList.remove('is-meter-running');
+              parentCard.classList.add('is-meter-done');
+              parentCard.style.setProperty('--meter-fill', '100%');
+            }
+          }
+        }
+
+        requestAnimationFrame(update);
+      }, delay);
+    }
+
+    // Hero stat strip cards (500K+, 99.9%, 5x, 115+)
+    const heroStatVals = document.querySelectorAll('.hero-metric-strip .stat-box__val');
+    heroStatVals.forEach((valEl, idx) => {
+      const parsed = parseMetric(valEl.textContent);
+      if (!parsed) return;
+      // Pre-initialize to zero so visitor sees the meter run up from the start
+      valEl.textContent = parsed.prefix + (parsed.decimals > 0 ? (0).toFixed(parsed.decimals) : '0') + parsed.suffix;
+      animateMeter(valEl, parsed, {
+        delay: 220 + idx * 120, // Staggered dial ignition
+        duration: 1400 + idx * 80
+      });
+    });
+
+    // Hero globe milestone pills (500K+, 99.9%)
+    const globeMilestones = document.querySelectorAll('.geo-pill--milestone .geo-pill__metric');
+    globeMilestones.forEach((pillEl, idx) => {
+      const parsed = parseMetric(pillEl.textContent);
+      if (!parsed) return;
+      pillEl.textContent = parsed.prefix + (parsed.decimals > 0 ? (0).toFixed(parsed.decimals) : '0') + parsed.suffix;
+      animateMeter(pillEl, parsed, {
+        delay: 360 + idx * 140,
+        duration: 1400
+      });
+    });
+
+    // Scroll-triggered meters for outcome stats (case studies)
+    const outcomeStatNums = document.querySelectorAll('.outcome-stat__num');
+    if ('IntersectionObserver' in window && outcomeStatNums.length > 0) {
+      const outcomeObserver = new IntersectionObserver(
+        (entries, observer) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              const el = entry.target;
+              const parsed = parseMetric(el.textContent);
+              if (parsed) {
+                el.textContent = parsed.prefix + (parsed.decimals > 0 ? (0).toFixed(parsed.decimals) : '0') + parsed.suffix;
+                animateMeter(el, parsed, {
+                  delay: 80,
+                  duration: 1300
+                });
+              }
+              observer.unobserve(el);
+            }
+          });
+        },
+        { threshold: 0.3 }
+      );
+
+      outcomeStatNums.forEach(numEl => outcomeObserver.observe(numEl));
+    }
+  }
+
+  // Trigger meter animation on DOM ready / load
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initMeterReadings);
+  } else {
+    initMeterReadings();
+  }
+
 })();
+
