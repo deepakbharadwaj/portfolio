@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Deepak Bharadwaj — Technical Product Manager &amp; Systems Engineer</title>
+  <title>Deepak Bharadwaj — Technical Product Manager &amp; Distributed Systems Engineer</title>
   <meta name="description" content="Deepak Bharadwaj: Technical Product Manager and systems engineer building reliable, high-throughput B2B platforms across EV charging SaaS, cloud infrastructure, and enterprise software.">
   <meta name="author" content="Deepak Bharadwaj">
   <meta name="robots" content="index, follow">
@@ -25,13 +25,12 @@
   <!-- Google Fonts: Playfair Display (Editorial Serif), Plus Jakarta Sans (Modern Grotesque), JetBrains Mono (Tech) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,500;1,600;1,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,500;1,600;1,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <!-- Theme flash prevention -->
   <script>
     (function () {
       const savedTheme = localStorage.getItem('theme');
-      // Default to light warm cream to showcase the signature editorial aesthetic
       const theme = savedTheme || 'light';
       document.documentElement.setAttribute('data-theme', theme);
     })();
@@ -41,26 +40,17 @@
 </head>
 <body>
 
-  <!-- Blueprint Architectural Grid Pattern -->
+  <!-- Bespoke Engineering Drafting Matrix Background Pattern -->
   <div class="bg-grid-pattern" aria-hidden="true"></div>
 
   <!-- Skip link for keyboard accessibility -->
   <a href="#main" class="skip-link">Skip to main content</a>
 
-  <!-- ═══════════════ TOP ANNOUNCEMENT + PILL NAVBAR ═══════════════ -->
+  <!-- ═══════════════ FLOATING PILL NAVBAR ═══════════════ -->
   <header class="header-shell" id="header">
     <div class="header-container">
       
-      <!-- Top Announcement Ribbon (Burgundy Ribbon from Reference) -->
-      <div class="top-announcement" role="region" aria-label="Announcement">
-        <div class="top-announcement__content">
-          <span class="top-announcement__badge">OPEN TO OPPORTUNITIES</span>
-          <span class="top-announcement__text">Available for Technical Product &amp; Engineering Leadership Roles · Bangalore &amp; Remote</span>
-          <span class="top-announcement__icon">🚀</span>
-        </div>
-      </div>
-
-      <!-- Floating Pill Navigation Bar -->
+      <!-- Floating Capsule Navigation Bar -->
       <nav class="pill-nav" id="pill-nav" aria-label="Primary navigation">
         <a href="#hero" class="nav-brand" aria-label="Deepak Bharadwaj — Home">
           <span class="nav-brand__mark">DB</span>
@@ -72,8 +62,8 @@
 
         <!-- Desktop Navigation Links -->
         <ul class="nav-links" id="nav-menu" role="list">
-          <li><a href="#work" class="nav-link">Work <span class="nav-caret">▾</span></a></li>
-          <li><a href="#marquee-section" class="nav-link">Highlights <span class="nav-caret">▾</span></a></li>
+          <li><a href="#projects" class="nav-link">Projects <span class="nav-caret">▾</span></a></li>
+          <li><a href="#highlights" class="nav-link">Highlights <span class="nav-caret">▾</span></a></li>
           <li><a href="#approach" class="nav-link">Approach <span class="nav-caret">▾</span></a></li>
           <li><a href="#ev-domain" class="nav-link">EV &amp; Energy <span class="nav-caret">▾</span></a></li>
           <li><a href="#capabilities" class="nav-link">Capabilities</a></li>
@@ -125,21 +115,25 @@
     <section class="hero-section" id="hero">
       <div class="hero-container">
 
-        <!-- Author Pill Intro Badge -->
-        <div class="hero-intro-pill">
-          <div class="hero-intro-avatar">
-            <img src="assets/profile-pic.png" alt="Deepak Bharadwaj" width="40" height="40" loading="eager">
+        <!-- Unboxed Editorial Profile Introduction (Not a button!) -->
+        <div class="hero-profile-header">
+          <div class="hero-profile-avatar-frame">
+            <img src="assets/profile-pic.png" alt="Deepak Bharadwaj" class="hero-profile-avatar-img" width="58" height="58" loading="eager">
+            <span class="hero-profile-status-indicator" title="Active in Bangalore"></span>
           </div>
-          <div class="hero-intro-text">
-            <span class="hero-intro-name">Deepak Bharadwaj</span>
-            <span class="hero-intro-dot">·</span>
-            <span class="hero-intro-role">Technical PM &amp; Systems Engineer</span>
-            <span class="hero-intro-dot">·</span>
-            <span class="hero-intro-loc">Bangalore, India</span>
+          <div class="hero-profile-details">
+            <div class="hero-profile-identity">
+              <span class="hero-profile-name">Deepak Bharadwaj</span>
+              <span class="hero-profile-divider">/</span>
+              <span class="hero-profile-location">Bangalore, India</span>
+            </div>
+            <div class="hero-profile-role-line">
+              Technical Product Manager &amp; Distributed Systems Engineer
+            </div>
           </div>
         </div>
 
-        <!-- Editorial Headline matching the reference design -->
+        <!-- Editorial Headline -->
         <h1 class="hero-title">
           <span class="hero-title-main">Architecting the world's most reliable</span>
           <span class="hero-title-highlight">
@@ -156,10 +150,10 @@
           Bridging business strategy with distributed systems engineering. Nine years of building mission-critical architectures across <strong class="text-accent">EV Charging SaaS</strong>, <strong class="text-accent">Cloud Infrastructure</strong>, and high-throughput <strong class="text-accent">Enterprise Platforms</strong>.
         </p>
 
-        <!-- CTA Action Buttons (Peach / Coral CTA with arrow block + Ghost CTA) -->
+        <!-- CTA Action Buttons -->
         <div class="hero-cta-group">
-          <a href="#work" class="btn-coral">
-            <span class="btn-coral__text">Explore Selected Work</span>
+          <a href="#projects" class="btn-coral">
+            <span class="btn-coral__text">Explore Featured Projects</span>
             <span class="btn-coral__icon" aria-hidden="true">↗</span>
           </a>
           <a href="#contact" class="btn-ghost-editorial">
@@ -167,23 +161,18 @@
           </a>
         </div>
 
-        <!-- ═══════════════ INTERACTIVE DOTTED GLOBE & FLOATING BADGES ═══════════════ -->
-        <div class="globe-stage" id="globe-stage" aria-label="Global platform reach illustration">
+        <!-- ═══════════════ INTERACTIVE DOTTED GLOBE & TECHNICAL KEYWORD BADGES ═══════════════ -->
+        <div class="globe-stage" id="globe-stage" aria-label="Global distributed systems network illustration">
           
           <!-- Dotted Hemisphere Canvas / SVG Graphic -->
           <div class="globe-graphic-wrap">
             <svg class="globe-hemisphere-svg" viewBox="0 0 1000 520" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
               <defs>
-                <!-- Radial gradient for soft sphere illumination -->
                 <radialGradient id="globeGlow" cx="50%" cy="30%" r="65%">
-                  <stop offset="0%" stop-color="var(--globe-glow-color)" stop-opacity="0.35"/>
-                  <stop offset="70%" stop-color="var(--globe-glow-color)" stop-opacity="0.08"/>
+                  <stop offset="0%" stop-color="var(--globe-glow-color)" stop-opacity="0.32"/>
+                  <stop offset="70%" stop-color="var(--globe-glow-color)" stop-opacity="0.06"/>
                   <stop offset="100%" stop-color="var(--globe-glow-color)" stop-opacity="0"/>
                 </radialGradient>
-                <linearGradient id="globeRingFade" x1="0%" y1="0%" x2="0%" y2="100%">
-                  <stop offset="0%" stop-color="currentColor" stop-opacity="0.45"/>
-                  <stop offset="100%" stop-color="currentColor" stop-opacity="0.08"/>
-                </linearGradient>
               </defs>
 
               <!-- Glowing spherical horizon -->
@@ -204,110 +193,107 @@
               <path d="M500 140 C320 250, 160 380, 60 520" stroke="currentColor" stroke-width="1.2" stroke-dasharray="2 6" opacity="0.35"/>
               <path d="M500 140 C680 250, 840 380, 940 520" stroke="currentColor" stroke-width="1.2" stroke-dasharray="2 6" opacity="0.35"/>
 
-              <!-- Stippled Dotted Landmass Clusters (Global Network Nodes) -->
+              <!-- Dotted Landmass Clusters (Global Nodes) -->
               <g class="globe-stipple-cluster" fill="currentColor">
-                <!-- North America cluster -->
-                <circle cx="210" cy="310" r="1.8" opacity="0.7"/><circle cx="225" cy="305" r="2.2" opacity="0.85"/><circle cx="240" cy="320" r="2" opacity="0.8"/><circle cx="195" cy="325" r="1.9" opacity="0.75"/><circle cx="230" cy="335" r="2.1" opacity="0.9"/><circle cx="215" cy="350" r="2.3" opacity="0.85"/><circle cx="250" cy="340" r="1.8" opacity="0.7"/><circle cx="270" cy="330" r="2.4" opacity="0.9"/><circle cx="280" cy="350" r="2" opacity="0.8"/><circle cx="260" cy="365" r="2.2" opacity="0.85"/><circle cx="235" cy="370" r="1.9" opacity="0.75"/><circle cx="210" cy="380" r="2.1" opacity="0.8"/><circle cx="275" cy="385" r="2.3" opacity="0.85"/><circle cx="295" cy="360" r="2" opacity="0.75"/><circle cx="310" cy="375" r="2.2" opacity="0.8"/><circle cx="180" cy="340" r="1.8" opacity="0.7"/><circle cx="165" cy="355" r="2.1" opacity="0.8"/><circle cx="150" cy="365" r="2" opacity="0.75"/>
-                
-                <!-- Europe cluster -->
-                <circle cx="470" cy="245" r="2.2" opacity="0.9"/><circle cx="485" cy="235" r="2.4" opacity="0.95"/><circle cx="500" cy="250" r="2.1" opacity="0.85"/><circle cx="515" cy="240" r="2.3" opacity="0.9"/><circle cx="475" cy="265" r="2" opacity="0.8"/><circle cx="495" cy="275" r="2.4" opacity="0.95"/><circle cx="525" cy="260" r="2.1" opacity="0.85"/><circle cx="540" cy="250" r="1.9" opacity="0.75"/><circle cx="460" cy="280" r="2.2" opacity="0.85"/><circle cx="480" cy="295" r="2.5" opacity="1"/><circle cx="510" cy="290" r="2.3" opacity="0.9"/><circle cx="535" cy="285" r="2.1" opacity="0.85"/><circle cx="560" cy="270" r="2" opacity="0.8"/><circle cx="550" cy="295" r="2.2" opacity="0.85"/><circle cx="530" cy="310" r="2.4" opacity="0.9"/><circle cx="495" cy="320" r="2.1" opacity="0.85"/>
-
-                <!-- Middle East & India cluster -->
-                <circle cx="575" cy="320" r="2.2" opacity="0.85"/><circle cx="590" cy="310" r="2.4" opacity="0.9"/><circle cx="610" cy="325" r="2.1" opacity="0.85"/><circle cx="600" cy="340" r="2.3" opacity="0.9"/><circle cx="625" cy="335" r="2" opacity="0.8"/><circle cx="640" cy="320" r="2.2" opacity="0.85"/><circle cx="655" cy="340" r="2.5" opacity="1"/><circle cx="670" cy="330" r="2.2" opacity="0.9"/><circle cx="685" cy="350" r="2.6" opacity="1"/><circle cx="700" cy="340" r="2.3" opacity="0.9"/><circle cx="715" cy="360" r="2.4" opacity="0.95"/><circle cx="730" cy="350" r="2.1" opacity="0.85"/><circle cx="745" cy="370" r="2.3" opacity="0.9"/><circle cx="700" cy="375" r="2.5" opacity="1"/><circle cx="680" cy="390" r="2.6" opacity="1"/><circle cx="695" cy="410" r="2.4" opacity="0.95"/><circle cx="710" cy="395" r="2.2" opacity="0.9"/><circle cx="735" cy="405" r="2" opacity="0.8"/><circle cx="660" cy="375" r="2.2" opacity="0.85"/>
-
-                <!-- East Asia & Oceania cluster -->
-                <circle cx="765" cy="360" r="2.1" opacity="0.8"/><circle cx="785" cy="350" r="2.3" opacity="0.85"/><circle cx="805" cy="370" r="2" opacity="0.8"/><circle cx="820" cy="360" r="2.4" opacity="0.9"/><circle cx="840" cy="380" r="2.2" opacity="0.85"/><circle cx="810" cy="395" r="2.5" opacity="1"/><circle cx="790" cy="410" r="2.2" opacity="0.9"/><circle cx="830" cy="420" r="2.1" opacity="0.85"/><circle cx="850" cy="405" r="1.9" opacity="0.75"/><circle cx="870" cy="430" r="2" opacity="0.8"/><circle cx="800" cy="445" r="2.3" opacity="0.9"/><circle cx="825" cy="460" r="2.1" opacity="0.85"/><circle cx="855" cy="470" r="1.8" opacity="0.75"/>
+                <circle cx="210" cy="310" r="1.8" opacity="0.7"/><circle cx="225" cy="305" r="2.2" opacity="0.85"/><circle cx="240" cy="320" r="2" opacity="0.8"/><circle cx="195" cy="325" r="1.9" opacity="0.75"/><circle cx="230" cy="335" r="2.1" opacity="0.9"/><circle cx="215" cy="350" r="2.3" opacity="0.85"/><circle cx="250" cy="340" r="1.8" opacity="0.7"/><circle cx="270" cy="330" r="2.4" opacity="0.9"/><circle cx="280" cy="350" r="2" opacity="0.8"/><circle cx="260" cy="365" r="2.2" opacity="0.85"/><circle cx="235" cy="370" r="1.9" opacity="0.75"/><circle cx="210" cy="380" r="2.1" opacity="0.8"/><circle cx="275" cy="385" r="2.3" opacity="0.85"/><circle cx="295" cy="360" r="2" opacity="0.75"/><circle cx="310" cy="375" r="2.2" opacity="0.8"/><circle cx="180" cy="340" r="1.8" opacity="0.7"/><circle cx="165" cy="355" r="2.1" opacity="0.8"/>
+                <circle cx="470" cy="245" r="2.2" opacity="0.9"/><circle cx="485" cy="235" r="2.4" opacity="0.95"/><circle cx="500" cy="250" r="2.1" opacity="0.85"/><circle cx="515" cy="240" r="2.3" opacity="0.9"/><circle cx="475" cy="265" r="2" opacity="0.8"/><circle cx="495" cy="275" r="2.4" opacity="0.95"/><circle cx="525" cy="260" r="2.1" opacity="0.85"/><circle cx="540" cy="250" r="1.9" opacity="0.75"/><circle cx="460" cy="280" r="2.2" opacity="0.85"/><circle cx="480" cy="295" r="2.5" opacity="1"/><circle cx="510" cy="290" r="2.3" opacity="0.9"/><circle cx="535" cy="285" r="2.1" opacity="0.85"/><circle cx="560" cy="270" r="2" opacity="0.8"/><circle cx="550" cy="295" r="2.2" opacity="0.85"/><circle cx="530" cy="310" r="2.4" opacity="0.9"/>
+                <circle cx="575" cy="320" r="2.2" opacity="0.85"/><circle cx="590" cy="310" r="2.4" opacity="0.9"/><circle cx="610" cy="325" r="2.1" opacity="0.85"/><circle cx="600" cy="340" r="2.3" opacity="0.9"/><circle cx="625" cy="335" r="2" opacity="0.8"/><circle cx="640" cy="320" r="2.2" opacity="0.85"/><circle cx="655" cy="340" r="2.5" opacity="1"/><circle cx="670" cy="330" r="2.2" opacity="0.9"/><circle cx="685" cy="350" r="2.6" opacity="1"/><circle cx="700" cy="340" r="2.3" opacity="0.9"/><circle cx="715" cy="360" r="2.4" opacity="0.95"/><circle cx="730" cy="350" r="2.1" opacity="0.85"/><circle cx="745" cy="370" r="2.3" opacity="0.9"/><circle cx="700" cy="375" r="2.5" opacity="1"/><circle cx="680" cy="390" r="2.6" opacity="1"/><circle cx="695" cy="410" r="2.4" opacity="0.95"/><circle cx="710" cy="395" r="2.2" opacity="0.9"/>
+                <circle cx="765" cy="360" r="2.1" opacity="0.8"/><circle cx="785" cy="350" r="2.3" opacity="0.85"/><circle cx="805" cy="370" r="2" opacity="0.8"/><circle cx="820" cy="360" r="2.4" opacity="0.9"/><circle cx="840" cy="380" r="2.2" opacity="0.85"/><circle cx="810" cy="395" r="2.5" opacity="1"/><circle cx="790" cy="410" r="2.2" opacity="0.9"/><circle cx="830" cy="420" r="2.1" opacity="0.85"/><circle cx="850" cy="405" r="1.9" opacity="0.75"/><circle cx="870" cy="430" r="2" opacity="0.8"/>
               </g>
 
-              <!-- Horizon Boundary Curve -->
-              <path d="M40 518 C 180 280, 820 280, 960 518" stroke="currentColor" stroke-width="1.8" opacity="0.5"/>
+              <!-- Horizon Curve -->
+              <path d="M40 518 C 180 280, 820 280, 960 518" stroke="currentColor" stroke-width="1.8" opacity="0.45"/>
             </svg>
           </div>
 
-          <!-- ═══════════════ FLOATING PILL LOCATION & MILESTONE BADGES ═══════════════ -->
-          <!-- Exactly mirroring the screenshot's distinctive colored pill badges! -->
+          <!-- ═══════════════ TECHNICAL KEYWORD BADGES ═══════════════ -->
+          <!-- Replaced city names with Deepak's core technical capabilities & systems! -->
           <div class="globe-badges-overlay" aria-hidden="true">
 
-            <!-- San Francisco (Mustard Gold) -->
-            <div class="geo-pill geo-pill--gold" style="top: 72%; left: 8%;">
+            <!-- Kafka Event Streaming -->
+            <div class="geo-pill geo-pill--teal" style="top: 68%; left: 6%;">
               <span class="geo-pill__dot"></span>
-              <span class="geo-pill__label">SAN FRANCISCO</span>
-              <span class="geo-pill__tooltip">Distributed Cloud Architecture</span>
+              <span class="geo-pill__label">KAFKA STREAMING</span>
+              <span class="geo-pill__tooltip">High-throughput event decoupling for charging events</span>
             </div>
 
-            <!-- New York (Deep Berry) -->
-            <div class="geo-pill geo-pill--berry" style="top: 48%; left: 24%;">
+            <!-- Distributed Microservices -->
+            <div class="geo-pill geo-pill--berry" style="top: 46%; left: 21%;">
               <span class="geo-pill__dot"></span>
-              <span class="geo-pill__label">NEW YORK</span>
-              <span class="geo-pill__tooltip">Enterprise SaaS Clients</span>
+              <span class="geo-pill__label">DISTRIBUTED MICROSERVICES</span>
+              <span class="geo-pill__tooltip">Modular services scaled on NestJS &amp; Docker</span>
             </div>
 
-            <!-- Chicago (Teal) -->
-            <div class="geo-pill geo-pill--teal" style="top: 68%; left: 28%;">
+            <!-- Redis Sentinel Caching -->
+            <div class="geo-pill geo-pill--gold" style="top: 66%; left: 26%;">
               <span class="geo-pill__dot"></span>
-              <span class="geo-pill__label">CHICAGO</span>
+              <span class="geo-pill__label">REDIS SENTINEL</span>
+              <span class="geo-pill__tooltip">Sub-millisecond driver session lookups</span>
             </div>
 
-            <!-- Miami (Slate Blue) -->
-            <div class="geo-pill geo-pill--blue" style="top: 86%; left: 25%;">
+            <!-- PostgreSQL Optimization -->
+            <div class="geo-pill geo-pill--blue" style="top: 86%; left: 22%;">
               <span class="geo-pill__dot"></span>
-              <span class="geo-pill__label">MIAMI</span>
+              <span class="geo-pill__label">POSTGRESQL TUNING</span>
+              <span class="geo-pill__tooltip">Optimized composite indexing &amp; partition locks</span>
             </div>
 
-            <!-- London (Wine Burgundy) -->
-            <div class="geo-pill geo-pill--wine" style="top: 65%; left: 45%;">
+            <!-- OCPP 2.0.1 Protocol -->
+            <div class="geo-pill geo-pill--wine" style="top: 62%; left: 44%;">
               <span class="geo-pill__dot"></span>
-              <span class="geo-pill__label">LONDON</span>
-              <span class="geo-pill__tooltip">OCPI Roaming Clearing</span>
+              <span class="geo-pill__label">OCPP 2.0.1 PROTOCOL</span>
+              <span class="geo-pill__tooltip">Hardware state machines &amp; device interop</span>
             </div>
 
-            <!-- Berlin (Ochre Gold) -->
-            <div class="geo-pill geo-pill--yellow" style="top: 72%; left: 63%;">
+            <!-- Dynamic Tariffs Engine -->
+            <div class="geo-pill geo-pill--yellow" style="top: 71%; left: 61%;">
               <span class="geo-pill__dot"></span>
-              <span class="geo-pill__label">BERLIN</span>
-              <span class="geo-pill__tooltip">Hardware Protocol Interop</span>
+              <span class="geo-pill__label">DYNAMIC TARIFFS</span>
+              <span class="geo-pill__tooltip">Multi-dimensional pricing &amp; host settlements</span>
             </div>
 
-            <!-- Warsaw (Deep Forest) -->
-            <div class="geo-pill geo-pill--forest" style="top: 50%; left: 68%;">
+            <!-- OCPI 2.2 Roaming -->
+            <div class="geo-pill geo-pill--forest" style="top: 48%; left: 66%;">
               <span class="geo-pill__dot"></span>
-              <span class="geo-pill__label">WARSAW</span>
+              <span class="geo-pill__label">OCPI 2.2 ROAMING</span>
+              <span class="geo-pill__tooltip">Cross-network e-mobility synchronization</span>
             </div>
 
-            <!-- Dubai (Sea Teal) -->
-            <div class="geo-pill geo-pill--teal" style="top: 57%; left: 57%;">
+            <!-- Kubernetes EKS Autoscaling -->
+            <div class="geo-pill geo-pill--teal" style="top: 56%; left: 55%;">
               <span class="geo-pill__dot"></span>
-              <span class="geo-pill__label">DUBAI</span>
-              <span class="geo-pill__tooltip">High-Volume Fleet Deployments</span>
+              <span class="geo-pill__label">KUBERNETES EKS</span>
+              <span class="geo-pill__tooltip">Horizontal Pod Autoscaling with zero downtime</span>
             </div>
 
-            <!-- Bengaluru (Royal Navy - Home Base / Accent) -->
-            <div class="geo-pill geo-pill--navy geo-pill--primary" style="top: 66%; left: 75%;">
+            <!-- Bangalore R&D HQ (Home Base) -->
+            <div class="geo-pill geo-pill--navy geo-pill--primary" style="top: 65%; left: 74%;">
               <span class="geo-pill__pulse"></span>
-              <span class="geo-pill__label">BENGALURU</span>
-              <span class="geo-pill__tooltip">R&amp;D Hub · Engineering HQ</span>
+              <span class="geo-pill__label">BANGALORE HQ</span>
+              <span class="geo-pill__tooltip">Engineering R&amp;D Hub · Global Product Delivery</span>
             </div>
 
-            <!-- Singapore (Deep Cobalt) -->
-            <div class="geo-pill geo-pill--navy" style="top: 85%; left: 80%;">
+            <!-- SAP Multi-Bank Connectivity -->
+            <div class="geo-pill geo-pill--navy" style="top: 84%; left: 76%;">
               <span class="geo-pill__dot"></span>
-              <span class="geo-pill__label">SINGAPORE</span>
-              <span class="geo-pill__tooltip">Asia-Pacific Telemetry</span>
+              <span class="geo-pill__label">SAP MULTI-BANK</span>
+              <span class="geo-pill__tooltip">115+ international bank integrations · Catalyst Award</span>
             </div>
 
-            <!-- Melbourne (Coral Peach) -->
-            <div class="geo-pill geo-pill--coral" style="top: 88%; left: 51%;">
+            <!-- Technical PRDs & OKRs -->
+            <div class="geo-pill geo-pill--coral" style="top: 87%; left: 49%;">
               <span class="geo-pill__dot"></span>
-              <span class="geo-pill__label">MELBOURNE</span>
+              <span class="geo-pill__label">TECHNICAL PRDs &amp; OKRs</span>
+              <span class="geo-pill__tooltip">Rigorous product specs bridging code and business</span>
             </div>
 
-            <!-- Scale & Engineering Milestone Badges -->
-            <div class="geo-pill geo-pill--milestone geo-pill--emerald" style="top: 36%; left: 14%;">
+            <!-- Scale & Production SLA Milestones -->
+            <div class="geo-pill geo-pill--milestone geo-pill--emerald" style="top: 34%; left: 12%;">
               <span class="geo-pill__metric">500K+</span>
               <span class="geo-pill__label">DAILY TXNS</span>
             </div>
 
-            <div class="geo-pill geo-pill--milestone geo-pill--indigo" style="top: 38%; left: 79%;">
+            <div class="geo-pill geo-pill--milestone geo-pill--indigo" style="top: 36%; left: 77%;">
               <span class="geo-pill__metric">99.9%</span>
               <span class="geo-pill__label">SLA UPTIME</span>
             </div>
@@ -343,11 +329,10 @@
     </section>
 
     <!-- ═══════════════ HORIZONTAL MOVING CARDS SECTION (MARQUEE) ═══════════════ -->
-    <!-- Matches Screenshot 2: "A global home / where you belong" with moving cards -->
-    <section class="marquee-section" id="marquee-section" aria-label="Featured Systems and Architecture Highlights">
+    <section class="marquee-section" id="highlights" aria-label="Featured Systems and Architecture Highlights">
       <div class="section-container">
         
-        <!-- Section Header matching Screenshot 2 -->
+        <!-- Section Header -->
         <div class="section-center-head">
           <span class="badge-mint">HIGHLIGHTS</span>
           <h2 class="section-title-editorial">
@@ -389,7 +374,7 @@
                 <span class="tech-pill">Kafka</span>
                 <span class="tech-pill">NestJS</span>
                 <span class="tech-pill">Postgres</span>
-                <a href="#case-platform-scale" class="scroll-card__link">Case Study ↗</a>
+                <a href="#case-platform-scale" class="scroll-card__link">Explore Details ↗</a>
               </div>
             </article>
 
@@ -409,7 +394,7 @@
                 <span class="tech-pill">WebSockets</span>
                 <span class="tech-pill">OCPP</span>
                 <span class="tech-pill">Redis</span>
-                <a href="#case-ev-interop" class="scroll-card__link">Case Study ↗</a>
+                <a href="#case-ev-interop" class="scroll-card__link">Explore Details ↗</a>
               </div>
             </article>
 
@@ -429,7 +414,7 @@
                 <span class="tech-pill">Node.js</span>
                 <span class="tech-pill">PostgreSQL</span>
                 <span class="tech-pill">PDF Gen</span>
-                <a href="#case-billing-tariffs" class="scroll-card__link">Case Study ↗</a>
+                <a href="#case-billing-tariffs" class="scroll-card__link">Explore Details ↗</a>
               </div>
             </article>
 
@@ -449,7 +434,7 @@
                 <span class="tech-pill">ABAP</span>
                 <span class="tech-pill">Java</span>
                 <span class="tech-pill">Catalyst Award</span>
-                <a href="#case-enterprise-sap" class="scroll-card__link">Case Study ↗</a>
+                <a href="#case-enterprise-sap" class="scroll-card__link">Explore Details ↗</a>
               </div>
             </article>
 
@@ -469,7 +454,7 @@
                 <span class="tech-pill">Kafka</span>
                 <span class="tech-pill">Redis Sentinel</span>
                 <span class="tech-pill">Docker</span>
-                <a href="#case-platform-scale" class="scroll-card__link">Case Study ↗</a>
+                <a href="#case-platform-scale" class="scroll-card__link">Explore Details ↗</a>
               </div>
             </article>
 
@@ -492,7 +477,7 @@
                 <span class="tech-pill">Kafka</span>
                 <span class="tech-pill">NestJS</span>
                 <span class="tech-pill">Postgres</span>
-                <a href="#case-platform-scale" class="scroll-card__link">Case Study ↗</a>
+                <a href="#case-platform-scale" class="scroll-card__link">Explore Details ↗</a>
               </div>
             </article>
 
@@ -511,7 +496,7 @@
                 <span class="tech-pill">WebSockets</span>
                 <span class="tech-pill">OCPP</span>
                 <span class="tech-pill">Redis</span>
-                <a href="#case-ev-interop" class="scroll-card__link">Case Study ↗</a>
+                <a href="#case-ev-interop" class="scroll-card__link">Explore Details ↗</a>
               </div>
             </article>
 
@@ -530,7 +515,7 @@
                 <span class="tech-pill">Node.js</span>
                 <span class="tech-pill">PostgreSQL</span>
                 <span class="tech-pill">PDF Gen</span>
-                <a href="#case-billing-tariffs" class="scroll-card__link">Case Study ↗</a>
+                <a href="#case-billing-tariffs" class="scroll-card__link">Explore Details ↗</a>
               </div>
             </article>
 
@@ -549,7 +534,7 @@
                 <span class="tech-pill">ABAP</span>
                 <span class="tech-pill">Java</span>
                 <span class="tech-pill">Catalyst Award</span>
-                <a href="#case-enterprise-sap" class="scroll-card__link">Case Study ↗</a>
+                <a href="#case-enterprise-sap" class="scroll-card__link">Explore Details ↗</a>
               </div>
             </article>
 
@@ -568,7 +553,7 @@
                 <span class="tech-pill">Kafka</span>
                 <span class="tech-pill">Redis Sentinel</span>
                 <span class="tech-pill">Docker</span>
-                <a href="#case-platform-scale" class="scroll-card__link">Case Study ↗</a>
+                <a href="#case-platform-scale" class="scroll-card__link">Explore Details ↗</a>
               </div>
             </article>
           </div>
@@ -594,7 +579,7 @@
                 <span class="tech-pill">OCPI 2.2</span>
                 <span class="tech-pill">REST APIs</span>
                 <span class="tech-pill">Token Auth</span>
-                <a href="#case-ev-interop" class="scroll-card__link">Case Study ↗</a>
+                <a href="#case-ev-interop" class="scroll-card__link">Explore Details ↗</a>
               </div>
             </article>
 
@@ -614,7 +599,7 @@
                 <span class="tech-pill">AWS EKS</span>
                 <span class="tech-pill">HPA</span>
                 <span class="tech-pill">Prometheus</span>
-                <a href="#case-platform-scale" class="scroll-card__link">Case Study ↗</a>
+                <a href="#case-platform-scale" class="scroll-card__link">Explore Details ↗</a>
               </div>
             </article>
 
@@ -634,7 +619,7 @@
                 <span class="tech-pill">PRD Specs</span>
                 <span class="tech-pill">Jira/Linear</span>
                 <span class="tech-pill">Sprint Gov</span>
-                <a href="#case-product-lifecycle" class="scroll-card__link">Case Study ↗</a>
+                <a href="#case-product-lifecycle" class="scroll-card__link">Explore Details ↗</a>
               </div>
             </article>
 
@@ -653,7 +638,7 @@
               <div class="scroll-card__footer">
                 <span class="tech-pill">OCPP Profiles</span>
                 <span class="tech-pill">Energy Telemetry</span>
-                <a href="#ev-domain" class="scroll-card__link">Details ↗</a>
+                <a href="#ev-domain" class="scroll-card__link">Explore Details ↗</a>
               </div>
             </article>
 
@@ -673,7 +658,7 @@
                 <span class="tech-pill">OpenSearch</span>
                 <span class="tech-pill">Sentry</span>
                 <span class="tech-pill">Grafana</span>
-                <a href="#capabilities" class="scroll-card__link">Details ↗</a>
+                <a href="#capabilities" class="scroll-card__link">Explore Details ↗</a>
               </div>
             </article>
 
@@ -696,7 +681,7 @@
                 <span class="tech-pill">OCPI 2.2</span>
                 <span class="tech-pill">REST APIs</span>
                 <span class="tech-pill">Token Auth</span>
-                <a href="#case-ev-interop" class="scroll-card__link">Case Study ↗</a>
+                <a href="#case-ev-interop" class="scroll-card__link">Explore Details ↗</a>
               </div>
             </article>
 
@@ -715,7 +700,7 @@
                 <span class="tech-pill">AWS EKS</span>
                 <span class="tech-pill">HPA</span>
                 <span class="tech-pill">Prometheus</span>
-                <a href="#case-platform-scale" class="scroll-card__link">Case Study ↗</a>
+                <a href="#case-platform-scale" class="scroll-card__link">Explore Details ↗</a>
               </div>
             </article>
 
@@ -734,7 +719,7 @@
                 <span class="tech-pill">PRD Specs</span>
                 <span class="tech-pill">Jira/Linear</span>
                 <span class="tech-pill">Sprint Gov</span>
-                <a href="#case-product-lifecycle" class="scroll-card__link">Case Study ↗</a>
+                <a href="#case-product-lifecycle" class="scroll-card__link">Explore Details ↗</a>
               </div>
             </article>
 
@@ -752,7 +737,7 @@
               <div class="scroll-card__footer">
                 <span class="tech-pill">OCPP Profiles</span>
                 <span class="tech-pill">Energy Telemetry</span>
-                <a href="#ev-domain" class="scroll-card__link">Details ↗</a>
+                <a href="#ev-domain" class="scroll-card__link">Explore Details ↗</a>
               </div>
             </article>
 
@@ -771,7 +756,7 @@
                 <span class="tech-pill">OpenSearch</span>
                 <span class="tech-pill">Sentry</span>
                 <span class="tech-pill">Grafana</span>
-                <a href="#capabilities" class="scroll-card__link">Details ↗</a>
+                <a href="#capabilities" class="scroll-card__link">Explore Details ↗</a>
               </div>
             </article>
           </div>
@@ -781,24 +766,24 @@
       </div>
     </section>
 
-    <!-- ═══════════════ SELECTED WORK (CASE STUDIES) ═══════════════ -->
-    <section class="section-editorial work-section" id="work">
+    <!-- ═══════════════ FEATURED PROJECTS (ARCHITECTURE DEEP DIVES) ═══════════════ -->
+    <section class="section-editorial work-section" id="projects">
       <div class="section-container">
         
         <header class="section-head">
           <div class="section-tag-row">
             <span class="section-index-badge">01</span>
-            <span class="pill-tag pill-tag--coral">SELECTED WORK</span>
+            <span class="pill-tag pill-tag--coral">FEATURED PROJECTS</span>
           </div>
-          <h2 class="section-heading-editorial">Deep Technical Case Studies</h2>
+          <h2 class="section-heading-editorial">Production Systems &amp; Architecture Breakdowns</h2>
           <p class="section-desc-editorial">
-            Detailed breakdowns of production platforms scaled to hundreds of thousands of daily events, complex hardware integrations, and enterprise financial connectors.
+            Detailed engineering breakdowns of high-throughput platforms, hardware protocol state machines, and enterprise banking connectors.
           </p>
         </header>
 
         <div class="cases-editorial">
 
-          <!-- Case 1: Scaling an EV Platform -->
+          <!-- Project 1: Scaling an EV Platform -->
           <article class="case-card is-open" id="case-platform-scale">
             <div class="case-card__header" role="button" tabindex="0" aria-expanded="true">
               <div class="case-card__num">01</div>
@@ -891,7 +876,7 @@
             </div>
           </article>
 
-          <!-- Case 2: Product Lifecycle Leadership -->
+          <!-- Project 2: Product Lifecycle Leadership -->
           <article class="case-card" id="case-product-lifecycle">
             <div class="case-card__header" role="button" tabindex="0" aria-expanded="false">
               <div class="case-card__num">02</div>
@@ -954,7 +939,7 @@
             </div>
           </article>
 
-          <!-- Case 3: EV Protocol Integration (OCPP & OCPI) -->
+          <!-- Project 3: EV Protocol Integration (OCPP & OCPI) -->
           <article class="case-card" id="case-ev-interop">
             <div class="case-card__header" role="button" tabindex="0" aria-expanded="false">
               <div class="case-card__num">03</div>
@@ -1013,7 +998,7 @@
             </div>
           </article>
 
-          <!-- Case 4: Multi-Dimensional Tariffs & Billing -->
+          <!-- Project 4: Multi-Dimensional Tariffs & Billing -->
           <article class="case-card" id="case-billing-tariffs">
             <div class="case-card__header" role="button" tabindex="0" aria-expanded="false">
               <div class="case-card__num">04</div>
@@ -1072,7 +1057,7 @@
             </div>
           </article>
 
-          <!-- Case 5: Enterprise SAP Performance & Reliability -->
+          <!-- Project 5: Enterprise SAP Performance & Reliability -->
           <article class="case-card" id="case-enterprise-sap">
             <div class="case-card__header" role="button" tabindex="0" aria-expanded="false">
               <div class="case-card__num">05</div>
@@ -1677,8 +1662,8 @@
           </div>
         </a>
         <div class="footer-quick-links">
-          <a href="#work">Work</a>
-          <a href="#marquee-section">Highlights</a>
+          <a href="#projects">Projects</a>
+          <a href="#highlights">Highlights</a>
           <a href="#approach">Approach</a>
           <a href="#ev-domain">EV &amp; Energy</a>
           <a href="#career">Career</a>
@@ -1688,7 +1673,7 @@
       </div>
       <div class="footer-bottom">
         <span class="footer-copy">&copy; 2026 Deepak Bharadwaj. All rights reserved.</span>
-        <span class="footer-credit">Crafted with warm editorial aesthetics, semantic HTML5, modern CSS &amp; vanilla JS.</span>
+        <span class="footer-credit">Crafted with warm architectural drafting aesthetics, semantic HTML5, modern CSS &amp; vanilla JS.</span>
       </div>
     </div>
   </footer>
