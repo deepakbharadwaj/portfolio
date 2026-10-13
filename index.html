@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Deepak Bharadwaj — Product × Engineering</title>
-  <meta name="description" content="Deepak Bharadwaj: Technical Product Manager and platform engineer building reliable, scalable B2B products across EV charging, enterprise SaaS, and cloud infrastructure.">
+  <title>Deepak Bharadwaj — Technical Product Manager &amp; Systems Engineer</title>
+  <meta name="description" content="Deepak Bharadwaj: Technical Product Manager and systems engineer building reliable, high-throughput B2B platforms across EV charging SaaS, cloud infrastructure, and enterprise software.">
   <meta name="author" content="Deepak Bharadwaj">
   <meta name="robots" content="index, follow">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Deepak Bharadwaj — Product × Engineering">
-  <meta property="og:description" content="Technical Product Manager and platform engineer building reliable, scalable B2B products across EV charging, enterprise SaaS, and cloud infrastructure.">
+  <meta property="og:title" content="Deepak Bharadwaj — Technical Product Manager &amp; Systems Engineer">
+  <meta property="og:description" content="Architecting reliable, scalable platforms across EV charging SaaS, enterprise banking connectors, and distributed systems.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://deepak-bharadwaj.com">
 
@@ -22,17 +22,17 @@
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 
-  <!-- Fonts: Plus Jakarta Sans & JetBrains Mono -->
+  <!-- Google Fonts: Playfair Display (Editorial Serif), Plus Jakarta Sans (Modern Grotesque), JetBrains Mono (Tech) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,500;1,600;1,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-  <!-- Prevent Theme Flash -->
+  <!-- Theme flash prevention -->
   <script>
     (function () {
       const savedTheme = localStorage.getItem('theme');
-      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-      const theme = savedTheme || (prefersDark ? 'dark' : 'light');
+      // Default to light warm cream to showcase the signature editorial aesthetic
+      const theme = savedTheme || 'light';
       document.documentElement.setAttribute('data-theme', theme);
     })();
   </script>
@@ -40,851 +40,1656 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Background Depth: Tech Grid & Illuminated Ambient Lighting -->
-  <div class="bg-grid" aria-hidden="true"></div>
-  <div class="ambient-glow" aria-hidden="true">
-    <div class="hero-spotlight"></div>
-    <div class="ambient-orb ambient-orb--1"></div>
-    <div class="ambient-orb ambient-orb--2"></div>
-    <div class="ambient-orb ambient-orb--3"></div>
-  </div>
 
-  <!-- Skip link -->
-  <a href="#main" class="skip-link">Skip to content</a>
+  <!-- Blueprint Architectural Grid Pattern -->
+  <div class="bg-grid-pattern" aria-hidden="true"></div>
 
-  <!-- Navigation -->
-  <nav class="nav" id="nav" aria-label="Primary navigation">
-    <div class="nav__inner">
-      <a href="#hero" class="nav__logo" aria-label="Deepak Bharadwaj — home">
-        <span class="nav__logo-mark">DB</span>
-        <span class="nav__logo-text">Deepak Bharadwaj</span>
-      </a>
+  <!-- Skip link for keyboard accessibility -->
+  <a href="#main" class="skip-link">Skip to main content</a>
 
-      <div class="nav__right">
-        <ul class="nav__menu" id="nav-menu" role="list">
-          <li><a href="#work" class="nav__link">Work</a></li>
-          <li><a href="#approach" class="nav__link">Approach</a></li>
-          <li><a href="#ev-domain" class="nav__link">EV &amp; Energy</a></li>
-          <li><a href="#capabilities" class="nav__link">Capabilities</a></li>
-          <li><a href="#career" class="nav__link">Career</a></li>
-          <li><a href="#about" class="nav__link">About</a></li>
-          <li><a href="#contact" class="nav__link nav__link--cta">Get in Touch</a></li>
+  <!-- ═══════════════ TOP ANNOUNCEMENT + PILL NAVBAR ═══════════════ -->
+  <header class="header-shell" id="header">
+    <div class="header-container">
+      
+      <!-- Top Announcement Ribbon (Burgundy Ribbon from Reference) -->
+      <div class="top-announcement" role="region" aria-label="Announcement">
+        <div class="top-announcement__content">
+          <span class="top-announcement__badge">OPEN TO OPPORTUNITIES</span>
+          <span class="top-announcement__text">Available for Technical Product &amp; Engineering Leadership Roles · Bangalore &amp; Remote</span>
+          <span class="top-announcement__icon">🚀</span>
+        </div>
+      </div>
+
+      <!-- Floating Pill Navigation Bar -->
+      <nav class="pill-nav" id="pill-nav" aria-label="Primary navigation">
+        <a href="#hero" class="nav-brand" aria-label="Deepak Bharadwaj — Home">
+          <span class="nav-brand__mark">DB</span>
+          <div class="nav-brand__meta">
+            <span class="nav-brand__name">DEEPAK BHARADWAJ</span>
+            <span class="nav-brand__sub">PRODUCT &times; SYSTEMS</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <ul class="nav-links" id="nav-menu" role="list">
+          <li><a href="#work" class="nav-link">Work <span class="nav-caret">▾</span></a></li>
+          <li><a href="#marquee-section" class="nav-link">Highlights <span class="nav-caret">▾</span></a></li>
+          <li><a href="#approach" class="nav-link">Approach <span class="nav-caret">▾</span></a></li>
+          <li><a href="#ev-domain" class="nav-link">EV &amp; Energy <span class="nav-caret">▾</span></a></li>
+          <li><a href="#capabilities" class="nav-link">Capabilities</a></li>
+          <li><a href="#career" class="nav-link">Career</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
         </ul>
 
-        <!-- Light / Dark Mode Toggle Switch -->
-        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme" title="Toggle theme">
-          <!-- Sun icon (for dark mode -> switch to light) -->
-          <svg class="theme-toggle__sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <circle cx="12" cy="12" r="4"></circle>
-            <path d="M12 2v2"></path>
-            <path d="M12 20v2"></path>
-            <path d="m4.93 4.93 1.41 1.41"></path>
-            <path d="m17.66 17.66 1.41 1.41"></path>
-            <path d="M2 12h2"></path>
-            <path d="M20 12h2"></path>
-            <path d="m6.34 17.66-1.41 1.41"></path>
-            <path d="m19.07 4.93-1.41 1.41"></path>
-          </svg>
-          <!-- Moon icon (for light mode -> switch to dark) -->
-          <svg class="theme-toggle__moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
-          </svg>
-        </button>
+        <!-- Right Action Items -->
+        <div class="nav-actions">
+          <a href="#contact" class="nav-cta-link">
+            <span>Get in Touch</span>
+            <span class="nav-cta-arrow">↗</span>
+          </a>
 
-        <!-- Mobile hamburger -->
-        <button class="nav__toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-menu">
-          <span class="nav__toggle-bar"></span>
-          <span class="nav__toggle-bar"></span>
-        </button>
-      </div>
+          <!-- Theme Toggle Switch -->
+          <button class="theme-switch" id="theme-toggle" aria-label="Toggle theme" title="Toggle theme">
+            <!-- Sun icon -->
+            <svg class="theme-icon theme-icon--sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="4"></circle>
+              <path d="M12 2v2"></path>
+              <path d="M12 20v2"></path>
+              <path d="m4.93 4.93 1.41 1.41"></path>
+              <path d="m17.66 17.66 1.41 1.41"></path>
+              <path d="M2 12h2"></path>
+              <path d="M20 12h2"></path>
+              <path d="m6.34 17.66-1.41 1.41"></path>
+              <path d="m19.07 4.93-1.41 1.41"></path>
+            </svg>
+            <!-- Moon icon -->
+            <svg class="theme-icon theme-icon--moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+            </svg>
+          </button>
+
+          <!-- Mobile Hamburger Toggle -->
+          <button class="mobile-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu">
+            <span class="mobile-toggle__line"></span>
+            <span class="mobile-toggle__line"></span>
+          </button>
+        </div>
+      </nav>
+
     </div>
-  </nav>
+  </header>
 
   <main id="main">
 
-    <!-- ═══════════════ HERO ═══════════════ -->
-    <section class="hero" id="hero">
-      <div class="hero__container">
+    <!-- ═══════════════ HERO SECTION ═══════════════ -->
+    <section class="hero-section" id="hero">
+      <div class="hero-container">
 
-        <div class="hero__layout">
-          <!-- Left Column: Narrative & Headline -->
-          <div class="hero__main">
-            <!-- Author Profile Introduction (Unboxed & Natural) -->
-            <div class="hero__author-intro">
-              <div class="hero__author-avatar-frame">
-                <img src="assets/profile-pic.png" alt="Deepak Bharadwaj" class="hero__author-photo" width="68" height="68" loading="eager">
-              </div>
-              <div class="hero__author-text">
-                <div class="hero__author-meta">
-                  <span class="hero__author-name">Deepak Bharadwaj</span>
-                  <span class="hero__author-separator">·</span>
-                  <span class="hero__author-location">Bangalore, India</span>
-                </div>
-                <span class="hero__author-role">Technical Product Management &amp; Engineering</span>
-              </div>
-            </div>
-
-            <div class="hero__eyebrow">
-              <span class="hero__eyebrow-line"></span>
-              <span class="hero__eyebrow-text">Technical Product Manager · Software Engineering</span>
-            </div>
-
-            <h1 class="hero__title">
-              <span class="hero__title-line">Turning complex</span>
-              <span class="hero__title-line">technical problems into</span>
-              <span class="hero__title-line hero__title-line--accent">reliable products.</span>
-            </h1>
-
-            <p class="hero__intro">
-              I bridge business strategy with distributed systems engineering. Nine years of technical execution across <span class="kw">EV Charging SaaS</span>, <span class="kw">Cloud Infrastructure</span>, and high-throughput <span class="kw">Enterprise Platforms</span>.
-            </p>
-
-            <div class="hero__actions">
-              <a href="#work" class="btn btn--primary">Explore Selected Work</a>
-              <a href="#contact" class="btn btn--ghost">Get in Touch</a>
-            </div>
+        <!-- Author Pill Intro Badge -->
+        <div class="hero-intro-pill">
+          <div class="hero-intro-avatar">
+            <img src="assets/profile-pic.png" alt="Deepak Bharadwaj" width="40" height="40" loading="eager">
           </div>
-
-          <!-- Right Column: Interactive System & PM Snapshot -->
-          <div class="hero__aside">
-            <div class="platform-card" aria-label="Technical &amp; Product Profile Snapshot">
-              <div class="platform-card__header">
-                <div class="platform-card__traffic-lights">
-                  <span class="light light--red"></span>
-                  <span class="light light--yellow"></span>
-                  <span class="light light--green"></span>
-                </div>
-                <span class="platform-card__filename">deepak.profile.sys</span>
-                <span class="platform-card__badge"><span class="status-beacon-pulse"></span> ACTIVE</span>
-              </div>
-
-              <div class="platform-card__body">
-                <!-- Domain & Architecture Specs -->
-                <div class="spec-group">
-                  <div class="spec-row">
-                    <span class="spec-label">Domain</span>
-                    <span class="spec-val spec-val--highlight">EV Charging SaaS &amp; CPMS</span>
-                  </div>
-                  <div class="spec-row">
-                    <span class="spec-label">Engineering</span>
-                    <span class="spec-val">Distributed Microservices</span>
-                  </div>
-                  <div class="spec-row">
-                    <span class="spec-label">Core Stack</span>
-                    <div class="spec-tags">
-                      <span class="pill-tag">Kafka</span>
-                      <span class="pill-tag">NestJS</span>
-                      <span class="pill-tag">PostgreSQL</span>
-                      <span class="pill-tag">Redis</span>
-                      <span class="pill-tag">Kubernetes</span>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="spec-divider"></div>
-
-                <!-- Dual Superpower: Product x Engineering -->
-                <div class="dual-matrix">
-                  <div class="matrix-col">
-                    <div class="matrix-heading">
-                      <span class="matrix-icon">◈</span> PRODUCT OWNER
-                    </div>
-                    <ul class="matrix-list">
-                      <li>Technical PRDs &amp; Scoping</li>
-                      <li>Tariffs &amp; Complex Billing</li>
-                      <li>OKR &amp; KPI Accountability</li>
-                      <li>B2B SaaS Prioritization</li>
-                    </ul>
-                  </div>
-                  <div class="matrix-col">
-                    <div class="matrix-heading">
-                      <span class="matrix-icon">▣</span> SOFTWARE ENGINEERING
-                    </div>
-                    <ul class="matrix-list">
-                      <li>High-Concurrency Backend</li>
-                      <li>Database Optimization</li>
-                      <li>Hardware-Software Interop</li>
-                      <li>99.9% Production SLA</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-
-              <div class="platform-card__footer">
-                <div class="footer-telemetry">
-                  <span class="telemetry-dot"></span>
-                  <span>Bangalore, India</span>
-                </div>
-                <span class="footer-stat">9+ Yrs Experience</span>
-              </div>
-            </div>
+          <div class="hero-intro-text">
+            <span class="hero-intro-name">Deepak Bharadwaj</span>
+            <span class="hero-intro-dot">·</span>
+            <span class="hero-intro-role">Technical PM &amp; Systems Engineer</span>
+            <span class="hero-intro-dot">·</span>
+            <span class="hero-intro-loc">Bangalore, India</span>
           </div>
         </div>
 
-        <!-- Impact strip -->
-        <div class="hero__metrics" aria-label="Key impact metrics">
-          <div class="metric">
-            <span class="metric__value">500K+</span>
-            <span class="metric__label">Daily Transactions</span>
+        <!-- Editorial Headline matching the reference design -->
+        <h1 class="hero-title">
+          <span class="hero-title-main">Architecting the world's most reliable</span>
+          <span class="hero-title-highlight">
+            <em class="serif-italic">Product Platforms</em>
+            <!-- Hand-drawn curved sketch underline SVG -->
+            <svg class="sketch-underline" viewBox="0 0 460 22" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M4 16C120 4.5 320 3 454 13" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"/>
+              <path d="M22 19C150 10.5 345 9.5 435 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" opacity="0.8"/>
+            </svg>
+          </span>
+        </h1>
+
+        <p class="hero-subtitle">
+          Bridging business strategy with distributed systems engineering. Nine years of building mission-critical architectures across <strong class="text-accent">EV Charging SaaS</strong>, <strong class="text-accent">Cloud Infrastructure</strong>, and high-throughput <strong class="text-accent">Enterprise Platforms</strong>.
+        </p>
+
+        <!-- CTA Action Buttons (Peach / Coral CTA with arrow block + Ghost CTA) -->
+        <div class="hero-cta-group">
+          <a href="#work" class="btn-coral">
+            <span class="btn-coral__text">Explore Selected Work</span>
+            <span class="btn-coral__icon" aria-hidden="true">↗</span>
+          </a>
+          <a href="#contact" class="btn-ghost-editorial">
+            <span>Get in Touch</span>
+          </a>
+        </div>
+
+        <!-- ═══════════════ INTERACTIVE DOTTED GLOBE & FLOATING BADGES ═══════════════ -->
+        <div class="globe-stage" id="globe-stage" aria-label="Global platform reach illustration">
+          
+          <!-- Dotted Hemisphere Canvas / SVG Graphic -->
+          <div class="globe-graphic-wrap">
+            <svg class="globe-hemisphere-svg" viewBox="0 0 1000 520" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <defs>
+                <!-- Radial gradient for soft sphere illumination -->
+                <radialGradient id="globeGlow" cx="50%" cy="30%" r="65%">
+                  <stop offset="0%" stop-color="var(--globe-glow-color)" stop-opacity="0.35"/>
+                  <stop offset="70%" stop-color="var(--globe-glow-color)" stop-opacity="0.08"/>
+                  <stop offset="100%" stop-color="var(--globe-glow-color)" stop-opacity="0"/>
+                </radialGradient>
+                <linearGradient id="globeRingFade" x1="0%" y1="0%" x2="0%" y2="100%">
+                  <stop offset="0%" stop-color="currentColor" stop-opacity="0.45"/>
+                  <stop offset="100%" stop-color="currentColor" stop-opacity="0.08"/>
+                </linearGradient>
+              </defs>
+
+              <!-- Glowing spherical horizon -->
+              <ellipse cx="500" cy="500" rx="460" ry="340" fill="url(#globeGlow)" />
+
+              <!-- Latitude Arcs -->
+              <ellipse cx="500" cy="500" rx="460" ry="340" stroke="currentColor" stroke-width="1.2" stroke-dasharray="2 6" opacity="0.35"/>
+              <ellipse cx="500" cy="460" rx="440" ry="290" stroke="currentColor" stroke-width="1.2" stroke-dasharray="2 6" opacity="0.4"/>
+              <ellipse cx="500" cy="410" rx="410" ry="240" stroke="currentColor" stroke-width="1.2" stroke-dasharray="2 6" opacity="0.45"/>
+              <ellipse cx="500" cy="350" rx="360" ry="180" stroke="currentColor" stroke-width="1.2" stroke-dasharray="2 6" opacity="0.5"/>
+              <ellipse cx="500" cy="280" rx="290" ry="120" stroke="currentColor" stroke-width="1.2" stroke-dasharray="2 6" opacity="0.55"/>
+              <ellipse cx="500" cy="200" rx="190" ry="60" stroke="currentColor" stroke-width="1.2" stroke-dasharray="2 6" opacity="0.6"/>
+
+              <!-- Longitude Meridians -->
+              <path d="M500 140 C500 280, 500 420, 500 520" stroke="currentColor" stroke-width="1.2" stroke-dasharray="2 6" opacity="0.55"/>
+              <path d="M500 140 C410 260, 320 400, 240 520" stroke="currentColor" stroke-width="1.2" stroke-dasharray="2 6" opacity="0.45"/>
+              <path d="M500 140 C590 260, 680 400, 760 520" stroke="currentColor" stroke-width="1.2" stroke-dasharray="2 6" opacity="0.45"/>
+              <path d="M500 140 C320 250, 160 380, 60 520" stroke="currentColor" stroke-width="1.2" stroke-dasharray="2 6" opacity="0.35"/>
+              <path d="M500 140 C680 250, 840 380, 940 520" stroke="currentColor" stroke-width="1.2" stroke-dasharray="2 6" opacity="0.35"/>
+
+              <!-- Stippled Dotted Landmass Clusters (Global Network Nodes) -->
+              <g class="globe-stipple-cluster" fill="currentColor">
+                <!-- North America cluster -->
+                <circle cx="210" cy="310" r="1.8" opacity="0.7"/><circle cx="225" cy="305" r="2.2" opacity="0.85"/><circle cx="240" cy="320" r="2" opacity="0.8"/><circle cx="195" cy="325" r="1.9" opacity="0.75"/><circle cx="230" cy="335" r="2.1" opacity="0.9"/><circle cx="215" cy="350" r="2.3" opacity="0.85"/><circle cx="250" cy="340" r="1.8" opacity="0.7"/><circle cx="270" cy="330" r="2.4" opacity="0.9"/><circle cx="280" cy="350" r="2" opacity="0.8"/><circle cx="260" cy="365" r="2.2" opacity="0.85"/><circle cx="235" cy="370" r="1.9" opacity="0.75"/><circle cx="210" cy="380" r="2.1" opacity="0.8"/><circle cx="275" cy="385" r="2.3" opacity="0.85"/><circle cx="295" cy="360" r="2" opacity="0.75"/><circle cx="310" cy="375" r="2.2" opacity="0.8"/><circle cx="180" cy="340" r="1.8" opacity="0.7"/><circle cx="165" cy="355" r="2.1" opacity="0.8"/><circle cx="150" cy="365" r="2" opacity="0.75"/>
+                
+                <!-- Europe cluster -->
+                <circle cx="470" cy="245" r="2.2" opacity="0.9"/><circle cx="485" cy="235" r="2.4" opacity="0.95"/><circle cx="500" cy="250" r="2.1" opacity="0.85"/><circle cx="515" cy="240" r="2.3" opacity="0.9"/><circle cx="475" cy="265" r="2" opacity="0.8"/><circle cx="495" cy="275" r="2.4" opacity="0.95"/><circle cx="525" cy="260" r="2.1" opacity="0.85"/><circle cx="540" cy="250" r="1.9" opacity="0.75"/><circle cx="460" cy="280" r="2.2" opacity="0.85"/><circle cx="480" cy="295" r="2.5" opacity="1"/><circle cx="510" cy="290" r="2.3" opacity="0.9"/><circle cx="535" cy="285" r="2.1" opacity="0.85"/><circle cx="560" cy="270" r="2" opacity="0.8"/><circle cx="550" cy="295" r="2.2" opacity="0.85"/><circle cx="530" cy="310" r="2.4" opacity="0.9"/><circle cx="495" cy="320" r="2.1" opacity="0.85"/>
+
+                <!-- Middle East & India cluster -->
+                <circle cx="575" cy="320" r="2.2" opacity="0.85"/><circle cx="590" cy="310" r="2.4" opacity="0.9"/><circle cx="610" cy="325" r="2.1" opacity="0.85"/><circle cx="600" cy="340" r="2.3" opacity="0.9"/><circle cx="625" cy="335" r="2" opacity="0.8"/><circle cx="640" cy="320" r="2.2" opacity="0.85"/><circle cx="655" cy="340" r="2.5" opacity="1"/><circle cx="670" cy="330" r="2.2" opacity="0.9"/><circle cx="685" cy="350" r="2.6" opacity="1"/><circle cx="700" cy="340" r="2.3" opacity="0.9"/><circle cx="715" cy="360" r="2.4" opacity="0.95"/><circle cx="730" cy="350" r="2.1" opacity="0.85"/><circle cx="745" cy="370" r="2.3" opacity="0.9"/><circle cx="700" cy="375" r="2.5" opacity="1"/><circle cx="680" cy="390" r="2.6" opacity="1"/><circle cx="695" cy="410" r="2.4" opacity="0.95"/><circle cx="710" cy="395" r="2.2" opacity="0.9"/><circle cx="735" cy="405" r="2" opacity="0.8"/><circle cx="660" cy="375" r="2.2" opacity="0.85"/>
+
+                <!-- East Asia & Oceania cluster -->
+                <circle cx="765" cy="360" r="2.1" opacity="0.8"/><circle cx="785" cy="350" r="2.3" opacity="0.85"/><circle cx="805" cy="370" r="2" opacity="0.8"/><circle cx="820" cy="360" r="2.4" opacity="0.9"/><circle cx="840" cy="380" r="2.2" opacity="0.85"/><circle cx="810" cy="395" r="2.5" opacity="1"/><circle cx="790" cy="410" r="2.2" opacity="0.9"/><circle cx="830" cy="420" r="2.1" opacity="0.85"/><circle cx="850" cy="405" r="1.9" opacity="0.75"/><circle cx="870" cy="430" r="2" opacity="0.8"/><circle cx="800" cy="445" r="2.3" opacity="0.9"/><circle cx="825" cy="460" r="2.1" opacity="0.85"/><circle cx="855" cy="470" r="1.8" opacity="0.75"/>
+              </g>
+
+              <!-- Horizon Boundary Curve -->
+              <path d="M40 518 C 180 280, 820 280, 960 518" stroke="currentColor" stroke-width="1.8" opacity="0.5"/>
+            </svg>
           </div>
-          <div class="metric">
-            <span class="metric__value">99.9%</span>
-            <span class="metric__label">System Uptime</span>
-          </div>
-          <div class="metric">
-            <span class="metric__value">5×</span>
-            <span class="metric__label">API Performance</span>
-          </div>
-          <div class="metric">
-            <span class="metric__value">30×</span>
-            <span class="metric__label">Scalability Gain</span>
+
+          <!-- ═══════════════ FLOATING PILL LOCATION & MILESTONE BADGES ═══════════════ -->
+          <!-- Exactly mirroring the screenshot's distinctive colored pill badges! -->
+          <div class="globe-badges-overlay" aria-hidden="true">
+
+            <!-- San Francisco (Mustard Gold) -->
+            <div class="geo-pill geo-pill--gold" style="top: 72%; left: 8%;">
+              <span class="geo-pill__dot"></span>
+              <span class="geo-pill__label">SAN FRANCISCO</span>
+              <span class="geo-pill__tooltip">Distributed Cloud Architecture</span>
+            </div>
+
+            <!-- New York (Deep Berry) -->
+            <div class="geo-pill geo-pill--berry" style="top: 48%; left: 24%;">
+              <span class="geo-pill__dot"></span>
+              <span class="geo-pill__label">NEW YORK</span>
+              <span class="geo-pill__tooltip">Enterprise SaaS Clients</span>
+            </div>
+
+            <!-- Chicago (Teal) -->
+            <div class="geo-pill geo-pill--teal" style="top: 68%; left: 28%;">
+              <span class="geo-pill__dot"></span>
+              <span class="geo-pill__label">CHICAGO</span>
+            </div>
+
+            <!-- Miami (Slate Blue) -->
+            <div class="geo-pill geo-pill--blue" style="top: 86%; left: 25%;">
+              <span class="geo-pill__dot"></span>
+              <span class="geo-pill__label">MIAMI</span>
+            </div>
+
+            <!-- London (Wine Burgundy) -->
+            <div class="geo-pill geo-pill--wine" style="top: 65%; left: 45%;">
+              <span class="geo-pill__dot"></span>
+              <span class="geo-pill__label">LONDON</span>
+              <span class="geo-pill__tooltip">OCPI Roaming Clearing</span>
+            </div>
+
+            <!-- Berlin (Ochre Gold) -->
+            <div class="geo-pill geo-pill--yellow" style="top: 72%; left: 63%;">
+              <span class="geo-pill__dot"></span>
+              <span class="geo-pill__label">BERLIN</span>
+              <span class="geo-pill__tooltip">Hardware Protocol Interop</span>
+            </div>
+
+            <!-- Warsaw (Deep Forest) -->
+            <div class="geo-pill geo-pill--forest" style="top: 50%; left: 68%;">
+              <span class="geo-pill__dot"></span>
+              <span class="geo-pill__label">WARSAW</span>
+            </div>
+
+            <!-- Dubai (Sea Teal) -->
+            <div class="geo-pill geo-pill--teal" style="top: 57%; left: 57%;">
+              <span class="geo-pill__dot"></span>
+              <span class="geo-pill__label">DUBAI</span>
+              <span class="geo-pill__tooltip">High-Volume Fleet Deployments</span>
+            </div>
+
+            <!-- Bengaluru (Royal Navy - Home Base / Accent) -->
+            <div class="geo-pill geo-pill--navy geo-pill--primary" style="top: 66%; left: 75%;">
+              <span class="geo-pill__pulse"></span>
+              <span class="geo-pill__label">BENGALURU</span>
+              <span class="geo-pill__tooltip">R&amp;D Hub · Engineering HQ</span>
+            </div>
+
+            <!-- Singapore (Deep Cobalt) -->
+            <div class="geo-pill geo-pill--navy" style="top: 85%; left: 80%;">
+              <span class="geo-pill__dot"></span>
+              <span class="geo-pill__label">SINGAPORE</span>
+              <span class="geo-pill__tooltip">Asia-Pacific Telemetry</span>
+            </div>
+
+            <!-- Melbourne (Coral Peach) -->
+            <div class="geo-pill geo-pill--coral" style="top: 88%; left: 51%;">
+              <span class="geo-pill__dot"></span>
+              <span class="geo-pill__label">MELBOURNE</span>
+            </div>
+
+            <!-- Scale & Engineering Milestone Badges -->
+            <div class="geo-pill geo-pill--milestone geo-pill--emerald" style="top: 36%; left: 14%;">
+              <span class="geo-pill__metric">500K+</span>
+              <span class="geo-pill__label">DAILY TXNS</span>
+            </div>
+
+            <div class="geo-pill geo-pill--milestone geo-pill--indigo" style="top: 38%; left: 79%;">
+              <span class="geo-pill__metric">99.9%</span>
+              <span class="geo-pill__label">SLA UPTIME</span>
+            </div>
+
           </div>
         </div>
-        <p class="hero__metrics-note">Metrics reflect cross-functional team outcomes I contributed to as technical lead and product owner.</p>
-      </div>
 
-      <div class="hero__scroll-cue" aria-hidden="true">
-        <span class="hero__scroll-line"></span>
-      </div>
-    </section>
-
-    <!-- ═══════════════ SELECTED WORK ═══════════════ -->
-    <section class="section work" id="work">
-      <div class="section__container">
-        <header class="section__header">
-          <span class="section__number">01</span>
-          <h2 class="section__title">Selected Work</h2>
-          <p class="section__subtitle">High-impact projects across distributed systems engineering, product execution, and platform reliability.</p>
-        </header>
-
-        <div class="cases">
-
-          <!-- Case 1 -->
-          <article class="case" id="case-platform-scale">
-            <div class="case__header">
-              <span class="case__index">01</span>
-              <div class="case__header-main">
-                <h3 class="case__title">Scaling an EV Platform to 500K+ Daily Transactions</h3>
-                <div class="case__meta">
-                  <span class="case__tag">Engineering · Scale</span>
-                  <span class="case__sep">·</span>
-                  <span class="case__company">EV Charging SaaS Platform</span>
-                </div>
-              </div>
-            </div>
-            <div class="case__content">
-              <div class="case__grid">
-                <div class="case__block">
-                  <h4>Context &amp; Challenge</h4>
-                  <p>An EV charging SaaS platform needed to scale rapidly without service degradation. Monolithic bottlenecks and synchronous request chains choked under driver charging peaks, degrading API responsiveness.</p>
-                </div>
-                <div class="case__block">
-                  <h4>My Role &amp; Ownership</h4>
-                  <p>Senior Software Engineer leading backend distributed engineering. Built horizontally scalable microservices, asynchronous message queues, and low-latency database queries.</p>
-                </div>
-                <div class="case__block">
-                  <h4>Engineering &amp; Technical Decisions</h4>
-                  <ul>
-                    <li><span class="kw">Kafka Event Streaming</span> to decouple charging sessions from blocking request chains</li>
-                    <li><span class="kw">Redis Sentinel Caching</span> for sub-millisecond session lookup on high-traffic endpoints</li>
-                    <li><span class="kw">PostgreSQL Query Optimization</span> with specialized indexing for high-write transactions</li>
-                    <li><span class="kw">Kubernetes (EKS)</span> autoscaling policies tuned to real-time traffic surges</li>
-                  </ul>
-                </div>
-                <div class="case__block">
-                  <h4>Measurable Outcome</h4>
-                  <p>Platform reliably supported <span class="kw">500K+ daily transactions</span> at <span class="kw">99.9% uptime</span>. Delivered a <span class="kw">5× API performance gain</span> and <span class="kw">30× capacity expansion</span> from initial limits.</p>
-                </div>
-
-                <!-- Architecture diagram -->
-                <div class="case__diagram case__block--wide">
-                  <h4>Simplified Architecture Flow</h4>
-                  <div class="diagram">
-                    <div class="diagram__row">
-                      <div class="diagram__node diagram__node--client">
-                        <span class="diagram__icon">◧</span>
-                        <span>Web &amp; Mobile Clients</span>
-                      </div>
-                      <div class="diagram__arrow">→</div>
-                      <div class="diagram__node diagram__node--gateway">
-                        <span class="diagram__icon">⊞</span>
-                        <span>API Gateway / NGINX</span>
-                      </div>
-                    </div>
-                    <div class="diagram__connector">↓</div>
-                    <div class="diagram__row diagram__row--services">
-                      <div class="diagram__node diagram__node--service">
-                        <span class="diagram__icon">▣</span>
-                        <span>Auth Service</span>
-                      </div>
-                      <div class="diagram__node diagram__node--service">
-                        <span class="diagram__icon">▣</span>
-                        <span>Charging Core</span>
-                      </div>
-                      <div class="diagram__node diagram__node--service">
-                        <span class="diagram__icon">▣</span>
-                        <span>Payments Engine</span>
-                      </div>
-                      <div class="diagram__node diagram__node--service">
-                        <span class="diagram__icon">▣</span>
-                        <span>Account Mgmt</span>
-                      </div>
-                    </div>
-                    <div class="diagram__connector">↕</div>
-                    <div class="diagram__row diagram__row--infra">
-                      <div class="diagram__node diagram__node--data">
-                        <span class="diagram__icon">◉</span>
-                        <span>PostgreSQL</span>
-                      </div>
-                      <div class="diagram__node diagram__node--data">
-                        <span class="diagram__icon">◎</span>
-                        <span>Redis Sentinel</span>
-                      </div>
-                      <div class="diagram__node diagram__node--data">
-                        <span class="diagram__icon">≋</span>
-                        <span>Apache Kafka</span>
-                      </div>
-                      <div class="diagram__node diagram__node--data">
-                        <span class="diagram__icon">◈</span>
-                        <span>OpenSearch</span>
-                      </div>
-                    </div>
-                  </div>
-                  <p class="diagram__caption">Conceptual architecture — proprietary implementation specifics protected.</p>
-                </div>
-              </div>
-            </div>
-          </article>
-
-          <!-- Case 2 -->
-          <article class="case" id="case-product-lifecycle">
-            <div class="case__header">
-              <span class="case__index">02</span>
-              <div class="case__header-main">
-                <h3 class="case__title">Leading End-to-End Product Lifecycle for Mission-Critical EV Software</h3>
-                <div class="case__meta">
-                  <span class="case__tag">Product · Execution</span>
-                  <span class="case__sep">·</span>
-                  <span class="case__company">EV Charging SaaS Platform</span>
-                </div>
-              </div>
-            </div>
-            <div class="case__content">
-              <div class="case__grid">
-                <div class="case__block">
-                  <h4>Context &amp; Challenge</h4>
-                  <p>Stepped up from engineering to Technical Product Manager. The platform needed structured roadmap prioritization, cross-functional alignment, and clear PRD translations for complex B2B operator demands.</p>
-                </div>
-                <div class="case__block">
-                  <h4>My Role &amp; Execution</h4>
-                  <p>Owned the entire product lifecycle: customer discovery, data-backed prioritization, PRD specifications, cross-team sprint delivery, and outcome tracking against OKRs.</p>
-                </div>
-                <div class="case__block">
-                  <h4>Key Decisions &amp; Trade-offs</h4>
-                  <ul>
-                    <li>Prioritized <span class="kw">Platform Reliability &amp; Data Integrity</span> over raw feature velocity</li>
-                    <li>Built systematic <span class="kw">PRD-to-Delivery Workflows</span> unifying engineering and business teams</li>
-                    <li>Balanced urgent operator feature requests with fundamental scalability investments</li>
-                    <li>Transformed customer support ticket analytics into high-impact roadmap priorities</li>
-                  </ul>
-                </div>
-                <div class="case__block">
-                  <h4>Measurable Outcome</h4>
-                  <p>Launched critical payment and user modules driving a <span class="kw">5× increase in concurrent sessions</span>. Drastically accelerated incident resolution with revamped observability and proactive alerting.</p>
-                </div>
-              </div>
-            </div>
-          </article>
-
-          <!-- Case 3 -->
-          <article class="case" id="case-ev-interop">
-            <div class="case__header">
-              <span class="case__index">03</span>
-              <div class="case__header-main">
-                <h3 class="case__title">EV Protocol Integration: OCPP 1.6/2.0 &amp; OCPI Roaming</h3>
-                <div class="case__meta">
-                  <span class="case__tag">Engineering · IoT Interoperability</span>
-                  <span class="case__sep">·</span>
-                  <span class="case__company">EV Charging Platform</span>
-                </div>
-              </div>
-            </div>
-            <div class="case__content">
-              <div class="case__grid">
-                <div class="case__block">
-                  <h4>Context &amp; Challenge</h4>
-                  <p>EV platforms must interface with physical hardware (<span class="kw">OCPP</span>) and roaming clearinghouses (<span class="kw">OCPI</span>). Vendor deviations from spec frequently caused session dropped messages and billing mismatches.</p>
-                </div>
-                <div class="case__block">
-                  <h4>My Role &amp; Technical Execution</h4>
-                  <p>Defined product specifications and co-engineered protocol handling for <span class="kw">OCPP 1.6</span> (with <span class="kw">OCPP 2.0</span> exposure) and roaming integration with partner networks.</p>
-                </div>
-                <div class="case__block">
-                  <h4>Key Decisions &amp; Trade-offs</h4>
-                  <ul>
-                    <li>Designed fault-tolerant state machine handling charger edge-case disconnections</li>
-                    <li>Built an abstraction layer isolating core billing logic from non-compliant charger firmware</li>
-                    <li>Standardized roaming tariff translation to prevent inter-network rounding discrepancies</li>
-                  </ul>
-                </div>
-                <div class="case__block">
-                  <h4>Measurable Outcome</h4>
-                  <p>Shortened charging station onboarding timelines, significantly reduced communication drop-offs, and enabled seamless driver roaming across partner charging networks.</p>
-                </div>
-              </div>
-            </div>
-          </article>
-
-          <!-- Case 4 -->
-          <article class="case" id="case-billing-tariffs">
-            <div class="case__header">
-              <span class="case__index">04</span>
-              <div class="case__header-main">
-                <h3 class="case__title">Multi-Dimensional Tariffs &amp; Automated Revenue-Share Billing</h3>
-                <div class="case__meta">
-                  <span class="case__tag">Fintech · Complex Billing</span>
-                  <span class="case__sep">·</span>
-                  <span class="case__company">EV Charging Platform</span>
-                </div>
-              </div>
-            </div>
-            <div class="case__content">
-              <div class="case__grid">
-                <div class="case__block">
-                  <h4>Context &amp; Challenge</h4>
-                  <p>EV billing blends energy consumed, peak time-of-use rates, parking penalties, and multi-party revenue shares between platform operators and site hosts. Errors immediately jeopardize commercial partnerships.</p>
-                </div>
-                <div class="case__block">
-                  <h4>My Role &amp; Execution</h4>
-                  <p>Product owner for tariff configuration engines, multi-party revenue sharing calculations, and automated financial report generation with verifiable audit trails.</p>
-                </div>
-                <div class="case__block">
-                  <h4>Key Decisions &amp; Trade-offs</h4>
-                  <ul>
-                    <li>Engineered <span class="kw">Load-Based Dynamic Tariffs</span> supporting complex commercial contracts</li>
-                    <li>Enforced strict decimal precision rules and immutable transaction logs for financial audits</li>
-                    <li>Automated instant <span class="kw">PDF Invoicing &amp; Settlement Exports</span> for multi-party stakeholders</li>
-                  </ul>
-                </div>
-                <div class="case__block">
-                  <h4>Measurable Outcome</h4>
-                  <p>Supported diverse monetization models across commercial and fleet operators, eliminating manual reconciliation overhead and providing 100% auditable accounting.</p>
-                </div>
-              </div>
-            </div>
-          </article>
-
-          <!-- Case 5 -->
-          <article class="case" id="case-enterprise-sap">
-            <div class="case__header">
-              <span class="case__index">05</span>
-              <div class="case__header-main">
-                <h3 class="case__title">Enterprise Performance &amp; Banking Connector Reliability at Scale</h3>
-                <div class="case__meta">
-                  <span class="case__tag">Enterprise SaaS · High Reliability</span>
-                  <span class="case__sep">·</span>
-                  <span class="case__company">SAP Labs</span>
-                </div>
-              </div>
-            </div>
-            <div class="case__content">
-              <div class="case__grid">
-                <div class="case__block">
-                  <h4>Context &amp; Challenge</h4>
-                  <p>Enterprise banking and insurance modules handling mission-critical financial transactions across global markets. The Multi Bank Connectivity (MBC) Connector required 24/7 reliability across 115+ banking networks.</p>
-                </div>
-                <div class="case__block">
-                  <h4>My Role &amp; Execution</h4>
-                  <p>Software Developer responsible for core module performance, concurrency control, multilingual architecture, and international client delivery (including on-site engagement with Belgian banking client).</p>
-                </div>
-                <div class="case__block">
-                  <h4>Key Decisions &amp; Trade-offs</h4>
-                  <ul>
-                    <li>Implemented robust concurrency locks to prevent race conditions during high-volume batch runs</li>
-                    <li>Designed clean internationalization architecture without regression risk</li>
-                    <li>Engineered zero-downtime hotfixes for production banking integrations</li>
-                  </ul>
-                </div>
-                <div class="case__block">
-                  <h4>Measurable Outcome</h4>
-                  <p>Achieved a <span class="kw">5× performance acceleration</span> in the SAP PM module. Maintained rock-solid reliability across <span class="kw">115+ bank integrations</span>; recognized with the <span class="kw">SAP Catalyst Award</span>.</p>
-                </div>
-              </div>
-            </div>
-          </article>
-
+        <!-- Metric Stat Strip -->
+        <div class="hero-metric-strip" aria-label="Key professional outcomes">
+          <div class="stat-box">
+            <span class="stat-box__val">500K+</span>
+            <span class="stat-box__lbl">Daily Transactions</span>
+            <span class="stat-box__sub">High-throughput Kafka streaming</span>
+          </div>
+          <div class="stat-box">
+            <span class="stat-box__val">99.9%</span>
+            <span class="stat-box__lbl">System SLA Uptime</span>
+            <span class="stat-box__sub">Mission-critical EV charging</span>
+          </div>
+          <div class="stat-box">
+            <span class="stat-box__val">5&times;</span>
+            <span class="stat-box__lbl">API Speedup</span>
+            <span class="stat-box__sub">Redis Sentinel caching &amp; DB tuning</span>
+          </div>
+          <div class="stat-box">
+            <span class="stat-box__val">115+</span>
+            <span class="stat-box__lbl">Bank Connectors</span>
+            <span class="stat-box__sub">SAP Multi-Bank Connectivity</span>
+          </div>
         </div>
+
       </div>
     </section>
 
-    <!-- ═══════════════ APPROACH ═══════════════ -->
-    <section class="section approach" id="approach">
-      <div class="section__container">
-        <header class="section__header">
-          <span class="section__number">02</span>
-          <h2 class="section__title">Product × Engineering</h2>
-          <p class="section__subtitle">A disciplined framework connecting customer strategy directly to robust systems execution.</p>
-        </header>
+    <!-- ═══════════════ HORIZONTAL MOVING CARDS SECTION (MARQUEE) ═══════════════ -->
+    <!-- Matches Screenshot 2: "A global home / where you belong" with moving cards -->
+    <section class="marquee-section" id="marquee-section" aria-label="Featured Systems and Architecture Highlights">
+      <div class="section-container">
+        
+        <!-- Section Header matching Screenshot 2 -->
+        <div class="section-center-head">
+          <span class="badge-mint">HIGHLIGHTS</span>
+          <h2 class="section-title-editorial">
+            A proven record
+            <span class="serif-italic-block">
+              <em>where systems scale</em>
+              <svg class="sketch-underline-mint" viewBox="0 0 340 18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M4 13C85 4.5 210 3 336 11" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+              </svg>
+            </span>
+          </h2>
+          <p class="section-subtitle-editorial">
+            Real-world architectures, hardware integrations, and high-throughput B2B systems built and maintained across global markets.
+          </p>
+        </div>
 
-        <div class="approach__grid">
-          <div class="approach__card">
-            <span class="approach__step-badge">01 · DISCOVER</span>
-            <h3 class="approach__card-title">Ground in First Principles &amp; Data</h3>
-            <p class="approach__card-desc">Uncover operational bottlenecks through system telemetry, customer workflows, and root-cause analysis before designing solutions.</p>
+      </div>
+
+      <!-- Dual-Row Horizontal Moving Cards (Infinite Marquee) -->
+      <div class="marquee-viewport" role="region" aria-label="Interactive architecture cards moving horizontally">
+        
+        <!-- Row 1: Moving Left (Normal Direction) -->
+        <div class="marquee-track marquee-track--left" id="marquee-track-1">
+          <div class="marquee-content">
+            
+            <!-- Card 1: EV CPMS Platform -->
+            <article class="scroll-card">
+              <div class="scroll-card__badge-row">
+                <span class="pill-tag pill-tag--mint">EV CHARGING CORE</span>
+                <span class="scroll-card__loc">Elocity · Cloud</span>
+              </div>
+              <div class="scroll-card__graphic scroll-card__graphic--cpms">
+                <div class="tech-icon-chip">⚡</div>
+                <span class="tech-metric-highlight">500K+ Txns/Day</span>
+              </div>
+              <h3 class="scroll-card__title">Charge Point Management Core (CPMS)</h3>
+              <p class="scroll-card__desc">Real-time telemetry orchestration for thousands of EV chargers, driver session states, and remote commands at scale.</p>
+              <div class="scroll-card__footer">
+                <span class="tech-pill">Kafka</span>
+                <span class="tech-pill">NestJS</span>
+                <span class="tech-pill">Postgres</span>
+                <a href="#case-platform-scale" class="scroll-card__link">Case Study ↗</a>
+              </div>
+            </article>
+
+            <!-- Card 2: OCPP Protocols -->
+            <article class="scroll-card">
+              <div class="scroll-card__badge-row">
+                <span class="pill-tag pill-tag--coral">HARDWARE INTEROP</span>
+                <span class="scroll-card__loc">OCPP 1.6 &amp; 2.0.1</span>
+              </div>
+              <div class="scroll-card__graphic scroll-card__graphic--ocpp">
+                <div class="tech-icon-chip">🔌</div>
+                <span class="tech-metric-highlight">Zero Firmware Drops</span>
+              </div>
+              <h3 class="scroll-card__title">Charger Firmware &amp; Protocol Engine</h3>
+              <p class="scroll-card__desc">Resilient state machine handling edge-case device disconnections, boot notifications, and vendor deviations.</p>
+              <div class="scroll-card__footer">
+                <span class="tech-pill">WebSockets</span>
+                <span class="tech-pill">OCPP</span>
+                <span class="tech-pill">Redis</span>
+                <a href="#case-ev-interop" class="scroll-card__link">Case Study ↗</a>
+              </div>
+            </article>
+
+            <!-- Card 3: Dynamic Tariffs -->
+            <article class="scroll-card">
+              <div class="scroll-card__badge-row">
+                <span class="pill-tag pill-tag--gold">FINTECH &amp; BILLING</span>
+                <span class="scroll-card__loc">Energy Engine</span>
+              </div>
+              <div class="scroll-card__graphic scroll-card__graphic--tariffs">
+                <div class="tech-icon-chip">📊</div>
+                <span class="tech-metric-highlight">100% Audit Precision</span>
+              </div>
+              <h3 class="scroll-card__title">Multi-Dimensional Tariff &amp; Revenue Engine</h3>
+              <p class="scroll-card__desc">Dynamic billing combining kWh energy, time-of-use pricing, parking idle fees, and multi-party site splits.</p>
+              <div class="scroll-card__footer">
+                <span class="tech-pill">Node.js</span>
+                <span class="tech-pill">PostgreSQL</span>
+                <span class="tech-pill">PDF Gen</span>
+                <a href="#case-billing-tariffs" class="scroll-card__link">Case Study ↗</a>
+              </div>
+            </article>
+
+            <!-- Card 4: SAP Multi-Bank -->
+            <article class="scroll-card">
+              <div class="scroll-card__badge-row">
+                <span class="pill-tag pill-tag--navy">ENTERPRISE SAAS</span>
+                <span class="scroll-card__loc">SAP Labs · Global</span>
+              </div>
+              <div class="scroll-card__graphic scroll-card__graphic--sap">
+                <div class="tech-icon-chip">🏦</div>
+                <span class="tech-metric-highlight">115+ Global Banks</span>
+              </div>
+              <h3 class="scroll-card__title">SAP Multi-Bank Connectivity Connector</h3>
+              <p class="scroll-card__desc">High-throughput payment gateway integrations for enterprise banking and insurance giants with 24/7 reliability.</p>
+              <div class="scroll-card__footer">
+                <span class="tech-pill">ABAP</span>
+                <span class="tech-pill">Java</span>
+                <span class="tech-pill">Catalyst Award</span>
+                <a href="#case-enterprise-sap" class="scroll-card__link">Case Study ↗</a>
+              </div>
+            </article>
+
+            <!-- Card 5: High Concurrency API -->
+            <article class="scroll-card">
+              <div class="scroll-card__badge-row">
+                <span class="pill-tag pill-tag--berry">DISTRIBUTED BACKEND</span>
+                <span class="scroll-card__loc">Architecture</span>
+              </div>
+              <div class="scroll-card__graphic scroll-card__graphic--perf">
+                <div class="tech-icon-chip">🚀</div>
+                <span class="tech-metric-highlight">5&times; Throughput Gain</span>
+              </div>
+              <h3 class="scroll-card__title">Sub-Millisecond Cache &amp; Event Stream</h3>
+              <p class="scroll-card__desc">Decoupled synchronous request bottlenecks into event-driven Kafka workers backed by Redis Sentinel clusters.</p>
+              <div class="scroll-card__footer">
+                <span class="tech-pill">Kafka</span>
+                <span class="tech-pill">Redis Sentinel</span>
+                <span class="tech-pill">Docker</span>
+                <a href="#case-platform-scale" class="scroll-card__link">Case Study ↗</a>
+              </div>
+            </article>
+
           </div>
 
-          <div class="approach__card">
-            <span class="approach__step-badge">02 · MAP &amp; SCOPE</span>
-            <h3 class="approach__card-title">Evaluate Feasibility &amp; Trade-offs</h3>
-            <p class="approach__card-desc">Weigh throughput limits, infrastructure cost, and delivery risk. Ensure engineering choices directly support business OKRs without debt.</p>
-          </div>
+          <!-- Duplicate Content for Seamless Infinite Loop -->
+          <div class="marquee-content" aria-hidden="true">
+            <article class="scroll-card">
+              <div class="scroll-card__badge-row">
+                <span class="pill-tag pill-tag--mint">EV CHARGING CORE</span>
+                <span class="scroll-card__loc">Elocity · Cloud</span>
+              </div>
+              <div class="scroll-card__graphic scroll-card__graphic--cpms">
+                <div class="tech-icon-chip">⚡</div>
+                <span class="tech-metric-highlight">500K+ Txns/Day</span>
+              </div>
+              <h3 class="scroll-card__title">Charge Point Management Core (CPMS)</h3>
+              <p class="scroll-card__desc">Real-time telemetry orchestration for thousands of EV chargers, driver session states, and remote commands at scale.</p>
+              <div class="scroll-card__footer">
+                <span class="tech-pill">Kafka</span>
+                <span class="tech-pill">NestJS</span>
+                <span class="tech-pill">Postgres</span>
+                <a href="#case-platform-scale" class="scroll-card__link">Case Study ↗</a>
+              </div>
+            </article>
 
-          <div class="approach__card">
-            <span class="approach__step-badge">03 · SPECIFY</span>
-            <h3 class="approach__card-title">Define Unambiguous PRD Contracts</h3>
-            <p class="approach__card-desc">Draft clear technical PRDs, API schemas, and edge-case acceptance criteria. Align engineering, QA, and business stakeholders early.</p>
-          </div>
+            <article class="scroll-card">
+              <div class="scroll-card__badge-row">
+                <span class="pill-tag pill-tag--coral">HARDWARE INTEROP</span>
+                <span class="scroll-card__loc">OCPP 1.6 &amp; 2.0.1</span>
+              </div>
+              <div class="scroll-card__graphic scroll-card__graphic--ocpp">
+                <div class="tech-icon-chip">🔌</div>
+                <span class="tech-metric-highlight">Zero Firmware Drops</span>
+              </div>
+              <h3 class="scroll-card__title">Charger Firmware &amp; Protocol Engine</h3>
+              <p class="scroll-card__desc">Resilient state machine handling edge-case device disconnections, boot notifications, and vendor deviations.</p>
+              <div class="scroll-card__footer">
+                <span class="tech-pill">WebSockets</span>
+                <span class="tech-pill">OCPP</span>
+                <span class="tech-pill">Redis</span>
+                <a href="#case-ev-interop" class="scroll-card__link">Case Study ↗</a>
+              </div>
+            </article>
 
-          <div class="approach__card">
-            <span class="approach__step-badge">04 · DELIVER</span>
-            <h3 class="approach__card-title">Build Side-by-Side with Engineering</h3>
-            <p class="approach__card-desc">Stay embedded across sprint cycles—resolving technical ambiguity, reviewing service design, and validating zero-downtime deployment paths.</p>
-          </div>
+            <article class="scroll-card">
+              <div class="scroll-card__badge-row">
+                <span class="pill-tag pill-tag--gold">FINTECH &amp; BILLING</span>
+                <span class="scroll-card__loc">Energy Engine</span>
+              </div>
+              <div class="scroll-card__graphic scroll-card__graphic--tariffs">
+                <div class="tech-icon-chip">📊</div>
+                <span class="tech-metric-highlight">100% Audit Precision</span>
+              </div>
+              <h3 class="scroll-card__title">Multi-Dimensional Tariff &amp; Revenue Engine</h3>
+              <p class="scroll-card__desc">Dynamic billing combining kWh energy, time-of-use pricing, parking idle fees, and multi-party site splits.</p>
+              <div class="scroll-card__footer">
+                <span class="tech-pill">Node.js</span>
+                <span class="tech-pill">PostgreSQL</span>
+                <span class="tech-pill">PDF Gen</span>
+                <a href="#case-billing-tariffs" class="scroll-card__link">Case Study ↗</a>
+              </div>
+            </article>
 
-          <div class="approach__card">
-            <span class="approach__step-badge">05 · MEASURE</span>
-            <h3 class="approach__card-title">Validate Outcomes &amp; Iterate</h3>
-            <p class="approach__card-desc">Features aren't done at launch. Track real adoption, API latencies, and SLA uptime against OKRs to feed proven insights into next roadmaps.</p>
+            <article class="scroll-card">
+              <div class="scroll-card__badge-row">
+                <span class="pill-tag pill-tag--navy">ENTERPRISE SAAS</span>
+                <span class="scroll-card__loc">SAP Labs · Global</span>
+              </div>
+              <div class="scroll-card__graphic scroll-card__graphic--sap">
+                <div class="tech-icon-chip">🏦</div>
+                <span class="tech-metric-highlight">115+ Global Banks</span>
+              </div>
+              <h3 class="scroll-card__title">SAP Multi-Bank Connectivity Connector</h3>
+              <p class="scroll-card__desc">High-throughput payment gateway integrations for enterprise banking and insurance giants with 24/7 reliability.</p>
+              <div class="scroll-card__footer">
+                <span class="tech-pill">ABAP</span>
+                <span class="tech-pill">Java</span>
+                <span class="tech-pill">Catalyst Award</span>
+                <a href="#case-enterprise-sap" class="scroll-card__link">Case Study ↗</a>
+              </div>
+            </article>
+
+            <article class="scroll-card">
+              <div class="scroll-card__badge-row">
+                <span class="pill-tag pill-tag--berry">DISTRIBUTED BACKEND</span>
+                <span class="scroll-card__loc">Architecture</span>
+              </div>
+              <div class="scroll-card__graphic scroll-card__graphic--perf">
+                <div class="tech-icon-chip">🚀</div>
+                <span class="tech-metric-highlight">5&times; Throughput Gain</span>
+              </div>
+              <h3 class="scroll-card__title">Sub-Millisecond Cache &amp; Event Stream</h3>
+              <p class="scroll-card__desc">Decoupled synchronous request bottlenecks into event-driven Kafka workers backed by Redis Sentinel clusters.</p>
+              <div class="scroll-card__footer">
+                <span class="tech-pill">Kafka</span>
+                <span class="tech-pill">Redis Sentinel</span>
+                <span class="tech-pill">Docker</span>
+                <a href="#case-platform-scale" class="scroll-card__link">Case Study ↗</a>
+              </div>
+            </article>
           </div>
         </div>
+
+        <!-- Row 2: Moving Right (Reverse Direction) -->
+        <div class="marquee-track marquee-track--right" id="marquee-track-2">
+          <div class="marquee-content">
+
+            <!-- Card 6: OCPI Roaming -->
+            <article class="scroll-card">
+              <div class="scroll-card__badge-row">
+                <span class="pill-tag pill-tag--teal">E-MOBILITY ROAMING</span>
+                <span class="scroll-card__loc">OCPI 2.2 Protocol</span>
+              </div>
+              <div class="scroll-card__graphic scroll-card__graphic--roaming">
+                <div class="tech-icon-chip">🌐</div>
+                <span class="tech-metric-highlight">Multi-Network Interop</span>
+              </div>
+              <h3 class="scroll-card__title">Cross-Network Driver Roaming (OCPI)</h3>
+              <p class="scroll-card__desc">Automated clearinghouse synchronization enabling EV drivers to roam seamlessly across partner charge point operators.</p>
+              <div class="scroll-card__footer">
+                <span class="tech-pill">OCPI 2.2</span>
+                <span class="tech-pill">REST APIs</span>
+                <span class="tech-pill">Token Auth</span>
+                <a href="#case-ev-interop" class="scroll-card__link">Case Study ↗</a>
+              </div>
+            </article>
+
+            <!-- Card 7: Kubernetes Platform -->
+            <article class="scroll-card">
+              <div class="scroll-card__badge-row">
+                <span class="pill-tag pill-tag--navy">CLOUD INFRASTRUCTURE</span>
+                <span class="scroll-card__loc">AWS EKS Platform</span>
+              </div>
+              <div class="scroll-card__graphic scroll-card__graphic--k8s">
+                <div class="tech-icon-chip">☸️</div>
+                <span class="tech-metric-highlight">99.9% Production SLA</span>
+              </div>
+              <h3 class="scroll-card__title">Zero-Downtime Kubernetes Autoscaling</h3>
+              <p class="scroll-card__desc">Horizontal pod autoscaling configured for unpredictable driver charging peaks with zero service degradation.</p>
+              <div class="scroll-card__footer">
+                <span class="tech-pill">AWS EKS</span>
+                <span class="tech-pill">HPA</span>
+                <span class="tech-pill">Prometheus</span>
+                <a href="#case-platform-scale" class="scroll-card__link">Case Study ↗</a>
+              </div>
+            </article>
+
+            <!-- Card 8: Product Execution Framework -->
+            <article class="scroll-card">
+              <div class="scroll-card__badge-row">
+                <span class="pill-tag pill-tag--mint">PRODUCT EXECUTION</span>
+                <span class="scroll-card__loc">PRD to Production</span>
+              </div>
+              <div class="scroll-card__graphic scroll-card__graphic--pm">
+                <div class="tech-icon-chip">📋</div>
+                <span class="tech-metric-highlight">100% Sprint Predictability</span>
+              </div>
+              <h3 class="scroll-card__title">Technical PRDs &amp; Sprint Architecture</h3>
+              <p class="scroll-card__desc">Translating complex commercial operator needs into precise engineering contracts, data schemas, and measurable OKRs.</p>
+              <div class="scroll-card__footer">
+                <span class="tech-pill">PRD Specs</span>
+                <span class="tech-pill">Jira/Linear</span>
+                <span class="tech-pill">Sprint Gov</span>
+                <a href="#case-product-lifecycle" class="scroll-card__link">Case Study ↗</a>
+              </div>
+            </article>
+
+            <!-- Card 9: Smart Energy & Load Balancing -->
+            <article class="scroll-card">
+              <div class="scroll-card__badge-row">
+                <span class="pill-tag pill-tag--gold">GRID BALANCING</span>
+                <span class="scroll-card__loc">Smart Charging</span>
+              </div>
+              <div class="scroll-card__graphic scroll-card__graphic--energy">
+                <div class="tech-icon-chip">🔋</div>
+                <span class="tech-metric-highlight">Peak Shaving</span>
+              </div>
+              <h3 class="scroll-card__title">Smart Load Balancing &amp; Fleet Throttling</h3>
+              <p class="scroll-card__desc">Grid-aware power throttling algorithms preventing local transformer overloads during simultaneous multi-vehicle charging.</p>
+              <div class="scroll-card__footer">
+                <span class="tech-pill">OCPP Profiles</span>
+                <span class="tech-pill">Energy Telemetry</span>
+                <a href="#ev-domain" class="scroll-card__link">Details ↗</a>
+              </div>
+            </article>
+
+            <!-- Card 10: APM Observability -->
+            <article class="scroll-card">
+              <div class="scroll-card__badge-row">
+                <span class="pill-tag pill-tag--coral">OBSERVABILITY</span>
+                <span class="scroll-card__loc">Production Telemetry</span>
+              </div>
+              <div class="scroll-card__graphic scroll-card__graphic--apm">
+                <div class="tech-icon-chip">📈</div>
+                <span class="tech-metric-highlight">&minus;60% Incident MTTR</span>
+              </div>
+              <h3 class="scroll-card__title">Proactive Telemetry &amp; Sentry/OpenSearch</h3>
+              <p class="scroll-card__desc">Centralized error tracing, database slow-query alerts, and live operational dashboards for on-call engineers.</p>
+              <div class="scroll-card__footer">
+                <span class="tech-pill">OpenSearch</span>
+                <span class="tech-pill">Sentry</span>
+                <span class="tech-pill">Grafana</span>
+                <a href="#capabilities" class="scroll-card__link">Details ↗</a>
+              </div>
+            </article>
+
+          </div>
+
+          <!-- Duplicate Content for Seamless Infinite Loop -->
+          <div class="marquee-content" aria-hidden="true">
+            <article class="scroll-card">
+              <div class="scroll-card__badge-row">
+                <span class="pill-tag pill-tag--teal">E-MOBILITY ROAMING</span>
+                <span class="scroll-card__loc">OCPI 2.2 Protocol</span>
+              </div>
+              <div class="scroll-card__graphic scroll-card__graphic--roaming">
+                <div class="tech-icon-chip">🌐</div>
+                <span class="tech-metric-highlight">Multi-Network Interop</span>
+              </div>
+              <h3 class="scroll-card__title">Cross-Network Driver Roaming (OCPI)</h3>
+              <p class="scroll-card__desc">Automated clearinghouse synchronization enabling EV drivers to roam seamlessly across partner charge point operators.</p>
+              <div class="scroll-card__footer">
+                <span class="tech-pill">OCPI 2.2</span>
+                <span class="tech-pill">REST APIs</span>
+                <span class="tech-pill">Token Auth</span>
+                <a href="#case-ev-interop" class="scroll-card__link">Case Study ↗</a>
+              </div>
+            </article>
+
+            <article class="scroll-card">
+              <div class="scroll-card__badge-row">
+                <span class="pill-tag pill-tag--navy">CLOUD INFRASTRUCTURE</span>
+                <span class="scroll-card__loc">AWS EKS Platform</span>
+              </div>
+              <div class="scroll-card__graphic scroll-card__graphic--k8s">
+                <div class="tech-icon-chip">☸️</div>
+                <span class="tech-metric-highlight">99.9% Production SLA</span>
+              </div>
+              <h3 class="scroll-card__title">Zero-Downtime Kubernetes Autoscaling</h3>
+              <p class="scroll-card__desc">Horizontal pod autoscaling configured for unpredictable driver charging peaks with zero service degradation.</p>
+              <div class="scroll-card__footer">
+                <span class="tech-pill">AWS EKS</span>
+                <span class="tech-pill">HPA</span>
+                <span class="tech-pill">Prometheus</span>
+                <a href="#case-platform-scale" class="scroll-card__link">Case Study ↗</a>
+              </div>
+            </article>
+
+            <article class="scroll-card">
+              <div class="scroll-card__badge-row">
+                <span class="pill-tag pill-tag--mint">PRODUCT EXECUTION</span>
+                <span class="scroll-card__loc">PRD to Production</span>
+              </div>
+              <div class="scroll-card__graphic scroll-card__graphic--pm">
+                <div class="tech-icon-chip">📋</div>
+                <span class="tech-metric-highlight">100% Sprint Predictability</span>
+              </div>
+              <h3 class="scroll-card__title">Technical PRDs &amp; Sprint Architecture</h3>
+              <p class="scroll-card__desc">Translating complex commercial operator needs into precise engineering contracts, data schemas, and measurable OKRs.</p>
+              <div class="scroll-card__footer">
+                <span class="tech-pill">PRD Specs</span>
+                <span class="tech-pill">Jira/Linear</span>
+                <span class="tech-pill">Sprint Gov</span>
+                <a href="#case-product-lifecycle" class="scroll-card__link">Case Study ↗</a>
+              </div>
+            </article>
+
+            <article class="scroll-card">
+              <div class="scroll-card__badge-row">
+                <span class="pill-tag pill-tag--gold">GRID BALANCING</span>
+                <span class="scroll-card__loc">Smart Charging</span>
+              </div>
+              <div class="scroll-card__graphic scroll-card__graphic--energy">
+                <div class="tech-icon-chip">🔋</div>
+                <span class="tech-metric-highlight">Peak Shaving</span>
+              </div>
+              <h3 class="scroll-card__title">Smart Load Balancing &amp; Fleet Throttling</h3>
+              <p class="scroll-card__desc">Grid-aware power throttling algorithms preventing local transformer overloads during simultaneous multi-vehicle charging.</p>
+              <div class="scroll-card__footer">
+                <span class="tech-pill">OCPP Profiles</span>
+                <span class="tech-pill">Energy Telemetry</span>
+                <a href="#ev-domain" class="scroll-card__link">Details ↗</a>
+              </div>
+            </article>
+
+            <article class="scroll-card">
+              <div class="scroll-card__badge-row">
+                <span class="pill-tag pill-tag--coral">OBSERVABILITY</span>
+                <span class="scroll-card__loc">Production Telemetry</span>
+              </div>
+              <div class="scroll-card__graphic scroll-card__graphic--apm">
+                <div class="tech-icon-chip">📈</div>
+                <span class="tech-metric-highlight">&minus;60% Incident MTTR</span>
+              </div>
+              <h3 class="scroll-card__title">Proactive Telemetry &amp; Sentry/OpenSearch</h3>
+              <p class="scroll-card__desc">Centralized error tracing, database slow-query alerts, and live operational dashboards for on-call engineers.</p>
+              <div class="scroll-card__footer">
+                <span class="tech-pill">OpenSearch</span>
+                <span class="tech-pill">Sentry</span>
+                <span class="tech-pill">Grafana</span>
+                <a href="#capabilities" class="scroll-card__link">Details ↗</a>
+              </div>
+            </article>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ═══════════════ SELECTED WORK (CASE STUDIES) ═══════════════ -->
+    <section class="section-editorial work-section" id="work">
+      <div class="section-container">
+        
+        <header class="section-head">
+          <div class="section-tag-row">
+            <span class="section-index-badge">01</span>
+            <span class="pill-tag pill-tag--coral">SELECTED WORK</span>
+          </div>
+          <h2 class="section-heading-editorial">Deep Technical Case Studies</h2>
+          <p class="section-desc-editorial">
+            Detailed breakdowns of production platforms scaled to hundreds of thousands of daily events, complex hardware integrations, and enterprise financial connectors.
+          </p>
+        </header>
+
+        <div class="cases-editorial">
+
+          <!-- Case 1: Scaling an EV Platform -->
+          <article class="case-card is-open" id="case-platform-scale">
+            <div class="case-card__header" role="button" tabindex="0" aria-expanded="true">
+              <div class="case-card__num">01</div>
+              <div class="case-card__meta">
+                <h3 class="case-card__title">Scaling an EV Platform to 500K+ Daily Transactions</h3>
+                <div class="case-card__tags">
+                  <span class="case-badge">Distributed Systems</span>
+                  <span class="case-sep">·</span>
+                  <span class="case-corp">EV Charging SaaS Platform</span>
+                  <span class="case-sep">·</span>
+                  <span class="case-metric">99.9% Uptime</span>
+                </div>
+              </div>
+              <div class="case-card__chevron" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+              </div>
+            </div>
+
+            <div class="case-card__drawer">
+              <div class="case-card__grid">
+                <div class="case-box">
+                  <span class="case-box__label">CONTEXT &amp; CHALLENGE</span>
+                  <h4 class="case-box__title">Monolithic Bottlenecks Under Peak Load</h4>
+                  <p>As EV charger deployments expanded exponentially, peak driver charging periods caused severe synchronous request bottlenecks, degrading response times and causing database connection pool exhaustion.</p>
+                </div>
+
+                <div class="case-box">
+                  <span class="case-box__label">OWNERSHIP &amp; ROLE</span>
+                  <h4 class="case-box__title">Backend &amp; Distributed Systems Lead</h4>
+                  <p>Owned distributed systems architecture, event-driven streaming design, low-latency caching patterns, and database query optimization from concept to production rollout.</p>
+                </div>
+
+                <div class="case-box case-box--wide">
+                  <span class="case-box__label">TECHNICAL ARCHITECTURE DECISIONS</span>
+                  <ul class="case-check-list">
+                    <li><strong class="text-accent">Apache Kafka Streaming:</strong> Decoupled high-frequency charging telemetry and payment validation from HTTP request-response chains, handling traffic bursts smoothly.</li>
+                    <li><strong class="text-accent">Redis Sentinel In-Memory Caching:</strong> Achieved sub-millisecond session lookup on high-traffic charger status endpoints, reducing database read load by over 70%.</li>
+                    <li><strong class="text-accent">PostgreSQL Query Optimization:</strong> Redesigned composite indexes and partitioned high-write transaction log tables to eliminate lock contention.</li>
+                    <li><strong class="text-accent">Kubernetes (EKS) Horizontal Pod Autoscaling:</strong> Configured proactive CPU/memory threshold scaling with zero dropped requests during sudden load spikes.</li>
+                  </ul>
+                </div>
+
+                <div class="case-box case-box--metric">
+                  <span class="case-box__label">MEASURABLE OUTCOME</span>
+                  <div class="outcome-stat-row">
+                    <div class="outcome-stat">
+                      <span class="outcome-stat__num">500K+</span>
+                      <span class="outcome-stat__text">Daily transactions sustained</span>
+                    </div>
+                    <div class="outcome-stat">
+                      <span class="outcome-stat__num">5&times;</span>
+                      <span class="outcome-stat__text">API latency acceleration</span>
+                    </div>
+                    <div class="outcome-stat">
+                      <span class="outcome-stat__num">99.9%</span>
+                      <span class="outcome-stat__text">Production availability</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Architectural Flow Diagram -->
+                <div class="case-box case-box--diagram">
+                  <span class="case-box__label">SYSTEM TOPOLOGY SCHEMATIC</span>
+                  <div class="arch-flow">
+                    <div class="arch-step">
+                      <span class="arch-chip arch-chip--client">Clients / Chargers</span>
+                      <span class="arch-sub">Web, Mobile &amp; Hardware</span>
+                    </div>
+                    <div class="arch-arrow">→</div>
+                    <div class="arch-step">
+                      <span class="arch-chip arch-chip--gw">API Gateway</span>
+                      <span class="arch-sub">Rate Limiting &amp; NGINX</span>
+                    </div>
+                    <div class="arch-arrow">→</div>
+                    <div class="arch-step arch-step--group">
+                      <div class="arch-chip arch-chip--srv">Auth Service</div>
+                      <div class="arch-chip arch-chip--srv">Charging Core</div>
+                      <div class="arch-chip arch-chip--srv">Tariffs Engine</div>
+                    </div>
+                    <div class="arch-arrow">→</div>
+                    <div class="arch-step arch-step--data">
+                      <div class="arch-chip arch-chip--db">Kafka Event Bus</div>
+                      <div class="arch-chip arch-chip--db">Redis Sentinel</div>
+                      <div class="arch-chip arch-chip--db">PostgreSQL Cluster</div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </article>
+
+          <!-- Case 2: Product Lifecycle Leadership -->
+          <article class="case-card" id="case-product-lifecycle">
+            <div class="case-card__header" role="button" tabindex="0" aria-expanded="false">
+              <div class="case-card__num">02</div>
+              <div class="case-card__meta">
+                <h3 class="case-card__title">Leading End-to-End Product Lifecycle for Mission-Critical EV Software</h3>
+                <div class="case-card__tags">
+                  <span class="case-badge">Product Ownership</span>
+                  <span class="case-sep">·</span>
+                  <span class="case-corp">Elocity</span>
+                  <span class="case-sep">·</span>
+                  <span class="case-metric">Cross-Functional Leadership</span>
+                </div>
+              </div>
+              <div class="case-card__chevron" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+              </div>
+            </div>
+
+            <div class="case-card__drawer">
+              <div class="case-card__grid">
+                <div class="case-box">
+                  <span class="case-box__label">CONTEXT &amp; CHALLENGE</span>
+                  <h4 class="case-box__title">Bridging High-Speed Demands with Engineering Sanity</h4>
+                  <p>Transitioned from senior engineering to Technical Product Manager. Rapidly expanding operator accounts requested disparate features without unified architectural standards, risking codebase divergence.</p>
+                </div>
+
+                <div class="case-box">
+                  <span class="case-box__label">OWNERSHIP &amp; ROLE</span>
+                  <h4 class="case-box__title">Technical Product Manager</h4>
+                  <p>Directed whole-product lifecycle: customer discovery interviews, data-driven feature scoring (RICE/Value-Effort), technical PRD documentation, sprint commitments, and release governance.</p>
+                </div>
+
+                <div class="case-box case-box--wide">
+                  <span class="case-box__label">KEY DECISIONS &amp; FRAMEWORKS</span>
+                  <ul class="case-check-list">
+                    <li><strong class="text-accent">Contract-First PRD Standard:</strong> Established rigid PRD templates detailing data models, edge cases, failure states, and acceptance criteria before sprint planning.</li>
+                    <li><strong class="text-accent">Telemetry-Driven Roadmap Prioritization:</strong> Replaced subjective opinions with actual telemetry logs, driver drop-off funnels, and operator support tickets.</li>
+                    <li><strong class="text-accent">Platform Reliability Over Shiny Velocity:</strong> Established a 20% dedicated capacity buffer per sprint specifically for tech debt, database indexes, and resilience.</li>
+                  </ul>
+                </div>
+
+                <div class="case-box case-box--metric">
+                  <span class="case-box__label">MEASURABLE OUTCOME</span>
+                  <div class="outcome-stat-row">
+                    <div class="outcome-stat">
+                      <span class="outcome-stat__num">5&times;</span>
+                      <span class="outcome-stat__text">Increase in concurrent sessions</span>
+                    </div>
+                    <div class="outcome-stat">
+                      <span class="outcome-stat__num">&minus;40%</span>
+                      <span class="outcome-stat__text">PRD clarification churn</span>
+                    </div>
+                    <div class="outcome-stat">
+                      <span class="outcome-stat__num">100%</span>
+                      <span class="outcome-stat__text">On-time quarterly OKR delivery</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Case 3: EV Protocol Integration (OCPP & OCPI) -->
+          <article class="case-card" id="case-ev-interop">
+            <div class="case-card__header" role="button" tabindex="0" aria-expanded="false">
+              <div class="case-card__num">03</div>
+              <div class="case-card__meta">
+                <h3 class="case-card__title">EV Protocol Integration: OCPP 1.6/2.0 &amp; OCPI Roaming</h3>
+                <div class="case-card__tags">
+                  <span class="case-badge">IoT &amp; Protocols</span>
+                  <span class="case-sep">·</span>
+                  <span class="case-corp">EV Infrastructure</span>
+                  <span class="case-sep">·</span>
+                  <span class="case-metric">Hardware Interoperability</span>
+                </div>
+              </div>
+              <div class="case-card__chevron" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+              </div>
+            </div>
+
+            <div class="case-card__drawer">
+              <div class="case-card__grid">
+                <div class="case-box">
+                  <span class="case-box__label">CONTEXT &amp; CHALLENGE</span>
+                  <h4 class="case-box__title">Physical Hardware Quirks in a Digital Cloud</h4>
+                  <p>Connecting thousands of physical chargers from 10+ hardware manufacturers running different firmware versions revealed continuous non-compliant JSON payloads and dropped WebSocket connections.</p>
+                </div>
+
+                <div class="case-box">
+                  <span class="case-box__label">OWNERSHIP &amp; ROLE</span>
+                  <h4 class="case-box__title">Protocol Architect &amp; Product Owner</h4>
+                  <p>Authored protocol adapter specifications, led integration testing in physical charger test benches, and engineered abstraction adapters isolating core charging logic from messy charger firmware.</p>
+                </div>
+
+                <div class="case-box case-box--wide">
+                  <span class="case-box__label">ENGINEERING HIGHLIGHTS</span>
+                  <ul class="case-check-list">
+                    <li><strong class="text-accent">State Machine Fault Tolerance:</strong> Created an asynchronous state machine with reconciliation timers that cleanly handle unexpected offline events mid-charge.</li>
+                    <li><strong class="text-accent">OCPP 1.6J to 2.0.1 Pathway:</strong> Designed a bidirectional message translator enabling forward-compatibility with advanced smart charging profiles.</li>
+                    <li><strong class="text-accent">OCPI 2.2 Roaming Integration:</strong> Connected external e-Mobility Service Providers (eMSPs) with token authentication, live session push, and CDR settlement.</li>
+                  </ul>
+                </div>
+
+                <div class="case-box case-box--metric">
+                  <span class="case-box__label">MEASURABLE OUTCOME</span>
+                  <div class="outcome-stat-row">
+                    <div class="outcome-stat">
+                      <span class="outcome-stat__num">&minus;65%</span>
+                      <span class="outcome-stat__text">Hardware onboarding time</span>
+                    </div>
+                    <div class="outcome-stat">
+                      <span class="outcome-stat__num">99.8%</span>
+                      <span class="outcome-stat__text">Session message delivery rate</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Case 4: Multi-Dimensional Tariffs & Billing -->
+          <article class="case-card" id="case-billing-tariffs">
+            <div class="case-card__header" role="button" tabindex="0" aria-expanded="false">
+              <div class="case-card__num">04</div>
+              <div class="case-card__meta">
+                <h3 class="case-card__title">Multi-Dimensional Tariffs &amp; Automated Revenue-Share Billing</h3>
+                <div class="case-card__tags">
+                  <span class="case-badge">Fintech &amp; Billing</span>
+                  <span class="case-sep">·</span>
+                  <span class="case-corp">EV SaaS Platform</span>
+                  <span class="case-sep">·</span>
+                  <span class="case-metric">Audit-Grade Financials</span>
+                </div>
+              </div>
+              <div class="case-card__chevron" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+              </div>
+            </div>
+
+            <div class="case-card__drawer">
+              <div class="case-card__grid">
+                <div class="case-box">
+                  <span class="case-box__label">CONTEXT &amp; CHALLENGE</span>
+                  <h4 class="case-box__title">Complex Multi-Party Monetization</h4>
+                  <p>EV pricing is multidimensional: base connection fees, energy consumption (kWh), time-of-use peak surcharges, and parking penalties, followed by fractional revenue splits among site owners and grid utilities.</p>
+                </div>
+
+                <div class="case-box">
+                  <span class="case-box__label">OWNERSHIP &amp; ROLE</span>
+                  <h4 class="case-box__title">Fintech Product Owner</h4>
+                  <p>Owned the tariff configuration engine, financial settlement math, and tax calculation modules with zero tolerance for floating point rounding discrepancies.</p>
+                </div>
+
+                <div class="case-box case-box--wide">
+                  <span class="case-box__label">SYSTEM HIGHLIGHTS</span>
+                  <ul class="case-check-list">
+                    <li><strong class="text-accent">Exact Decimal Math:</strong> Implemented strict integer/arbitrary-precision decimal arithmetic to guarantee zero financial drift across thousands of daily microtransactions.</li>
+                    <li><strong class="text-accent">Dynamic Tiered Tariffs:</strong> Created flexible policy builders allowing operators to customize time-of-day tariffs and commercial fleet discounts.</li>
+                    <li><strong class="text-accent">Automated Invoicing &amp; Payouts:</strong> Automated end-of-month PDF tax invoice generation and settlement ledger exports for commercial hosts.</li>
+                  </ul>
+                </div>
+
+                <div class="case-box case-box--metric">
+                  <span class="case-box__label">MEASURABLE OUTCOME</span>
+                  <div class="outcome-stat-row">
+                    <div class="outcome-stat">
+                      <span class="outcome-stat__num">100%</span>
+                      <span class="outcome-stat__text">Reconciliation accuracy</span>
+                    </div>
+                    <div class="outcome-stat">
+                      <span class="outcome-stat__num">0</span>
+                      <span class="outcome-stat__text">Manual billing disputes</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Case 5: Enterprise SAP Performance & Reliability -->
+          <article class="case-card" id="case-enterprise-sap">
+            <div class="case-card__header" role="button" tabindex="0" aria-expanded="false">
+              <div class="case-card__num">05</div>
+              <div class="case-card__meta">
+                <h3 class="case-card__title">Enterprise Performance &amp; Banking Connector Reliability at Scale</h3>
+                <div class="case-card__tags">
+                  <span class="case-badge">Enterprise SaaS</span>
+                  <span class="case-sep">·</span>
+                  <span class="case-corp">SAP Labs</span>
+                  <span class="case-sep">·</span>
+                  <span class="case-metric">Catalyst Award</span>
+                </div>
+              </div>
+              <div class="case-card__chevron" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+              </div>
+            </div>
+
+            <div class="case-card__drawer">
+              <div class="case-card__grid">
+                <div class="case-box">
+                  <span class="case-box__label">CONTEXT &amp; CHALLENGE</span>
+                  <h4 class="case-box__title">Mission-Critical Global Banking Concurrency</h4>
+                  <p>Enterprise clients managing billions in capital relied on SAP Multi-Bank Connectivity (MBC). Transaction batches across 115+ international banks required absolute data integrity and low-latency processing.</p>
+                </div>
+
+                <div class="case-box">
+                  <span class="case-box__label">OWNERSHIP &amp; ROLE</span>
+                  <h4 class="case-box__title">Software Developer (Core Banking Modules)</h4>
+                  <p>Engineered core module performance enhancements, concurrency lock optimizations, and international client delivery (including on-site consulting with Belgian banking client).</p>
+                </div>
+
+                <div class="case-box case-box--wide">
+                  <span class="case-box__label">KEY ACHIEVEMENTS</span>
+                  <ul class="case-check-list">
+                    <li><strong class="text-accent">5× Acceleration in SAP PM Module:</strong> Refactored memory management and database query logic, reducing batch execution runtimes drastically.</li>
+                    <li><strong class="text-accent">Rock-Solid 115+ Bank Integration:</strong> Handled MT940, CAMT.053, and ISO 20022 banking formats with fault-tolerant parsing.</li>
+                    <li><strong class="text-accent">SAP Catalyst Award:</strong> Recognized by executive leadership for exceptional delivery speed and zero-regression production releases.</li>
+                  </ul>
+                </div>
+
+                <div class="case-box case-box--metric">
+                  <span class="case-box__label">MEASURABLE OUTCOME</span>
+                  <div class="outcome-stat-row">
+                    <div class="outcome-stat">
+                      <span class="outcome-stat__num">5&times;</span>
+                      <span class="outcome-stat__text">Core module runtime speedup</span>
+                    </div>
+                    <div class="outcome-stat">
+                      <span class="outcome-stat__num">115+</span>
+                      <span class="outcome-stat__text">International banks supported</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ═══════════════ APPROACH / METHODOLOGY ═══════════════ -->
+    <section class="section-editorial approach-section" id="approach">
+      <div class="section-container">
+        
+        <header class="section-head">
+          <div class="section-tag-row">
+            <span class="section-index-badge">02</span>
+            <span class="pill-tag pill-tag--mint">METHODOLOGY</span>
+          </div>
+          <h2 class="section-heading-editorial">Product &times; Engineering Framework</h2>
+          <p class="section-desc-editorial">
+            A disciplined five-phase methodology bridging customer discovery and commercial objectives directly with robust, production-grade distributed architectures.
+          </p>
+        </header>
+
+        <div class="approach-grid-editorial">
+          
+          <div class="approach-card">
+            <div class="approach-card__num">01</div>
+            <span class="pill-tag pill-tag--mint">DISCOVER</span>
+            <h3 class="approach-card__title">Ground in Telemetry &amp; First Principles</h3>
+            <p class="approach-card__desc">Uncover true operational bottlenecks through production APM metrics, customer session funnels, and root-cause analysis before touching specs.</p>
+          </div>
+
+          <div class="approach-card">
+            <div class="approach-card__num">02</div>
+            <span class="pill-tag pill-tag--gold">MAP &amp; SCOPE</span>
+            <h3 class="approach-card__title">Evaluate Feasibility &amp; Trade-offs</h3>
+            <p class="approach-card__desc">Model throughput thresholds, compute cost, and delivery risk. Ensure every engineering choice directly compounds business ROI without hidden debt.</p>
+          </div>
+
+          <div class="approach-card">
+            <div class="approach-card__num">03</div>
+            <span class="pill-tag pill-tag--coral">SPECIFY</span>
+            <h3 class="approach-card__title">Draft Unambiguous PRD Contracts</h3>
+            <p class="approach-card__desc">Author rigorous technical PRDs, OpenAPI schemas, and edge-case acceptance criteria. Unify engineers, QA, and business stakeholders early.</p>
+          </div>
+
+          <div class="approach-card">
+            <div class="approach-card__num">04</div>
+            <span class="pill-tag pill-tag--navy">DELIVER</span>
+            <h3 class="approach-card__title">Build Side-by-Side with Engineering</h3>
+            <p class="approach-card__desc">Stay embedded across sprint cycles—resolving ambiguities, reviewing database schemas, and ensuring smooth zero-downtime deployment paths.</p>
+          </div>
+
+          <div class="approach-card">
+            <div class="approach-card__num">05</div>
+            <span class="pill-tag pill-tag--berry">MEASURE</span>
+            <h3 class="approach-card__title">Validate Outcomes &amp; Compound Gains</h3>
+            <p class="approach-card__desc">Shipped code isn't done. Track real user adoption, P99 API latencies, and SLA uptime against OKRs to feed proven insights into subsequent roadmaps.</p>
+          </div>
+
+        </div>
+
       </div>
     </section>
 
     <!-- ═══════════════ EV & ENERGY DOMAIN ═══════════════ -->
-    <section class="section ev-domain" id="ev-domain">
-      <div class="section__container">
-        <header class="section__header">
-          <span class="section__number">03</span>
-          <h2 class="section__title">EV Charging &amp; Energy</h2>
-          <p class="section__subtitle">Practical domain experience connecting physical chargers, grid energy management, and multi-tenant SaaS billing.</p>
+    <section class="section-editorial ev-domain-section" id="ev-domain">
+      <div class="section-container">
+        
+        <header class="section-head">
+          <div class="section-tag-row">
+            <span class="section-index-badge">03</span>
+            <span class="pill-tag pill-tag--teal">DEEP DOMAIN</span>
+          </div>
+          <h2 class="section-heading-editorial">EV Charging &amp; Energy Domain Expertise</h2>
+          <p class="section-desc-editorial">
+            Four years on the frontlines of the clean energy transition connecting physical hardware, electrical grid capacity, and multi-tenant SaaS billing.
+          </p>
         </header>
 
-        <div class="ev__grid">
-          <div class="ev__card">
-            <span class="ev__card-badge">CPMS PLATFORM</span>
-            <h3>Charging Management Core</h3>
-            <p>Real-time orchestration of charger telemetry, driver sessions, remote commands, and operational uptime.</p>
+        <div class="ev-grid-editorial">
+          
+          <div class="domain-card">
+            <div class="domain-card__icon">⚡</div>
+            <span class="pill-tag pill-tag--mint">CPMS PLATFORM</span>
+            <h3 class="domain-card__title">Charge Point Management Systems</h3>
+            <p class="domain-card__desc">High-concurrency orchestration of real-time charger telemetry, driver session lifecycles, and remote command dispatch across thousands of live ports.</p>
           </div>
-          <div class="ev__card">
-            <span class="ev__card-badge">HARDWARE PROTOCOLS</span>
-            <h3>OCPP 1.6 &amp; 2.0 Integration</h3>
-            <p>Deep protocol handling: state machines, remote start/stop, firmware updates, and vendor-specific device quirks.</p>
+
+          <div class="domain-card">
+            <div class="domain-card__icon">🔌</div>
+            <span class="pill-tag pill-tag--coral">PROTOCOLS</span>
+            <h3 class="domain-card__title">OCPP 1.6 &amp; 2.0.1 Mastery</h3>
+            <p class="domain-card__desc">Deep protocol implementation: state machines, remote start/stop, firmware upgrades, smart charging profiles, and vendor firmware troubleshooting.</p>
           </div>
-          <div class="ev__card">
-            <span class="ev__card-badge">ROAMING NETWORKS</span>
-            <h3>OCPI &amp; Network Interop</h3>
-            <p>Cross-network roaming integration enabling seamless driver access across participating partner networks.</p>
+
+          <div class="domain-card">
+            <div class="domain-card__icon">🌐</div>
+            <span class="pill-tag pill-tag--teal">ROAMING</span>
+            <h3 class="domain-card__title">OCPI e-Mobility Roaming</h3>
+            <p class="domain-card__desc">Seamless cross-network integration allowing drivers to authenticate, initiate charging, and settle fees across partner networks without separate accounts.</p>
           </div>
-          <div class="ev__card">
-            <span class="ev__card-badge">DYNAMIC PRICING</span>
-            <h3>Tariffs &amp; Energy Billing</h3>
-            <p>Multi-dimensional pricing engines spanning kWh consumption, time-of-use rates, and peak demand surcharges.</p>
+
+          <div class="domain-card">
+            <div class="domain-card__icon">📊</div>
+            <span class="pill-tag pill-tag--gold">DYNAMIC PRICING</span>
+            <h3 class="domain-card__title">Complex Tariffs &amp; Energy Billing</h3>
+            <p class="domain-card__desc">Multi-dimensional pricing engines combining energy consumed (kWh), peak time-of-use rates, parking overtime fees, and host revenue splits.</p>
           </div>
-          <div class="ev__card">
-            <span class="ev__card-badge">FINANCIAL CLEARING</span>
-            <h3>Revenue Share &amp; Settlements</h3>
-            <p>Automated financial clearing and auditable PDF reporting between platform operators and site hosts.</p>
+
+          <div class="domain-card">
+            <div class="domain-card__icon">📑</div>
+            <span class="pill-tag pill-tag--navy">FINANCIAL CLEARING</span>
+            <h3 class="domain-card__title">Automated Host Settlements</h3>
+            <p class="domain-card__desc">Zero-error financial clearing and automated PDF invoicing between platform operators, property hosts, and fleet corporate accounts.</p>
           </div>
-          <div class="ev__card">
-            <span class="ev__card-badge">GRID BALANCING</span>
-            <h3>Smart Charging &amp; Energy</h3>
-            <p>Grid-aware load management, local power throttling, and fleet scheduling to protect electrical assets.</p>
+
+          <div class="domain-card">
+            <div class="domain-card__icon">🔋</div>
+            <span class="pill-tag pill-tag--berry">GRID BALANCING</span>
+            <h3 class="domain-card__title">Smart Charging &amp; Peak Shaving</h3>
+            <p class="domain-card__desc">Grid-aware power throttling, local load management (LLM), and prioritized fleet scheduling to safeguard electrical transformer capacity.</p>
           </div>
+
         </div>
+
       </div>
     </section>
 
     <!-- ═══════════════ CAPABILITIES ═══════════════ -->
-    <section class="section capabilities" id="capabilities">
-      <div class="section__container">
-        <header class="section__header">
-          <span class="section__number">04</span>
-          <h2 class="section__title">Capabilities</h2>
-          <p class="section__subtitle">Core competencies organized by business and technical impact.</p>
+    <section class="section-editorial capabilities-section" id="capabilities">
+      <div class="section-container">
+        
+        <header class="section-head">
+          <div class="section-tag-row">
+            <span class="section-index-badge">04</span>
+            <span class="pill-tag pill-tag--gold">COMPETENCIES</span>
+          </div>
+          <h2 class="section-heading-editorial">Capabilities &amp; Core Stack</h2>
+          <p class="section-desc-editorial">
+            Technical product management backed by hands-on engineering execution across high-throughput distributed architectures.
+          </p>
         </header>
 
-        <div class="cap__grid">
-          <div class="cap__group">
-            <h3 class="cap__group-title">Product &amp; Strategy</h3>
-            <ul class="cap__list">
-              <li><span class="kw">End-to-End Product Lifecycle</span></li>
-              <li><span class="kw">PRD Specifications &amp; User Stories</span></li>
-              <li><span class="kw">OKR &amp; KPI Metric Alignment</span></li>
-              <li><span class="kw">B2B SaaS Monetization Workflows</span></li>
-              <li>Stakeholder Alignment &amp; Roadmap Prioritization</li>
-              <li>Customer Discovery &amp; Usability Feedback</li>
-              <li>Cross-Functional Delivery Leadership</li>
+        <div class="cap-grid-editorial">
+          
+          <!-- Cap Group 1 -->
+          <div class="cap-card">
+            <div class="cap-card__header">
+              <span class="cap-card__mark">◈</span>
+              <h3 class="cap-card__title">Product &amp; Strategy</h3>
+            </div>
+            <ul class="cap-pill-list">
+              <li><span class="kw-pill">End-to-End Product Lifecycle</span></li>
+              <li><span class="kw-pill">Technical PRD Contracts</span></li>
+              <li><span class="kw-pill">OKR &amp; KPI Metric Alignment</span></li>
+              <li><span class="kw-pill">B2B SaaS Monetization</span></li>
+              <li>Stakeholder Alignment</li>
+              <li>Customer Discovery &amp; Interviews</li>
+              <li>Data-Driven Roadmap Prioritization</li>
+              <li>Cross-Functional Team Leadership</li>
             </ul>
           </div>
 
-          <div class="cap__group">
-            <h3 class="cap__group-title">Software &amp; Systems Engineering</h3>
-            <ul class="cap__list">
-              <li><span class="kw">Distributed Microservices Architecture</span></li>
-              <li><span class="kw">Event-Driven Streaming (Kafka)</span></li>
-              <li><span class="kw">High-Throughput Node.js &amp; NestJS</span></li>
-              <li><span class="kw">PostgreSQL &amp; Redis Sentinel Caching</span></li>
-              <li>REST &amp; GraphQL API Contract Design</li>
+          <!-- Cap Group 2 -->
+          <div class="cap-card">
+            <div class="cap-card__header">
+              <span class="cap-card__mark">▣</span>
+              <h3 class="cap-card__title">Software &amp; Systems Engineering</h3>
+            </div>
+            <ul class="cap-pill-list">
+              <li><span class="kw-pill">Distributed Microservices</span></li>
+              <li><span class="kw-pill">Kafka Event Streaming</span></li>
+              <li><span class="kw-pill">NestJS &amp; High-Throughput Node.js</span></li>
+              <li><span class="kw-pill">PostgreSQL &amp; Redis Sentinel</span></li>
+              <li>REST &amp; GraphQL API Contracts</li>
               <li>TypeScript &amp; Modern Python</li>
-              <li>Concurrency Control &amp; Performance Tuning</li>
+              <li>Concurrency &amp; Lock Optimization</li>
+              <li>Database Indexing &amp; Partitioning</li>
             </ul>
           </div>
 
-          <div class="cap__group">
-            <h3 class="cap__group-title">Cloud &amp; Platform</h3>
-            <ul class="cap__list">
-              <li><span class="kw">Kubernetes (EKS) Orchestration</span></li>
-              <li><span class="kw">AWS Cloud Services (EC2, S3, RDS)</span></li>
-              <li><span class="kw">Observability &amp; APM Monitoring</span></li>
-              <li>NGINX Ingress &amp; Cloudflare Edge CDN</li>
-              <li>Horizontal Autoscaling &amp; Zero-Downtime Deploys</li>
+          <!-- Cap Group 3 -->
+          <div class="cap-card">
+            <div class="cap-card__header">
+              <span class="cap-card__mark">☸</span>
+              <h3 class="cap-card__title">Cloud &amp; Platform</h3>
+            </div>
+            <ul class="cap-pill-list">
+              <li><span class="kw-pill">Kubernetes (EKS) Orchestration</span></li>
+              <li><span class="kw-pill">AWS (EC2, S3, RDS, CloudWatch)</span></li>
+              <li><span class="kw-pill">Observability (OpenSearch, Sentry)</span></li>
+              <li>Horizontal Autoscaling (HPA)</li>
+              <li>Zero-Downtime Deployments</li>
+              <li>Docker Containerization</li>
+              <li>NGINX Ingress &amp; Edge Security</li>
               <li>High Availability &amp; Disaster Recovery</li>
             </ul>
           </div>
 
-          <div class="cap__group">
-            <h3 class="cap__group-title">EV &amp; Mobility Domain</h3>
-            <ul class="cap__list">
-              <li><span class="kw">OCPP 1.6J &amp; 2.0.1 Protocol Integration</span></li>
-              <li><span class="kw">OCPI 2.2 Roaming &amp; e-Mobility</span></li>
-              <li><span class="kw">Charge Point Management Systems (CPMS)</span></li>
-              <li>Load-Based Tariff Engines &amp; Revenue Sharing</li>
-              <li>Hardware Bench Testing &amp; Firmware Troubleshooting</li>
-              <li>Payment Gateways &amp; Automated Invoicing</li>
+          <!-- Cap Group 4 -->
+          <div class="cap-card">
+            <div class="cap-card__header">
+              <span class="cap-card__mark">⚡</span>
+              <h3 class="cap-card__title">EV &amp; Mobility Domain</h3>
+            </div>
+            <ul class="cap-pill-list">
+              <li><span class="kw-pill">OCPP 1.6J &amp; 2.0.1 Protocols</span></li>
+              <li><span class="kw-pill">OCPI 2.2 Roaming Standard</span></li>
+              <li><span class="kw-pill">CPMS Architecture</span></li>
+              <li>Dynamic Tariffs &amp; Settlements</li>
+              <li>Charger Hardware Bench Testing</li>
+              <li>Firmware Troubleshooting</li>
+              <li>Payment Gateway Integrations</li>
+              <li>Smart Charging Load Throttling</li>
             </ul>
           </div>
 
-          <div class="cap__group">
-            <h3 class="cap__group-title">AI &amp; Emerging Tech</h3>
-            <ul class="cap__list">
-              <li><span class="kw">AI-Assisted Engineering &amp; PM Workflows</span></li>
-              <li>LLM Product Integration Feasibility Analysis</li>
-              <li>Agentic Automation Systems &amp; Tooling</li>
-              <li>Practical Evaluation of ML Utility vs. Cost</li>
+          <!-- Cap Group 5 -->
+          <div class="cap-card cap-card--full">
+            <div class="cap-card__header">
+              <span class="cap-card__mark">✦</span>
+              <h3 class="cap-card__title">AI &amp; Emerging Tech Engineering</h3>
+            </div>
+            <ul class="cap-pill-list">
+              <li><span class="kw-pill">AI-Assisted Engineering Workflows</span></li>
+              <li><span class="kw-pill">LLM Product Feasibility &amp; ROI Analysis</span></li>
+              <li><span class="kw-pill">Agentic Automation Systems</span></li>
+              <li>API Schema Integration for AI Agents</li>
+              <li>Practical ML Utility vs. Compute Cost Evaluation</li>
             </ul>
-            <p class="cap__note">Focused on practical product integration and workflow acceleration rather than pure model research.</p>
+            <p class="cap-footnote">Focused on practical product integration, operational velocity, and high-impact business workflows rather than speculative model research.</p>
           </div>
+
         </div>
+
       </div>
     </section>
 
-    <!-- ═══════════════ CAREER ═══════════════ -->
-    <section class="section career" id="career">
-      <div class="section__container">
-        <header class="section__header">
-          <span class="section__number">05</span>
-          <h2 class="section__title">Career Path</h2>
-          <p class="section__subtitle">A deliberate evolution from systems engineering to product ownership.</p>
+    <!-- ═══════════════ CAREER TIMELINE ═══════════════ -->
+    <section class="section-editorial career-section" id="career">
+      <div class="section-container">
+        
+        <header class="section-head">
+          <div class="section-tag-row">
+            <span class="section-index-badge">05</span>
+            <span class="pill-tag pill-tag--navy">JOURNEY</span>
+          </div>
+          <h2 class="section-heading-editorial">Career Path &amp; Track Record</h2>
+          <p class="section-desc-editorial">
+            A deliberate evolution from low-level systems and enterprise banking engineering to high-ownership technical product management.
+          </p>
         </header>
 
-        <div class="timeline">
-          <div class="timeline__item timeline__item--current">
-            <div class="timeline__marker"></div>
-            <div class="timeline__content">
-              <span class="timeline__date">2024 — Present</span>
-              <h3 class="timeline__role">Technical Product Manager</h3>
-              <span class="timeline__company">Elocity · Bangalore</span>
-              <p>Directing the product lifecycle for an EV charging SaaS platform. Spearheading roadmap strategy, technical PRDs, cross-functional sprints, and customer revenue modules.</p>
+        <div class="editorial-timeline">
+          
+          <!-- Item 1: Elocity TPM -->
+          <div class="timeline-row timeline-row--active">
+            <div class="timeline-row__side">
+              <span class="timeline-badge timeline-badge--current">PRESENT</span>
+              <span class="timeline-year">2024 — Now</span>
+            </div>
+            <div class="timeline-row__node">
+              <div class="timeline-node-dot"></div>
+              <div class="timeline-node-line"></div>
+            </div>
+            <div class="timeline-row__card">
+              <div class="timeline-row__card-head">
+                <div>
+                  <h3 class="timeline-role">Technical Product Manager</h3>
+                  <span class="timeline-corp">Elocity · Bangalore, India</span>
+                </div>
+                <span class="pill-tag pill-tag--mint">PRODUCT LEADERSHIP</span>
+              </div>
+              <p class="timeline-desc">
+                Leading the whole product lifecycle for an EV charging SaaS platform. Directing technical PRDs, roadmap governance, cross-functional engineering sprints, customer tariff engines, and platform scalability.
+              </p>
             </div>
           </div>
-          <div class="timeline__item">
-            <div class="timeline__marker"></div>
-            <div class="timeline__content">
-              <span class="timeline__date">2022 — 2024</span>
-              <h3 class="timeline__role">Senior Software Engineer</h3>
-              <span class="timeline__company">Elocity · Bangalore</span>
-              <p>Engineered backend microservices, Kafka event streaming pipelines, and Redis caching layers. Scaled core platform capacity to 500K+ daily transactions.</p>
+
+          <!-- Item 2: Elocity Senior SWE -->
+          <div class="timeline-row">
+            <div class="timeline-row__side">
+              <span class="timeline-year">2022 — 2024</span>
+            </div>
+            <div class="timeline-row__node">
+              <div class="timeline-node-dot"></div>
+              <div class="timeline-node-line"></div>
+            </div>
+            <div class="timeline-row__card">
+              <div class="timeline-row__card-head">
+                <div>
+                  <h3 class="timeline-role">Senior Software Engineer</h3>
+                  <span class="timeline-corp">Elocity · Bangalore, India</span>
+                </div>
+                <span class="pill-tag pill-tag--coral">DISTRIBUTED SYSTEMS</span>
+              </div>
+              <p class="timeline-desc">
+                Architected high-throughput backend microservices, Kafka event streaming pipelines, and Redis Sentinel caching. Scaled core platform capacity to 500K+ daily transactions at 99.9% uptime.
+              </p>
             </div>
           </div>
-          <div class="timeline__item">
-            <div class="timeline__marker"></div>
-            <div class="timeline__content">
-              <span class="timeline__date">2018 — 2022</span>
-              <h3 class="timeline__role">Software Developer</h3>
-              <span class="timeline__company">SAP Labs · Bangalore</span>
-              <p>Built high-throughput enterprise modules for banking and insurance clients. Ensured reliability across 115+ bank connections; received SAP Catalyst Award.</p>
+
+          <!-- Item 3: SAP Labs Software Developer -->
+          <div class="timeline-row">
+            <div class="timeline-row__side">
+              <span class="timeline-year">2018 — 2022</span>
+            </div>
+            <div class="timeline-row__node">
+              <div class="timeline-node-dot"></div>
+              <div class="timeline-node-line"></div>
+            </div>
+            <div class="timeline-row__card">
+              <div class="timeline-row__card-head">
+                <div>
+                  <h3 class="timeline-role">Software Developer</h3>
+                  <span class="timeline-corp">SAP Labs · Bangalore, India</span>
+                </div>
+                <span class="pill-tag pill-tag--gold">SAP CATALYST AWARD</span>
+              </div>
+              <p class="timeline-desc">
+                Built enterprise banking and insurance connectors for SAP Multi-Bank Connectivity (MBC). Ensured 24/7 reliability across 115+ global financial institutions; recognized with the prestigious SAP Catalyst Award.
+              </p>
             </div>
           </div>
-          <div class="timeline__item">
-            <div class="timeline__marker"></div>
-            <div class="timeline__content">
-              <span class="timeline__date">2014 — 2018</span>
-              <h3 class="timeline__role">B.Tech, Computer Science</h3>
-              <span class="timeline__company">SJCE, Mysore · GPA 9.2</span>
-              <p>Solid computer science foundation. Included internship at SAP Labs (IXP Program) and early software development at PiRuby.</p>
+
+          <!-- Item 4: Education -->
+          <div class="timeline-row">
+            <div class="timeline-row__side">
+              <span class="timeline-year">2014 — 2018</span>
+            </div>
+            <div class="timeline-row__node">
+              <div class="timeline-node-dot"></div>
+            </div>
+            <div class="timeline-row__card">
+              <div class="timeline-row__card-head">
+                <div>
+                  <h3 class="timeline-role">B.Tech, Computer Science &amp; Engineering</h3>
+                  <span class="timeline-corp">SJCE, Mysore · GPA 9.2 / 10.0</span>
+                </div>
+                <span class="pill-tag pill-tag--navy">FOUNDATIONS</span>
+              </div>
+              <p class="timeline-desc">
+                Rigorous computer science foundation spanning operating systems, algorithms, distributed computing, and database theory. Included SAP IXP internship and early product engineering at PiRuby.
+              </p>
             </div>
           </div>
+
         </div>
+
       </div>
     </section>
 
-    <!-- ═══════════════ ABOUT ═══════════════ -->
-    <section class="section about" id="about">
-      <div class="section__container">
-        <header class="section__header">
-          <span class="section__number">06</span>
-          <h2 class="section__title">About</h2>
+    <!-- ═══════════════ ABOUT SECTION ═══════════════ -->
+    <section class="section-editorial about-section" id="about">
+      <div class="section-container">
+        
+        <header class="section-head">
+          <div class="section-tag-row">
+            <span class="section-index-badge">06</span>
+            <span class="pill-tag pill-tag--berry">PHILOSOPHY</span>
+          </div>
+          <h2 class="section-heading-editorial">About &amp; Principles</h2>
         </header>
 
-        <div class="about__content">
-          <div class="about__text">
-            <div class="about__header-bio">
-              <img src="assets/profile-pic.png" alt="Deepak Bharadwaj" class="about__avatar-thumb" width="64" height="64" loading="lazy">
+        <div class="about-grid-editorial">
+          
+          <!-- Left Bio Card -->
+          <div class="about-bio-card">
+            <div class="about-profile-header">
+              <div class="about-avatar-frame">
+                <img src="assets/profile-pic.png" alt="Deepak Bharadwaj" width="80" height="80" loading="lazy">
+              </div>
               <div>
-                <p class="about__lead" style="margin-bottom:0;">Engineer by training, product manager by trade.</p>
-                <span style="font-size:0.86rem; color:var(--text-dim); font-family:var(--font-mono);">Bangalore, India · 9 Years of Building</span>
+                <h3 class="about-name">Deepak Bharadwaj</h3>
+                <span class="about-creds">Engineer by training · Product Manager by trade</span>
+                <div class="about-meta-row">
+                  <span class="about-loc">Bangalore, India</span>
+                  <span class="about-sep">·</span>
+                  <span class="about-exp">9+ Years Building Platforms</span>
+                </div>
               </div>
             </div>
 
-            <p>I started in deep systems engineering at SAP Labs, mastering concurrency, databases, and enterprise reliability. Over the past four years in the fast-moving EV charging software space, I transitioned into technical product management—where business outcomes and architecture decisions intersect.</p>
-
-            <p>I thrive on turning messy, technical ambiguity into dependable software that solves customer problems. I believe in high agency, candid communication, and engineering teams that own their outcomes from commit to production.</p>
+            <div class="about-narrative">
+              <p>
+                I cut my teeth in deep enterprise systems engineering at <strong>SAP Labs</strong>, mastering distributed concurrency, relational database indexing, and the unyielding demands of mission-critical banking connectors.
+              </p>
+              <p>
+                Over the past four years in the fast-moving EV charging software space, I stepped into <strong>technical product management</strong>—where business goals, unit economics, and complex distributed architectures collide.
+              </p>
+              <p>
+                I thrive on turning messy technical ambiguity into dependable software that solves customer problems. I believe in high agency, radical candor, and engineering teams that own their outcomes from commit to production.
+              </p>
+            </div>
           </div>
 
-          <div class="about__sidebar">
-            <div class="about__values">
-              <h3>Operating Principles</h3>
-              <ul>
-                <li><span class="kw">High Agency &amp; Ownership</span></li>
-                <li>Simplicity over unnecessary abstraction</li>
-                <li>Data-informed, decisive prioritization</li>
-                <li>Speed tempered by system reliability</li>
-                <li>Transparent, cross-functional collaboration</li>
+          <!-- Right Sidebar: Principles & Honors -->
+          <div class="about-side-stack">
+            
+            <div class="about-side-card">
+              <h3 class="about-side-title">Operating Principles</h3>
+              <ul class="principles-list">
+                <li><strong class="text-accent">High Agency &amp; Ownership:</strong> Take extreme responsibility for the problem, the solution, and the post-launch metrics.</li>
+                <li><strong class="text-accent">Simplicity Over Premature Abstraction:</strong> Solve the actual problem directly before introducing unnecessary architectural layers.</li>
+                <li><strong class="text-accent">Data-Informed, Decisive Prioritization:</strong> Combine user telemetry with sharp intuition to make fast, unambiguous calls.</li>
+                <li><strong class="text-accent">Reliability Is a Feature:</strong> Velocity means nothing if the system degrades under real-world driver peaks.</li>
+                <li><strong class="text-accent">Transparent Cross-Functional Alignment:</strong> Clear technical PRDs bridge business strategy with engineering execution.</li>
               </ul>
             </div>
 
-            <div class="about__awards">
-              <h3>Recognition &amp; Honors</h3>
-              <ul>
-                <li><strong>SAP Catalyst Award (2020)</strong> — High performance delivery</li>
-                <li><strong>Appreciation Letter, RubyPixels (2017)</strong> — Core contributor</li>
-                <li><strong>Best Outgoing Student Award (2012)</strong></li>
+            <div class="about-side-card">
+              <h3 class="about-side-title">Honors &amp; Recognition</h3>
+              <ul class="awards-list">
+                <li>
+                  <strong class="award-name">SAP Catalyst Award (2020)</strong>
+                  <span class="award-desc">Recognized by executive leadership for outstanding engineering velocity and banking connector reliability.</span>
+                </li>
+                <li>
+                  <strong class="award-name">Appreciation Letter, RubyPixels (2017)</strong>
+                  <span class="award-desc">Commended for foundational software architecture and high contribution cadence.</span>
+                </li>
+                <li>
+                  <strong class="award-name">Best Outgoing Student Award (2012)</strong>
+                  <span class="award-desc">Honored for academic excellence and leadership.</span>
+                </li>
               </ul>
             </div>
+
           </div>
+
         </div>
+
       </div>
     </section>
 
-    <!-- ═══════════════ CONTACT ═══════════════ -->
-    <section class="section contact" id="contact">
-      <div class="section__container">
-        <header class="section__header">
-          <span class="section__number">07</span>
-          <h2 class="section__title">Get in Touch</h2>
-          <p class="section__subtitle">Reach out for technical product management opportunities, engineering leadership, or systems consulting.</p>
+    <!-- ═══════════════ GET IN TOUCH (CONTACT HUB) ═══════════════ -->
+    <section class="section-editorial contact-section" id="contact">
+      <div class="section-container">
+        
+        <header class="section-head">
+          <div class="section-tag-row">
+            <span class="section-index-badge">07</span>
+            <span class="pill-tag pill-tag--coral">CONNECT</span>
+          </div>
+          <h2 class="section-heading-editorial">Get in Touch</h2>
+          <p class="section-desc-editorial">
+            Reach out for technical product management opportunities, engineering leadership roles, or distributed systems consulting.
+          </p>
         </header>
 
-        <div class="contact__hub">
-          <!-- Primary Email Action Card -->
-          <div class="contact__primary-card">
-            <div class="contact__primary-header">
-              <div class="contact__icon-box">
-                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <rect width="20" height="16" x="2" y="4" rx="2"></rect>
-                  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
-                </svg>
-              </div>
-              <div class="contact__primary-info">
-                <span class="contact__badge">DIRECT INQUIRY · FASTEST RESPONSE</span>
-                <h3 class="contact__primary-heading">Let's build something exceptional together</h3>
-              </div>
-            </div>
+        <div class="contact-hub-card">
+          
+          <div class="contact-hub-top">
+            <div class="contact-badge-pill">DIRECT INQUIRY · FASTEST RESPONSE</div>
+            <h3 class="contact-hub-title">Let's build something extraordinary together</h3>
+            <p class="contact-hub-sub">Whether scaling a platform to millions of daily events or structuring product governance, my inbox is always open.</p>
+          </div>
 
-            <div class="contact__email-action-row">
-              <a href="mailto:deepakbharadwaj14@gmail.com" class="contact__email-link" id="contact-email">
-                deepakbharadwaj14@gmail.com
+          <div class="contact-action-bar">
+            <a href="mailto:deepakbharadwaj14@gmail.com" class="contact-email-link" id="contact-email">
+              deepakbharadwaj14@gmail.com
+            </a>
+            <div class="contact-btn-pair">
+              <a href="mailto:deepakbharadwaj14@gmail.com?subject=Connecting%20via%20Portfolio" class="btn-coral">
+                <span>Send Email</span>
+                <span class="btn-coral__icon">↗</span>
               </a>
-              <div class="contact__btn-group">
-                <a href="mailto:deepakbharadwaj14@gmail.com?subject=Connecting%20via%20Portfolio" class="btn btn--primary contact__send-btn">
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                    <line x1="22" y1="2" x2="11" y2="13"></line>
-                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
-                  </svg>
-                  <span>Send Email</span>
-                </a>
-                <button type="button" class="btn btn--ghost contact__copy-btn" id="copy-email-btn" data-email="deepakbharadwaj14@gmail.com" aria-label="Copy email address to clipboard">
-                  <svg class="copy-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                    <rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect>
-                    <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path>
-                  </svg>
-                  <span class="copy-text">Copy</span>
-                </button>
-              </div>
+              <button type="button" class="btn-ghost-editorial" id="copy-email-btn" data-email="deepakbharadwaj14@gmail.com" aria-label="Copy email address to clipboard">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect>
+                  <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path>
+                </svg>
+                <span class="copy-text">Copy Email</span>
+              </button>
             </div>
           </div>
 
-          <!-- Secondary Channels Grid -->
-          <div class="contact__channels">
-            <a href="https://www.linkedin.com/in/deepakbharadwaj14" target="_blank" rel="noopener noreferrer" class="channel-card" id="contact-linkedin">
-              <div class="channel-card__icon-box">
+          <!-- Secondary Channels -->
+          <div class="contact-secondary-channels">
+            
+            <a href="https://www.linkedin.com/in/deepakbharadwaj14" target="_blank" rel="noopener noreferrer" class="contact-channel-item" id="contact-linkedin">
+              <div class="channel-icon-wrap">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                   <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
                   <rect width="4" height="12" x="2" y="9"></rect>
                   <circle cx="4" cy="4" r="2"></circle>
                 </svg>
               </div>
-              <div class="channel-card__content">
-                <span class="channel-card__badge">PROFESSIONAL NETWORK</span>
-                <h4 class="channel-card__title">LinkedIn Profile</h4>
-                <span class="channel-card__desc">in/deepakbharadwaj14</span>
+              <div class="channel-meta">
+                <span class="channel-badge">PROFESSIONAL NETWORK</span>
+                <h4 class="channel-title">LinkedIn Profile</h4>
+                <span class="channel-handle">in/deepakbharadwaj14</span>
               </div>
-              <span class="channel-card__arrow" aria-hidden="true">↗</span>
+              <span class="channel-arrow">↗</span>
             </a>
 
-            <div class="channel-card" id="contact-location">
-              <div class="channel-card__icon-box">
+            <div class="contact-channel-item" id="contact-location">
+              <div class="channel-icon-wrap">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                   <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
                   <circle cx="12" cy="10" r="3"></circle>
                 </svg>
               </div>
-              <div class="channel-card__content">
-                <span class="channel-card__badge">LOCATION &amp; TIMEZONE</span>
-                <h4 class="channel-card__title">Bangalore, India</h4>
-                <span class="channel-card__desc">IST (UTC +5:30) · Global Collaboration</span>
+              <div class="channel-meta">
+                <span class="channel-badge">LOCATION &amp; TIMEZONE</span>
+                <h4 class="channel-title">Bangalore, India</h4>
+                <span class="channel-handle">IST (UTC +5:30) · Global Remote</span>
               </div>
             </div>
 
-            <a href="mailto:deepakbharadwaj14@gmail.com?subject=Request%20for%20Deepak%20Bharadwaj%20Resume" class="channel-card" id="contact-resume">
-              <div class="channel-card__icon-box">
+            <a href="mailto:deepakbharadwaj14@gmail.com?subject=Request%20for%20Deepak%20Bharadwaj%20Resume" class="contact-channel-item" id="contact-resume">
+              <div class="channel-icon-wrap">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                   <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
                   <polyline points="14 2 14 8 20 8"></polyline>
                   <line x1="16" y1="13" x2="8" y2="13"></line>
                   <line x1="16" y1="17" x2="8" y2="17"></line>
-                  <polyline points="10 9 9 9 8 9"></polyline>
                 </svg>
               </div>
-              <div class="channel-card__content">
-                <span class="channel-card__badge">DOSSIER</span>
-                <h4 class="channel-card__title">Curriculum Vitae</h4>
-                <span class="channel-card__desc">Request Updated PDF</span>
+              <div class="channel-meta">
+                <span class="channel-badge">OFFICIAL DOSSIER</span>
+                <h4 class="channel-title">Curriculum Vitae</h4>
+                <span class="channel-handle">Request Updated PDF</span>
               </div>
-              <span class="channel-card__arrow" aria-hidden="true">↓</span>
+              <span class="channel-arrow">↓</span>
             </a>
+
           </div>
+
         </div>
+
       </div>
     </section>
 
   </main>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="footer__inner">
-      <span class="footer__copy">&copy; 2026 Deepak Bharadwaj</span>
-      <span class="footer__note">Crafted with modern HTML5, CSS custom properties, and vanilla JS.</span>
+  <!-- ═══════════════ FOOTER ═══════════════ -->
+  <footer class="footer-editorial">
+    <div class="footer-container">
+      <div class="footer-top">
+        <a href="#hero" class="nav-brand" aria-label="Return to top">
+          <span class="nav-brand__mark">DB</span>
+          <div class="nav-brand__meta">
+            <span class="nav-brand__name">DEEPAK BHARADWAJ</span>
+            <span class="nav-brand__sub">PRODUCT &times; SYSTEMS</span>
+          </div>
+        </a>
+        <div class="footer-quick-links">
+          <a href="#work">Work</a>
+          <a href="#marquee-section">Highlights</a>
+          <a href="#approach">Approach</a>
+          <a href="#ev-domain">EV &amp; Energy</a>
+          <a href="#career">Career</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span class="footer-copy">&copy; 2026 Deepak Bharadwaj. All rights reserved.</span>
+        <span class="footer-credit">Crafted with warm editorial aesthetics, semantic HTML5, modern CSS &amp; vanilla JS.</span>
+      </div>
     </div>
   </footer>
 
