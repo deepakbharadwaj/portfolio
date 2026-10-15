@@ -225,8 +225,9 @@
         .replace(/&times;/g, '×')
         .replace(/×/g, '×')
         .trim();
-      const hasMinus = clean.startsWith('−') || clean.startsWith('-');
-      const unsigned = hasMinus ? clean.slice(1) : clean;
+      const prefixMatch = clean.match(/^([−\-\~<>])/);
+      const prefix = prefixMatch ? prefixMatch[1] : '';
+      const unsigned = prefix ? clean.slice(prefix.length).trim() : clean;
 
       const match = unsigned.match(/^([0-9]+(?:\.[0-9]+)?)(.*)$/);
       if (!match) return null;
@@ -237,7 +238,7 @@
       const decimals = numStr.includes('.') ? numStr.split('.')[1].length : 0;
 
       return {
-        prefix: hasMinus ? '−' : '',
+        prefix: prefix,
         target: numVal,
         decimals: decimals,
         suffix: suffix,

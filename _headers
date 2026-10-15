@@ -5,9 +5,15 @@
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: camera=(), microphone=(), geolocation=()
 
-# Cache static assets forever (images, svgs, icons)
-/assets/*
+# Cache static media assets forever (images, svgs, icons)
+/assets/*.svg
   Cache-Control: public, max-age=31536000, immutable
+/assets/*.png
+  Cache-Control: public, max-age=31536000, immutable
+
+# Ensure resume PDF is revalidated so future replacements are immediately downloaded
+/assets/*.pdf
+  Cache-Control: public, max-age=0, must-revalidate
 
 # Cache CSS & JS with stale-while-revalidate for instantaneous edge delivery
 /*.css

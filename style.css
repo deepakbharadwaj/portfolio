@@ -1465,7 +1465,7 @@ body {
 }
 
 .case-card.is-open .case-card__drawer {
-  max-height: 2000px;
+  max-height: 6000px;
   border-top-color: var(--border);
 }
 
@@ -1621,6 +1621,174 @@ body {
   display: flex;
   flex-direction: column;
   gap: 0.4rem;
+}
+
+/* ─── Flagship Case Card & EVLM Custom Styling ─── */
+.case-card--flagship {
+  border-color: var(--border-strong);
+  position: relative;
+}
+
+.case-card--flagship.is-open {
+  border-color: var(--coral-btn);
+  box-shadow: var(--card-shadow-pop);
+}
+
+.case-card--flagship::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 4px;
+  background: var(--coral-btn);
+  border-top-left-radius: var(--radius-lg);
+  border-bottom-left-radius: var(--radius-lg);
+  z-index: 2;
+}
+
+.case-card__subheading {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin-bottom: 0.45rem;
+  font-weight: 500;
+}
+
+/* Product Capabilities Grid */
+.case-caps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.case-cap-item {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 1.15rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.case-cap-item:hover {
+  border-color: var(--border-strong);
+  box-shadow: 0 4px 14px rgba(26, 22, 18, 0.04);
+}
+
+.case-cap-item__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.case-cap-item__head-left {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex: 1;
+  min-width: 160px;
+}
+
+.case-cap-item__icon {
+  font-size: 1.15rem;
+  line-height: 1;
+}
+
+.case-cap-item__title {
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text);
+  margin: 0;
+}
+
+.case-cap-item__status {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 700;
+  padding: 0.18rem 0.55rem;
+  border-radius: 4px;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+.case-cap-item__status--live {
+  background: var(--pill-mint-bg);
+  color: var(--pill-mint-text);
+}
+
+.case-cap-item__status--scope {
+  background: var(--pill-navy-bg);
+  color: var(--pill-navy-text);
+}
+
+.case-cap-item__desc {
+  font-size: 0.86rem;
+  color: var(--text-muted);
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* Workflow Diagram Styling */
+.diagram-caption {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 0.85rem;
+}
+
+.arch-flow--evlm {
+  align-items: stretch;
+}
+
+.arch-flow--evlm .arch-step {
+  justify-content: center;
+}
+
+.arch-flow--evlm .arch-arrow {
+  align-self: center;
+}
+
+/* Delivery Outcome Strip */
+.case-delivery-summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 1.25rem;
+  margin-top: 1.25rem;
+  padding-top: 1.25rem;
+  border-top: 1px dashed var(--border);
+}
+
+.case-delivery-summary__item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.case-delivery-summary__label {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.case-delivery-summary__value {
+  font-size: 0.88rem;
+  color: var(--text);
+  font-weight: 600;
+  line-height: 1.45;
 }
 
 /* ═══════════════ APPROACH FRAMEWORK ═══════════════ */
