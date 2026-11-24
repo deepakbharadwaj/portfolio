@@ -1,0 +1,1748 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Deepak Bharadwaj — Staff Software Engineer · Distributed Systems &amp; Platform</title>
+  <meta name="description" content="Deepak Bharadwaj: Staff-level software engineer with nine years building event-driven, multi-tenant distributed systems — EV charging platforms at 500K+ daily transactions and enterprise banking connectors at SAP Labs.">
+  <meta name="author" content="Deepak Bharadwaj">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://deepak-bharadwaj.com/website">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Deepak Bharadwaj — Staff Software Engineer · Distributed Systems">
+  <meta property="og:description" content="Event-driven platforms, multi-tenant identity, payment state machines, and Kubernetes infrastructure — designed, built, and operated end to end.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://deepak-bharadwaj.com/website">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Deepak Bharadwaj — Systems × Platform">
+  <meta name="twitter:description" content="Staff-level backend and platform engineer building reliable, high-throughput distributed systems.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+
+  <!-- Google Fonts (shared with the main portfolio page) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,500;1,600;1,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Theme flash prevention -->
+  <script>
+    (function () {
+      var theme = 'light';
+      try { theme = localStorage.getItem('theme') || 'light'; } catch (e) {}
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
+
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Page-scoped additions: line icons in place of emoji glyphs -->
+  <style>
+    .eng-ico { width: 18px; height: 18px; stroke: currentColor; fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+    .tech-icon-chip { color: #191614; }
+    .domain-card__icon .eng-ico { width: 28px; height: 28px; color: var(--text); }
+    .case-cap-item__icon .eng-ico { width: 18px; height: 18px; color: var(--text); vertical-align: -3px; }
+    .eng-decision-table { width: 100%; border-collapse: collapse; margin-top: 0.85rem; font-size: 0.86rem; }
+    .eng-decision-table th, .eng-decision-table td { text-align: left; padding: 0.6rem 0.75rem; border-bottom: 1px solid var(--border); vertical-align: top; line-height: 1.5; }
+    .eng-decision-table th { font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-muted); font-weight: 600; }
+    .eng-decision-table td { color: var(--text-muted); }
+    .eng-decision-table td:first-child { font-weight: 700; color: var(--text); width: 24%; }
+    .eng-decision-table td:nth-child(2) { width: 44%; }
+    .build-meta { margin-top: 0.85rem; font-family: var(--font-mono); font-size: 0.74rem; letter-spacing: 0.02em; color: var(--text-dim); line-height: 1.5; }
+    .eng-table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    @media (max-width: 640px) {
+      .eng-decision-table thead { display: none; }
+      .eng-decision-table, .eng-decision-table tbody, .eng-decision-table tr, .eng-decision-table td { display: block; width: auto !important; }
+      .eng-decision-table tr { padding: 0.75rem 0; border-bottom: 1px solid var(--border); }
+      .eng-decision-table td { border: 0; padding: 0.2rem 0; }
+      .eng-decision-table td:nth-child(2)::before { content: 'Why: '; font-weight: 700; color: var(--text); }
+      .eng-decision-table td:nth-child(3)::before { content: 'Trade-off: '; font-weight: 700; color: var(--text); }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="bg-grid-pattern" aria-hidden="true"></div>
+
+  <div class="ambient-glow" aria-hidden="true">
+    <div class="hero-spotlight"></div>
+    <div class="ambient-orb ambient-orb--1"></div>
+    <div class="ambient-orb ambient-orb--2"></div>
+    <div class="ambient-orb ambient-orb--3"></div>
+    <div class="ambient-orb ambient-orb--4"></div>
+  </div>
+
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <!-- ═══════════════ FLOATING PILL NAVBAR ═══════════════ -->
+  <header class="header-shell" id="header">
+    <div class="header-container">
+      <nav class="pill-nav" id="pill-nav" aria-label="Primary navigation">
+        <a href="#hero" class="nav-brand" aria-label="Deepak Bharadwaj — Home">
+          <span class="nav-brand__mark">DB</span>
+          <div class="nav-brand__meta">
+            <span class="nav-brand__name">DEEPAK BHARADWAJ</span>
+            <span class="nav-brand__sub">SYSTEMS &times; PLATFORM</span>
+          </div>
+        </a>
+
+        <ul class="nav-links" id="nav-menu" role="list">
+          <li><a href="#projects" class="nav-link">Systems <span class="nav-caret">▾</span></a></li>
+          <li><a href="#highlights" class="nav-link">Highlights <span class="nav-caret">▾</span></a></li>
+          <li><a href="#approach" class="nav-link">Principles <span class="nav-caret">▾</span></a></li>
+          <li><a href="#platform" class="nav-link">Platform <span class="nav-caret">▾</span></a></li>
+          <li><a href="#capabilities" class="nav-link">Stack</a></li>
+          <li><a href="#career" class="nav-link">Career</a></li>
+          <li><a href="#builds" class="nav-link">Builds</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <a href="#contact" class="nav-cta-link" id="nav-contact-btn">
+            <span class="nav-cta-text">Get in Touch</span>
+            <span class="nav-cta-arrow">↗</span>
+          </a>
+
+          <button class="theme-switch" id="theme-toggle" aria-label="Toggle theme" title="Toggle theme">
+            <svg class="theme-icon theme-icon--sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="4"></circle>
+              <path d="M12 2v2"></path><path d="M12 20v2"></path>
+              <path d="m4.93 4.93 1.41 1.41"></path><path d="m17.66 17.66 1.41 1.41"></path>
+              <path d="M2 12h2"></path><path d="M20 12h2"></path>
+              <path d="m6.34 17.66-1.41 1.41"></path><path d="m19.07 4.93-1.41 1.41"></path>
+            </svg>
+            <svg class="theme-icon theme-icon--moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+            </svg>
+          </button>
+
+          <button class="mobile-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu">
+            <span class="mobile-toggle__line"></span>
+            <span class="mobile-toggle__line"></span>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ═══════════════ HERO ═══════════════ -->
+    <section class="hero-section" id="hero">
+      <div class="hero-container">
+
+        <div class="hero-profile-header">
+          <div class="hero-profile-avatar-frame">
+            <img src="assets/profile-pic.png" alt="Deepak Bharadwaj" class="hero-profile-avatar-img" width="58" height="58" loading="eager">
+            <span class="hero-profile-status-indicator" title="Active in Bangalore"></span>
+          </div>
+          <div class="hero-profile-details">
+            <div class="hero-profile-identity">
+              <span class="hero-profile-name">Deepak Bharadwaj</span>
+              <span class="hero-profile-divider">/</span>
+              <span class="hero-profile-location">Bangalore, India</span>
+            </div>
+            <div class="hero-profile-role-line">
+              Staff Software Engineer &middot; Distributed Systems &amp; Platform Architecture
+            </div>
+          </div>
+        </div>
+
+        <h1 class="hero-title">
+          <span class="hero-title-main">Designing distributed systems that</span>
+          <span class="hero-title-highlight">
+            <em class="serif-italic">hold up in production.</em>
+            <svg class="sketch-underline" viewBox="0 0 460 22" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M4 16C120 4.5 320 3 454 13" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"/>
+              <path d="M22 19C150 10.5 345 9.5 435 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" opacity="0.8"/>
+            </svg>
+          </span>
+        </h1>
+
+        <p class="hero-subtitle">
+          Nine years of backend and platform engineering with founding-engineer ownership: from service boundaries and data models to Kubernetes, edge security, and on-call. Event-driven <strong class="text-accent">EV charging platforms</strong>, multi-tenant <strong class="text-accent">identity &amp; payments</strong>, and enterprise <strong class="text-accent">banking connectors</strong>.
+        </p>
+
+        <div class="hero-cta-group">
+          <a href="#projects" class="btn-coral">
+            <span class="btn-coral__text">Explore System Breakdowns</span>
+            <span class="btn-coral__icon" aria-hidden="true">↗</span>
+          </a>
+          <a href="#contact" class="btn-ghost-editorial">
+            <span>Get in Touch</span>
+          </a>
+        </div>
+
+        <!-- Globe + technical keyword badges -->
+        <div class="globe-stage" id="globe-stage" aria-label="Distributed systems network illustration">
+          <div class="globe-graphic-wrap">
+            <svg class="globe-hemisphere-svg" viewBox="0 0 1000 520" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <defs>
+                <radialGradient id="globeGlow" cx="50%" cy="30%" r="65%">
+                  <stop offset="0%" stop-color="var(--globe-glow-color)" stop-opacity="0.32"/>
+                  <stop offset="70%" stop-color="var(--globe-glow-color)" stop-opacity="0.06"/>
+                  <stop offset="100%" stop-color="var(--globe-glow-color)" stop-opacity="0"/>
+                </radialGradient>
+              </defs>
+              <ellipse cx="500" cy="500" rx="460" ry="340" fill="url(#globeGlow)" />
+              <ellipse cx="500" cy="500" rx="460" ry="340" stroke="currentColor" stroke-width="1.2" stroke-dasharray="2 6" opacity="0.35"/>
+              <ellipse cx="500" cy="460" rx="440" ry="290" stroke="currentColor" stroke-width="1.2" stroke-dasharray="2 6" opacity="0.4"/>
+              <ellipse cx="500" cy="410" rx="410" ry="240" stroke="currentColor" stroke-width="1.2" stroke-dasharray="2 6" opacity="0.45"/>
+              <ellipse cx="500" cy="350" rx="360" ry="180" stroke="currentColor" stroke-width="1.2" stroke-dasharray="2 6" opacity="0.5"/>
+              <ellipse cx="500" cy="280" rx="290" ry="120" stroke="currentColor" stroke-width="1.2" stroke-dasharray="2 6" opacity="0.55"/>
+              <ellipse cx="500" cy="200" rx="190" ry="60" stroke="currentColor" stroke-width="1.2" stroke-dasharray="2 6" opacity="0.6"/>
+              <path d="M500 140 C500 280, 500 420, 500 520" stroke="currentColor" stroke-width="1.2" stroke-dasharray="2 6" opacity="0.55"/>
+              <path d="M500 140 C410 260, 320 400, 240 520" stroke="currentColor" stroke-width="1.2" stroke-dasharray="2 6" opacity="0.45"/>
+              <path d="M500 140 C590 260, 680 400, 760 520" stroke="currentColor" stroke-width="1.2" stroke-dasharray="2 6" opacity="0.45"/>
+              <path d="M500 140 C320 250, 160 380, 60 520" stroke="currentColor" stroke-width="1.2" stroke-dasharray="2 6" opacity="0.35"/>
+              <path d="M500 140 C680 250, 840 380, 940 520" stroke="currentColor" stroke-width="1.2" stroke-dasharray="2 6" opacity="0.35"/>
+              <g class="globe-stipple-cluster" fill="currentColor">
+                <circle cx="210" cy="310" r="1.8" opacity="0.7"/><circle cx="225" cy="305" r="2.2" opacity="0.85"/><circle cx="240" cy="320" r="2" opacity="0.8"/><circle cx="195" cy="325" r="1.9" opacity="0.75"/><circle cx="230" cy="335" r="2.1" opacity="0.9"/><circle cx="215" cy="350" r="2.3" opacity="0.85"/><circle cx="250" cy="340" r="1.8" opacity="0.7"/><circle cx="270" cy="330" r="2.4" opacity="0.9"/><circle cx="280" cy="350" r="2" opacity="0.8"/><circle cx="260" cy="365" r="2.2" opacity="0.85"/><circle cx="235" cy="370" r="1.9" opacity="0.75"/><circle cx="210" cy="380" r="2.1" opacity="0.8"/><circle cx="275" cy="385" r="2.3" opacity="0.85"/><circle cx="295" cy="360" r="2" opacity="0.75"/><circle cx="310" cy="375" r="2.2" opacity="0.8"/><circle cx="180" cy="340" r="1.8" opacity="0.7"/><circle cx="165" cy="355" r="2.1" opacity="0.8"/>
+                <circle cx="470" cy="245" r="2.2" opacity="0.9"/><circle cx="485" cy="235" r="2.4" opacity="0.95"/><circle cx="500" cy="250" r="2.1" opacity="0.85"/><circle cx="515" cy="240" r="2.3" opacity="0.9"/><circle cx="475" cy="265" r="2" opacity="0.8"/><circle cx="495" cy="275" r="2.4" opacity="0.95"/><circle cx="525" cy="260" r="2.1" opacity="0.85"/><circle cx="540" cy="250" r="1.9" opacity="0.75"/><circle cx="460" cy="280" r="2.2" opacity="0.85"/><circle cx="480" cy="295" r="2.5" opacity="1"/><circle cx="510" cy="290" r="2.3" opacity="0.9"/><circle cx="535" cy="285" r="2.1" opacity="0.85"/><circle cx="560" cy="270" r="2" opacity="0.8"/><circle cx="550" cy="295" r="2.2" opacity="0.85"/><circle cx="530" cy="310" r="2.4" opacity="0.9"/>
+                <circle cx="575" cy="320" r="2.2" opacity="0.85"/><circle cx="590" cy="310" r="2.4" opacity="0.9"/><circle cx="610" cy="325" r="2.1" opacity="0.85"/><circle cx="600" cy="340" r="2.3" opacity="0.9"/><circle cx="625" cy="335" r="2" opacity="0.8"/><circle cx="640" cy="320" r="2.2" opacity="0.85"/><circle cx="655" cy="340" r="2.5" opacity="1"/><circle cx="670" cy="330" r="2.2" opacity="0.9"/><circle cx="685" cy="350" r="2.6" opacity="1"/><circle cx="700" cy="340" r="2.3" opacity="0.9"/><circle cx="715" cy="360" r="2.4" opacity="0.95"/><circle cx="730" cy="350" r="2.1" opacity="0.85"/><circle cx="745" cy="370" r="2.3" opacity="0.9"/><circle cx="700" cy="375" r="2.5" opacity="1"/><circle cx="680" cy="390" r="2.6" opacity="1"/><circle cx="695" cy="410" r="2.4" opacity="0.95"/><circle cx="710" cy="395" r="2.2" opacity="0.9"/>
+                <circle cx="765" cy="360" r="2.1" opacity="0.8"/><circle cx="785" cy="350" r="2.3" opacity="0.85"/><circle cx="805" cy="370" r="2" opacity="0.8"/><circle cx="820" cy="360" r="2.4" opacity="0.9"/><circle cx="840" cy="380" r="2.2" opacity="0.85"/><circle cx="810" cy="395" r="2.5" opacity="1"/><circle cx="790" cy="410" r="2.2" opacity="0.9"/><circle cx="830" cy="420" r="2.1" opacity="0.85"/><circle cx="850" cy="405" r="1.9" opacity="0.75"/><circle cx="870" cy="430" r="2" opacity="0.8"/>
+              </g>
+              <path d="M40 518 C 180 280, 820 280, 960 518" stroke="currentColor" stroke-width="1.8" opacity="0.45"/>
+            </svg>
+          </div>
+
+          <div class="globe-badges-overlay" aria-hidden="true">
+            <div class="geo-pill geo-pill--kafka geo-pill--berry">
+              <span class="geo-pill__dot"></span>
+              <span class="geo-pill__label"><span class="geo-text-full">KAFKA EVENT BUS</span><span class="geo-text-mob">KAFKA</span></span>
+              <span class="geo-pill__tooltip">Async charging, telemetry &amp; payment workflows</span>
+            </div>
+            <div class="geo-pill geo-pill--microservices geo-pill--gold">
+              <span class="geo-pill__dot"></span>
+              <span class="geo-pill__label"><span class="geo-text-full">NESTJS MICROSERVICES</span><span class="geo-text-mob">SERVICES</span></span>
+              <span class="geo-pill__tooltip">TypeScript services with explicit domain boundaries</span>
+            </div>
+            <div class="geo-pill geo-pill--redis geo-pill--yellow">
+              <span class="geo-pill__dot"></span>
+              <span class="geo-pill__label"><span class="geo-text-full">REDIS SENTINEL</span><span class="geo-text-mob">REDIS</span></span>
+              <span class="geo-pill__tooltip">HA caching for hot read paths</span>
+            </div>
+            <div class="geo-pill geo-pill--postgres geo-pill--blue">
+              <span class="geo-pill__dot"></span>
+              <span class="geo-pill__label"><span class="geo-text-full">POSTGRESQL &amp; RLS</span><span class="geo-text-mob">POSTGRES</span></span>
+              <span class="geo-pill__tooltip">Indexing, query plans &amp; tenant isolation</span>
+            </div>
+            <div class="geo-pill geo-pill--ocpp geo-pill--wine">
+              <span class="geo-pill__dot"></span>
+              <span class="geo-pill__label"><span class="geo-text-full">OCPP 1.6 / 2.0.1</span><span class="geo-text-mob">OCPP</span></span>
+              <span class="geo-pill__tooltip">WebSocket device protocol &amp; session state machines</span>
+            </div>
+            <div class="geo-pill geo-pill--aiml geo-pill--teal">
+              <span class="geo-pill__dot"></span>
+              <span class="geo-pill__label"><span class="geo-text-full">JWT RS256 &amp; RBAC</span><span class="geo-text-mob">AUTH</span></span>
+              <span class="geo-pill__tooltip">Shared identity service across products</span>
+            </div>
+            <div class="geo-pill geo-pill--tariffs geo-pill--blue">
+              <span class="geo-pill__dot"></span>
+              <span class="geo-pill__label"><span class="geo-text-full">PAYMENT STATE MACHINES</span><span class="geo-text-mob">PAYMENTS</span></span>
+              <span class="geo-pill__tooltip">Idempotent billing, tariffs &amp; settlement</span>
+            </div>
+            <div class="geo-pill geo-pill--ocpi geo-pill--forest">
+              <span class="geo-pill__dot"></span>
+              <span class="geo-pill__label"><span class="geo-text-full">OCPI ROAMING</span><span class="geo-text-mob">OCPI</span></span>
+              <span class="geo-pill__tooltip">Cross-network sessions, tokens &amp; CDRs</span>
+            </div>
+            <div class="geo-pill geo-pill--k8s geo-pill--teal">
+              <span class="geo-pill__dot"></span>
+              <span class="geo-pill__label"><span class="geo-text-full">KUBERNETES EKS</span><span class="geo-text-mob">K8s</span></span>
+              <span class="geo-pill__tooltip">Helm, Argo CD GitOps &amp; horizontal autoscaling</span>
+            </div>
+            <div class="geo-pill geo-pill--bengaluru geo-pill--coral geo-pill--primary">
+              <span class="geo-pill__pulse"></span>
+              <span class="geo-pill__label"><span class="geo-text-full">BANGALORE</span><span class="geo-text-mob">BANGALORE</span></span>
+              <span class="geo-pill__tooltip">IST (UTC +5:30) · Remote-friendly</span>
+            </div>
+            <div class="geo-pill geo-pill--sap geo-pill--navy">
+              <span class="geo-pill__dot"></span>
+              <span class="geo-pill__label"><span class="geo-text-full">SAP MULTI-BANK</span><span class="geo-text-mob">SAP MBC</span></span>
+              <span class="geo-pill__tooltip">Connector support across 115+ banks</span>
+            </div>
+            <div class="geo-pill geo-pill--prds geo-pill--coral">
+              <span class="geo-pill__dot"></span>
+              <span class="geo-pill__label"><span class="geo-text-full">ISTIO &amp; EDGE SECURITY</span><span class="geo-text-mob">EDGE</span></span>
+              <span class="geo-pill__tooltip">Ingress auth, TLS, Cloudflare WAF</span>
+            </div>
+            <div class="geo-pill geo-pill--txns geo-pill--milestone geo-pill--emerald">
+              <span class="geo-pill__metric">500K+</span>
+              <span class="geo-pill__label"><span class="geo-text-full">DAILY TXNS</span><span class="geo-text-mob">TXNS</span></span>
+            </div>
+            <div class="geo-pill geo-pill--uptime geo-pill--milestone geo-pill--indigo">
+              <span class="geo-pill__metric">99.9%</span>
+              <span class="geo-pill__label"><span class="geo-text-full">UPTIME</span><span class="geo-text-mob">UPTIME</span></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-metric-strip" aria-label="Key engineering outcomes">
+          <div class="stat-box">
+            <span class="stat-box__val">500K+</span>
+            <span class="stat-box__lbl">Daily Transactions</span>
+            <span class="stat-box__sub">Event-driven EV charging platform</span>
+          </div>
+          <div class="stat-box">
+            <span class="stat-box__val">99.9%</span>
+            <span class="stat-box__lbl">Availability</span>
+            <span class="stat-box__sub">Multi-tenant services on AWS EKS</span>
+          </div>
+          <div class="stat-box">
+            <span class="stat-box__val">5&times;</span>
+            <span class="stat-box__lbl">Module Performance</span>
+            <span class="stat-box__sub">Concurrency control · SAP PM</span>
+          </div>
+          <div class="stat-box">
+            <span class="stat-box__val">10+</span>
+            <span class="stat-box__lbl">Engineers Mentored</span>
+            <span class="stat-box__sub">Design reviews &amp; code standards</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ═══════════════ HIGHLIGHTS MARQUEE ═══════════════ -->
+    <section class="marquee-section" id="highlights" aria-label="Featured systems highlights">
+      <div class="section-container">
+        <div class="section-center-head">
+          <span class="badge-mint">HIGHLIGHTS</span>
+          <h2 class="section-title-editorial">
+            Systems built,
+            <span class="serif-italic-block">
+              <em>shipped and operated</em>
+              <svg class="sketch-underline-mint" viewBox="0 0 340 18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M4 13C85 4.5 210 3 336 11" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+              </svg>
+            </span>
+          </h2>
+          <p class="section-subtitle-editorial">
+            Backend services, protocol engines, identity, payments, and infrastructure that I designed, implemented, and kept running in production.
+          </p>
+        </div>
+      </div>
+
+      <div class="marquee-viewport" role="region" aria-label="System highlight cards moving horizontally">
+
+        <!-- Row 1 -->
+        <div class="marquee-track marquee-track--left" id="marquee-track-1">
+          <div class="marquee-content">
+
+            <article class="scroll-card">
+              <div class="scroll-card__badge-row">
+                <span class="pill-tag pill-tag--mint">EVENT-DRIVEN CORE</span>
+                <span class="scroll-card__loc">Elocity · CPMS</span>
+              </div>
+              <div class="scroll-card__graphic scroll-card__graphic--cpms">
+                <div class="tech-icon-chip"><svg class="eng-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h11M4 12h16M4 17h8"/><path d="M15 4l3 3-3 3"/></svg></div>
+                <span class="tech-metric-highlight">500K+ Txns/Day</span>
+              </div>
+              <h3 class="scroll-card__title">Charging Platform Event Backbone</h3>
+              <p class="scroll-card__desc">Kafka-backed services decoupling charger telemetry, session lifecycle, and payment validation from synchronous request paths.</p>
+              <div class="scroll-card__footer">
+                <span class="tech-pill">Kafka</span>
+                <span class="tech-pill">NestJS</span>
+                <span class="tech-pill">PostgreSQL</span>
+                <a href="#case-platform-scale" class="scroll-card__link">Details ↗</a>
+              </div>
+            </article>
+
+            <article class="scroll-card">
+              <div class="scroll-card__badge-row">
+                <span class="pill-tag pill-tag--coral">DEVICE PROTOCOLS</span>
+                <span class="scroll-card__loc">OCPP 1.6 &amp; 2.0.1</span>
+              </div>
+              <div class="scroll-card__graphic scroll-card__graphic--ocpp">
+                <div class="tech-icon-chip"><svg class="eng-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 3v5M15 3v5"/><path d="M7 8h10v3a5 5 0 0 1-10 0z"/><path d="M12 16v5"/></svg></div>
+                <span class="tech-metric-highlight">Stateful WebSockets</span>
+              </div>
+              <h3 class="scroll-card__title">OCPP Session State Machine</h3>
+              <p class="scroll-card__desc">Connection lifecycle, boot and status handling, reconciliation after mid-session disconnects, and vendor firmware deviations.</p>
+              <div class="scroll-card__footer">
+                <span class="tech-pill">OCPP</span>
+                <span class="tech-pill">WebSocket</span>
+                <a href="#case-ev-interop" class="scroll-card__link">Details ↗</a>
+              </div>
+            </article>
+
+            <article class="scroll-card">
+              <div class="scroll-card__badge-row">
+                <span class="pill-tag pill-tag--teal">IDENTITY &amp; TENANCY</span>
+                <span class="scroll-card__loc">Shared AMS</span>
+              </div>
+              <div class="scroll-card__graphic scroll-card__graphic--roaming">
+                <div class="tech-icon-chip"><svg class="eng-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg></div>
+                <span class="tech-metric-highlight">Multi-Product</span>
+              </div>
+              <h3 class="scroll-card__title">Account Management Service</h3>
+              <p class="scroll-card__desc">Authentication, JWT (RS256), social OAuth, RBAC, and tenant management shared by the charging and load-management products.</p>
+              <div class="scroll-card__footer">
+                <span class="tech-pill">JWT</span>
+                <span class="tech-pill">RBAC</span>
+                <span class="tech-pill">RLS</span>
+                <a href="#case-identity" class="scroll-card__link">Details ↗</a>
+              </div>
+            </article>
+
+            <article class="scroll-card">
+              <div class="scroll-card__badge-row">
+                <span class="pill-tag pill-tag--gold">PAYMENTS &amp; BILLING</span>
+                <span class="scroll-card__loc">Financial Correctness</span>
+              </div>
+              <div class="scroll-card__graphic scroll-card__graphic--tariffs">
+                <div class="tech-icon-chip"><svg class="eng-ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg></div>
+                <span class="tech-metric-highlight">Idempotent Flows</span>
+              </div>
+              <h3 class="scroll-card__title">Payment, Tariff &amp; Billing Services</h3>
+              <p class="scroll-card__desc">Payment state machines, multi-dimensional tariffs, subscription billing, and revenue-share reporting with exact decimal arithmetic.</p>
+              <div class="scroll-card__footer">
+                <span class="tech-pill">State Machines</span>
+                <span class="tech-pill">PostgreSQL</span>
+                <a href="#case-billing" class="scroll-card__link">Details ↗</a>
+              </div>
+            </article>
+
+            <article class="scroll-card">
+              <div class="scroll-card__badge-row">
+                <span class="pill-tag pill-tag--navy">ENTERPRISE SAAS</span>
+                <span class="scroll-card__loc">SAP Labs</span>
+              </div>
+              <div class="scroll-card__graphic scroll-card__graphic--sap">
+                <div class="tech-icon-chip"><svg class="eng-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 10l9-6 9 6"/><path d="M5 10v8M10 10v8M14 10v8M19 10v8M3 20h18"/></svg></div>
+                <span class="tech-metric-highlight">115+ Banks</span>
+              </div>
+              <h3 class="scroll-card__title">Multi-Bank Connectivity &amp; PM Module</h3>
+              <p class="scroll-card__desc">Concurrency control that improved SAP PM module performance 5&times;, plus hotfixes and RCAs for a connector serving 115+ banks.</p>
+              <div class="scroll-card__footer">
+                <span class="tech-pill">Node.js</span>
+                <span class="tech-pill">SQL</span>
+                <a href="#case-enterprise-sap" class="scroll-card__link">Details ↗</a>
+              </div>
+            </article>
+
+          </div>
+          <div class="marquee-content" aria-hidden="true">
+
+            <article class="scroll-card">
+              <div class="scroll-card__badge-row">
+                <span class="pill-tag pill-tag--mint">EVENT-DRIVEN CORE</span>
+                <span class="scroll-card__loc">Elocity · CPMS</span>
+              </div>
+              <div class="scroll-card__graphic scroll-card__graphic--cpms">
+                <div class="tech-icon-chip"><svg class="eng-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h11M4 12h16M4 17h8"/><path d="M15 4l3 3-3 3"/></svg></div>
+                <span class="tech-metric-highlight">500K+ Txns/Day</span>
+              </div>
+              <h3 class="scroll-card__title">Charging Platform Event Backbone</h3>
+              <p class="scroll-card__desc">Kafka-backed services decoupling charger telemetry, session lifecycle, and payment validation from synchronous request paths.</p>
+              <div class="scroll-card__footer">
+                <span class="tech-pill">Kafka</span>
+                <span class="tech-pill">NestJS</span>
+                <span class="tech-pill">PostgreSQL</span>
+                <a href="#case-platform-scale" class="scroll-card__link" tabindex="-1">Details ↗</a>
+              </div>
+            </article>
+
+            <article class="scroll-card">
+              <div class="scroll-card__badge-row">
+                <span class="pill-tag pill-tag--coral">DEVICE PROTOCOLS</span>
+                <span class="scroll-card__loc">OCPP 1.6 &amp; 2.0.1</span>
+              </div>
+              <div class="scroll-card__graphic scroll-card__graphic--ocpp">
+                <div class="tech-icon-chip"><svg class="eng-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 3v5M15 3v5"/><path d="M7 8h10v3a5 5 0 0 1-10 0z"/><path d="M12 16v5"/></svg></div>
+                <span class="tech-metric-highlight">Stateful WebSockets</span>
+              </div>
+              <h3 class="scroll-card__title">OCPP Session State Machine</h3>
+              <p class="scroll-card__desc">Connection lifecycle, boot and status handling, reconciliation after mid-session disconnects, and vendor firmware deviations.</p>
+              <div class="scroll-card__footer">
+                <span class="tech-pill">OCPP</span>
+                <span class="tech-pill">WebSocket</span>
+                <a href="#case-ev-interop" class="scroll-card__link" tabindex="-1">Details ↗</a>
+              </div>
+            </article>
+
+            <article class="scroll-card">
+              <div class="scroll-card__badge-row">
+                <span class="pill-tag pill-tag--teal">IDENTITY &amp; TENANCY</span>
+                <span class="scroll-card__loc">Shared AMS</span>
+              </div>
+              <div class="scroll-card__graphic scroll-card__graphic--roaming">
+                <div class="tech-icon-chip"><svg class="eng-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg></div>
+                <span class="tech-metric-highlight">Multi-Product</span>
+              </div>
+              <h3 class="scroll-card__title">Account Management Service</h3>
+              <p class="scroll-card__desc">Authentication, JWT (RS256), social OAuth, RBAC, and tenant management shared by the charging and load-management products.</p>
+              <div class="scroll-card__footer">
+                <span class="tech-pill">JWT</span>
+                <span class="tech-pill">RBAC</span>
+                <span class="tech-pill">RLS</span>
+                <a href="#case-identity" class="scroll-card__link" tabindex="-1">Details ↗</a>
+              </div>
+            </article>
+
+            <article class="scroll-card">
+              <div class="scroll-card__badge-row">
+                <span class="pill-tag pill-tag--gold">PAYMENTS &amp; BILLING</span>
+                <span class="scroll-card__loc">Financial Correctness</span>
+              </div>
+              <div class="scroll-card__graphic scroll-card__graphic--tariffs">
+                <div class="tech-icon-chip"><svg class="eng-ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg></div>
+                <span class="tech-metric-highlight">Idempotent Flows</span>
+              </div>
+              <h3 class="scroll-card__title">Payment, Tariff &amp; Billing Services</h3>
+              <p class="scroll-card__desc">Payment state machines, multi-dimensional tariffs, subscription billing, and revenue-share reporting with exact decimal arithmetic.</p>
+              <div class="scroll-card__footer">
+                <span class="tech-pill">State Machines</span>
+                <span class="tech-pill">PostgreSQL</span>
+                <a href="#case-billing" class="scroll-card__link" tabindex="-1">Details ↗</a>
+              </div>
+            </article>
+
+            <article class="scroll-card">
+              <div class="scroll-card__badge-row">
+                <span class="pill-tag pill-tag--navy">ENTERPRISE SAAS</span>
+                <span class="scroll-card__loc">SAP Labs</span>
+              </div>
+              <div class="scroll-card__graphic scroll-card__graphic--sap">
+                <div class="tech-icon-chip"><svg class="eng-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 10l9-6 9 6"/><path d="M5 10v8M10 10v8M14 10v8M19 10v8M3 20h18"/></svg></div>
+                <span class="tech-metric-highlight">115+ Banks</span>
+              </div>
+              <h3 class="scroll-card__title">Multi-Bank Connectivity &amp; PM Module</h3>
+              <p class="scroll-card__desc">Concurrency control that improved SAP PM module performance 5&times;, plus hotfixes and RCAs for a connector serving 115+ banks.</p>
+              <div class="scroll-card__footer">
+                <span class="tech-pill">Node.js</span>
+                <span class="tech-pill">SQL</span>
+                <a href="#case-enterprise-sap" class="scroll-card__link" tabindex="-1">Details ↗</a>
+              </div>
+            </article>
+
+          </div>
+        </div>
+
+        <!-- Row 2 -->
+        <div class="marquee-track marquee-track--right" id="marquee-track-2">
+          <div class="marquee-content">
+
+            <article class="scroll-card">
+              <div class="scroll-card__badge-row">
+                <span class="pill-tag pill-tag--gold">GREENFIELD SYSTEM</span>
+                <span class="scroll-card__loc">EVLM · Utilities</span>
+              </div>
+              <div class="scroll-card__graphic scroll-card__graphic--energy">
+                <div class="tech-icon-chip"><svg class="eng-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg></div>
+                <span class="tech-metric-highlight">~3 Mo to Prod</span>
+              </div>
+              <h3 class="scroll-card__title">Closed-Loop EV Load Management</h3>
+              <p class="scroll-card__desc">Transformer telemetry in, OCPP charging profiles out, with closed-loop verification. Built on reused platform services rather than a rewrite.</p>
+              <div class="scroll-card__footer">
+                <span class="tech-pill">Control Loop</span>
+                <span class="tech-pill">OCPP</span>
+                <a href="#case-evlm" class="scroll-card__link">Details ↗</a>
+              </div>
+            </article>
+
+            <article class="scroll-card">
+              <div class="scroll-card__badge-row">
+                <span class="pill-tag pill-tag--navy">CLOUD INFRASTRUCTURE</span>
+                <span class="scroll-card__loc">AWS EKS · OCI</span>
+              </div>
+              <div class="scroll-card__graphic scroll-card__graphic--k8s">
+                <div class="tech-icon-chip"><svg class="eng-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l8.5 5v10L12 22l-8.5-5V7z"/><circle cx="12" cy="12" r="3"/></svg></div>
+                <span class="tech-metric-highlight">99.9% Uptime</span>
+              </div>
+              <h3 class="scroll-card__title">Kubernetes Platform &amp; GitOps</h3>
+              <p class="scroll-card__desc">Horizontally scaled services on EKS, Helm charts, Argo CD delivery, and environment-specific configuration across deployments.</p>
+              <div class="scroll-card__footer">
+                <span class="tech-pill">EKS</span>
+                <span class="tech-pill">Helm</span>
+                <span class="tech-pill">Argo CD</span>
+                <a href="#platform" class="scroll-card__link">Details ↗</a>
+              </div>
+            </article>
+
+            <article class="scroll-card">
+              <div class="scroll-card__badge-row">
+                <span class="pill-tag pill-tag--coral">EDGE &amp; NETWORKING</span>
+                <span class="scroll-card__loc">Ingress · TLS</span>
+              </div>
+              <div class="scroll-card__graphic scroll-card__graphic--perf">
+                <div class="tech-icon-chip"><svg class="eng-ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg></div>
+                <span class="tech-metric-highlight">Defense in Depth</span>
+              </div>
+              <h3 class="scroll-card__title">Ingress, Service Mesh &amp; Edge Security</h3>
+              <p class="scroll-card__desc">Cloudflare DNS/WAF, NLB and Nginx ingress, Istio gateway authentication, TLS and certificate troubleshooting.</p>
+              <div class="scroll-card__footer">
+                <span class="tech-pill">Istio</span>
+                <span class="tech-pill">Cloudflare</span>
+                <a href="#platform" class="scroll-card__link">Details ↗</a>
+              </div>
+            </article>
+
+            <article class="scroll-card">
+              <div class="scroll-card__badge-row">
+                <span class="pill-tag pill-tag--berry">PLATFORM REVIEW</span>
+                <span class="scroll-card__loc">Architecture Governance</span>
+              </div>
+              <div class="scroll-card__graphic scroll-card__graphic--pm">
+                <div class="tech-icon-chip"><svg class="eng-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4h6v3H9z"/><path d="M7 5H5v16h14V5h-2"/><path d="M8 13l2.5 2.5L16 10"/></svg></div>
+                <span class="tech-metric-highlight">~25 Repos Mapped</span>
+              </div>
+              <h3 class="scroll-card__title">Security &amp; Trust-Boundary Review</h3>
+              <p class="scroll-card__desc">Service inventory, edge vs in-process JWT verification, RLS coverage, and a prioritized platform hardening roadmap.</p>
+              <div class="scroll-card__footer">
+                <span class="tech-pill">Threat Model</span>
+                <span class="tech-pill">RLS</span>
+                <a href="#case-identity" class="scroll-card__link">Details ↗</a>
+              </div>
+            </article>
+
+            <article class="scroll-card">
+              <div class="scroll-card__badge-row">
+                <span class="pill-tag pill-tag--mint">OBSERVABILITY</span>
+                <span class="scroll-card__loc">On-Call &amp; RCA</span>
+              </div>
+              <div class="scroll-card__graphic scroll-card__graphic--apm">
+                <div class="tech-icon-chip"><svg class="eng-ico" viewBox="0 0 24 24" aria-hidden="true"><polyline points="3 12 7 12 10 5 14 19 17 12 21 12"/></svg></div>
+                <span class="tech-metric-highlight">Faster Resolution</span>
+              </div>
+              <h3 class="scroll-card__title">Monitoring, Alerting &amp; Incident Response</h3>
+              <p class="scroll-card__desc">OpenSearch-based log search, alert thresholds, and root-cause analysis practices that shortened incident resolution.</p>
+              <div class="scroll-card__footer">
+                <span class="tech-pill">OpenSearch</span>
+                <span class="tech-pill">Alerting</span>
+                <a href="#platform" class="scroll-card__link">Details ↗</a>
+              </div>
+            </article>
+
+          </div>
+          <div class="marquee-content" aria-hidden="true">
+
+            <article class="scroll-card">
+              <div class="scroll-card__badge-row">
+                <span class="pill-tag pill-tag--gold">GREENFIELD SYSTEM</span>
+                <span class="scroll-card__loc">EVLM · Utilities</span>
+              </div>
+              <div class="scroll-card__graphic scroll-card__graphic--energy">
+                <div class="tech-icon-chip"><svg class="eng-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg></div>
+                <span class="tech-metric-highlight">~3 Mo to Prod</span>
+              </div>
+              <h3 class="scroll-card__title">Closed-Loop EV Load Management</h3>
+              <p class="scroll-card__desc">Transformer telemetry in, OCPP charging profiles out, with closed-loop verification. Built on reused platform services rather than a rewrite.</p>
+              <div class="scroll-card__footer">
+                <span class="tech-pill">Control Loop</span>
+                <span class="tech-pill">OCPP</span>
+                <a href="#case-evlm" class="scroll-card__link" tabindex="-1">Details ↗</a>
+              </div>
+            </article>
+
+            <article class="scroll-card">
+              <div class="scroll-card__badge-row">
+                <span class="pill-tag pill-tag--navy">CLOUD INFRASTRUCTURE</span>
+                <span class="scroll-card__loc">AWS EKS · OCI</span>
+              </div>
+              <div class="scroll-card__graphic scroll-card__graphic--k8s">
+                <div class="tech-icon-chip"><svg class="eng-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l8.5 5v10L12 22l-8.5-5V7z"/><circle cx="12" cy="12" r="3"/></svg></div>
+                <span class="tech-metric-highlight">99.9% Uptime</span>
+              </div>
+              <h3 class="scroll-card__title">Kubernetes Platform &amp; GitOps</h3>
+              <p class="scroll-card__desc">Horizontally scaled services on EKS, Helm charts, Argo CD delivery, and environment-specific configuration across deployments.</p>
+              <div class="scroll-card__footer">
+                <span class="tech-pill">EKS</span>
+                <span class="tech-pill">Helm</span>
+                <span class="tech-pill">Argo CD</span>
+                <a href="#platform" class="scroll-card__link" tabindex="-1">Details ↗</a>
+              </div>
+            </article>
+
+            <article class="scroll-card">
+              <div class="scroll-card__badge-row">
+                <span class="pill-tag pill-tag--coral">EDGE &amp; NETWORKING</span>
+                <span class="scroll-card__loc">Ingress · TLS</span>
+              </div>
+              <div class="scroll-card__graphic scroll-card__graphic--perf">
+                <div class="tech-icon-chip"><svg class="eng-ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg></div>
+                <span class="tech-metric-highlight">Defense in Depth</span>
+              </div>
+              <h3 class="scroll-card__title">Ingress, Service Mesh &amp; Edge Security</h3>
+              <p class="scroll-card__desc">Cloudflare DNS/WAF, NLB and Nginx ingress, Istio gateway authentication, TLS and certificate troubleshooting.</p>
+              <div class="scroll-card__footer">
+                <span class="tech-pill">Istio</span>
+                <span class="tech-pill">Cloudflare</span>
+                <a href="#platform" class="scroll-card__link" tabindex="-1">Details ↗</a>
+              </div>
+            </article>
+
+            <article class="scroll-card">
+              <div class="scroll-card__badge-row">
+                <span class="pill-tag pill-tag--berry">PLATFORM REVIEW</span>
+                <span class="scroll-card__loc">Architecture Governance</span>
+              </div>
+              <div class="scroll-card__graphic scroll-card__graphic--pm">
+                <div class="tech-icon-chip"><svg class="eng-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4h6v3H9z"/><path d="M7 5H5v16h14V5h-2"/><path d="M8 13l2.5 2.5L16 10"/></svg></div>
+                <span class="tech-metric-highlight">~25 Repos Mapped</span>
+              </div>
+              <h3 class="scroll-card__title">Security &amp; Trust-Boundary Review</h3>
+              <p class="scroll-card__desc">Service inventory, edge vs in-process JWT verification, RLS coverage, and a prioritized platform hardening roadmap.</p>
+              <div class="scroll-card__footer">
+                <span class="tech-pill">Threat Model</span>
+                <span class="tech-pill">RLS</span>
+                <a href="#case-identity" class="scroll-card__link" tabindex="-1">Details ↗</a>
+              </div>
+            </article>
+
+            <article class="scroll-card">
+              <div class="scroll-card__badge-row">
+                <span class="pill-tag pill-tag--mint">OBSERVABILITY</span>
+                <span class="scroll-card__loc">On-Call &amp; RCA</span>
+              </div>
+              <div class="scroll-card__graphic scroll-card__graphic--apm">
+                <div class="tech-icon-chip"><svg class="eng-ico" viewBox="0 0 24 24" aria-hidden="true"><polyline points="3 12 7 12 10 5 14 19 17 12 21 12"/></svg></div>
+                <span class="tech-metric-highlight">Faster Resolution</span>
+              </div>
+              <h3 class="scroll-card__title">Monitoring, Alerting &amp; Incident Response</h3>
+              <p class="scroll-card__desc">OpenSearch-based log search, alert thresholds, and root-cause analysis practices that shortened incident resolution.</p>
+              <div class="scroll-card__footer">
+                <span class="tech-pill">OpenSearch</span>
+                <span class="tech-pill">Alerting</span>
+                <a href="#platform" class="scroll-card__link" tabindex="-1">Details ↗</a>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════ SYSTEM BREAKDOWNS ═══════════════ -->
+    <section class="section-editorial work-section" id="projects">
+      <div class="section-container">
+
+        <header class="section-head">
+          <div class="section-tag-row">
+            <span class="section-index-badge">01</span>
+            <span class="pill-tag pill-tag--coral">SYSTEM BREAKDOWNS</span>
+          </div>
+          <h2 class="section-heading-editorial">Architecture, Trade-offs &amp; Production Outcomes</h2>
+          <p class="section-desc-editorial">
+            Engineering deep dives: the constraint, the design, the decisions I made and why, and what ran in production.
+          </p>
+        </header>
+
+        <div class="cases-editorial">
+
+          <!-- 01 · Platform scale -->
+          <article class="case-card case-card--flagship is-open" id="case-platform-scale">
+            <div class="case-card__header" role="button" tabindex="0" aria-expanded="true">
+              <div class="case-card__num">01</div>
+              <div class="case-card__meta">
+                <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.35rem; flex-wrap: wrap;">
+                  <span class="pill-tag pill-tag--coral" style="font-size: 0.7rem; padding: 0.15rem 0.55rem; font-weight: 700; letter-spacing: 0.04em;">FLAGSHIP SYSTEM</span>
+                  <span class="pill-tag pill-tag--mint" style="font-size: 0.7rem; padding: 0.15rem 0.55rem; font-weight: 700; letter-spacing: 0.04em;">500K+ DAILY TRANSACTIONS</span>
+                </div>
+                <h3 class="case-card__title">Event-Driven, Multi-Tenant EV Charging Platform</h3>
+                <p class="case-card__subheading">Evolving a charge point management system from synchronous request chains to an event-driven microservice architecture on Kubernetes, sustaining 500K+ daily transactions at 99.9% availability.</p>
+                <div class="case-card__tags">
+                  <span class="case-badge">Distributed Systems</span>
+                  <span class="case-sep">·</span>
+                  <span class="case-corp">Elocity</span>
+                  <span class="case-sep">·</span>
+                  <span class="case-metric">Kafka · Redis · PostgreSQL · EKS</span>
+                </div>
+              </div>
+              <div class="case-card__chevron" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+              </div>
+            </div>
+
+            <div class="case-card__drawer">
+              <div class="case-card__grid">
+
+                <div class="case-box">
+                  <span class="case-box__label">01 · CONTEXT &amp; CONSTRAINTS</span>
+                  <h4 class="case-box__title">Bursty Device Traffic Meets Synchronous Request Chains</h4>
+                  <p>The platform manages chargers, sessions, tariffs, payments, roaming, and fleets for many tenants across multiple deployment environments. Charger telemetry and session events arrive in bursts tied to driver behaviour, and early request paths performed validation, persistence, and payment checks synchronously.</p>
+                  <p style="margin-top: 0.65rem;">Under peak load that coupling produced slow responses on hot endpoints and pressure on database connections — and a slow payment dependency could stall an unrelated charging flow.</p>
+                </div>
+
+                <div class="case-box">
+                  <span class="case-box__label">02 · MY ROLE</span>
+                  <h4 class="case-box__title">Backend &amp; Distributed Systems Lead</h4>
+                  <p>Owned service design and implementation for core backend modules in NestJS and TypeScript: authentication and RBAC, subscription billing, payments, and the event pipelines between charging, telemetry, and payment services. Worked hands-on through query tuning, caching, Kubernetes deployment, and production debugging, and set the code-review and reliability standards other engineers followed.</p>
+                </div>
+
+                <div class="case-box case-box--wide">
+                  <span class="case-box__label">03 · DESIGN DECISIONS &amp; TRADE-OFFS</span>
+                  <h4 class="case-box__title">What Changed, and Why</h4>
+                  <div class="eng-table-wrap">
+                    <table class="eng-decision-table">
+                      <thead>
+                        <tr><th>Decision</th><th>Rationale</th><th>Trade-off accepted</th></tr>
+                      </thead>
+                      <tbody>
+                        <tr><td>Kafka between domains</td><td>Moved telemetry, session lifecycle, and payment state transitions off the synchronous HTTP path so bursts are absorbed by consumers instead of request threads.</td><td>Eventual consistency between services; consumers must be idempotent and handle redelivery.</td></tr>
+                        <tr><td>Redis (Sentinel) on hot reads</td><td>Charger status and session lookups are read far more often than they change; caching them removes repeated database round-trips.</td><td>Cache invalidation on state change; Sentinel failover behaviour has to be tested, not assumed.</td></tr>
+                        <tr><td>Index and query-plan work in PostgreSQL</td><td>Profiled high-traffic endpoints and reworked indexes and queries where plans degraded under volume.</td><td>Write amplification from additional indexes on high-write tables.</td></tr>
+                        <tr><td>Horizontal scaling on EKS</td><td>Stateless services scaled by pod count behind ingress, so capacity follows traffic.</td><td>Stateful WebSocket connections (OCPP) need separate handling from stateless HTTP services.</td></tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+
+                <div class="case-box case-box--metric">
+                  <span class="case-box__label">04 · PRODUCTION OUTCOME</span>
+                  <div class="outcome-stat-row">
+                    <div class="outcome-stat">
+                      <span class="outcome-stat__num">500K+</span>
+                      <span class="outcome-stat__text">Daily transactions supported</span>
+                    </div>
+                    <div class="outcome-stat">
+                      <span class="outcome-stat__num">99.9%</span>
+                      <span class="outcome-stat__text">Platform availability</span>
+                    </div>
+                    <div class="outcome-stat">
+                      <span class="outcome-stat__num">Multi</span>
+                      <span class="outcome-stat__text">Tenants and deployment environments</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="case-box case-box--diagram">
+                  <span class="case-box__label">05 · SYSTEM TOPOLOGY</span>
+                  <span class="diagram-caption">[Simplified representation]</span>
+                  <div class="arch-flow">
+                    <div class="arch-step">
+                      <span class="arch-chip arch-chip--client">Chargers · Web · Mobile</span>
+                      <span class="arch-sub">OCPP WebSocket &amp; REST</span>
+                    </div>
+                    <div class="arch-arrow" aria-hidden="true">→</div>
+                    <div class="arch-step">
+                      <span class="arch-chip arch-chip--gw">Edge &amp; Ingress</span>
+                      <span class="arch-sub">Cloudflare · NLB · Istio</span>
+                    </div>
+                    <div class="arch-arrow" aria-hidden="true">→</div>
+                    <div class="arch-step arch-step--group">
+                      <div class="arch-chip arch-chip--srv">Identity (AMS)</div>
+                      <div class="arch-chip arch-chip--srv">Charging Core</div>
+                      <div class="arch-chip arch-chip--srv">Payments</div>
+                      <div class="arch-chip arch-chip--srv">Tariffs &amp; Billing</div>
+                    </div>
+                    <div class="arch-arrow" aria-hidden="true">→</div>
+                    <div class="arch-step arch-step--data">
+                      <div class="arch-chip arch-chip--db">Kafka</div>
+                      <div class="arch-chip arch-chip--db">Redis Sentinel</div>
+                      <div class="arch-chip arch-chip--db">PostgreSQL</div>
+                      <div class="arch-chip arch-chip--db">OpenSearch</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="case-box case-box--wide">
+                  <span class="case-box__label">06 · LESSONS</span>
+                  <ul class="case-check-list">
+                    <li><strong class="text-accent">Asynchrony moves complexity, it does not remove it:</strong> Every queue added needs an idempotency story, a retry policy, and a way to see consumer lag.</li>
+                    <li><strong class="text-accent">Device traffic is not web traffic:</strong> Long-lived charger connections and bursty reconnect storms deserve their own capacity model.</li>
+                    <li><strong class="text-accent">Measure before tuning:</strong> The largest wins came from endpoints identified through profiling, not from the ones that looked expensive in code review.</li>
+                  </ul>
+                </div>
+
+              </div>
+            </div>
+          </article>
+
+          <!-- 02 · EVLM -->
+          <article class="case-card" id="case-evlm">
+            <div class="case-card__header" role="button" tabindex="0" aria-expanded="false">
+              <div class="case-card__num">02</div>
+              <div class="case-card__meta">
+                <h3 class="case-card__title">EVLM — Greenfield Load-Management System on Shared Platform Foundations</h3>
+                <div class="case-card__tags">
+                  <span class="case-badge">0 &rarr; 1 Architecture</span>
+                  <span class="case-sep">·</span>
+                  <span class="case-corp">Utility Grid Control</span>
+                  <span class="case-sep">·</span>
+                  <span class="case-metric">~3 Months to Production</span>
+                </div>
+              </div>
+              <div class="case-card__chevron" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+              </div>
+            </div>
+
+            <div class="case-card__drawer">
+              <div class="case-card__grid">
+                <div class="case-box">
+                  <span class="case-box__label">CONTEXT &amp; CHALLENGE</span>
+                  <h4 class="case-box__title">Coordinating Physical Chargers Against Transformer Limits</h4>
+                  <p>Utilities need to see transformer loading alongside aggregated EV charging demand and curtail charging before assets exceed thermal limits. That means reconciling high-frequency transformer readings with asynchronous charger telemetry, then issuing control commands to heterogeneous hardware — safely, and with a small team.</p>
+                </div>
+
+                <div class="case-box">
+                  <span class="case-box__label">OWNERSHIP &amp; ROLE</span>
+                  <h4 class="case-box__title">Architect &amp; Hands-On Technical Lead</h4>
+                  <p>Led EVLM from scratch to production in roughly three months: service boundaries, Kafka pipelines, OCPP smart-charging profile schemas, data model, deployment on EKS, RBAC, and alert thresholds — while working through state-transition race conditions and charger protocol behaviour during integration.</p>
+                </div>
+
+                <div class="case-box case-box--wide">
+                  <span class="case-box__label">KEY ARCHITECTURE DECISION</span>
+                  <h4 class="case-box__title">Reuse Mature Services; Isolate the New Control Path</h4>
+                  <ul class="case-check-list">
+                    <li><strong class="text-accent">Reused, not rebuilt:</strong> EVLM consumes the existing identity service (AMS) and proven charging-platform capabilities instead of duplicating authentication, tenancy, and charger connectivity.</li>
+                    <li><strong class="text-accent">Separate product boundary:</strong> Load-management logic lives in its own services so a fault in a greenfield control path cannot destabilise the mature charging platform.</li>
+                    <li><strong class="text-accent">Monitoring decoupled from dispatch:</strong> Telemetry ingestion and control dispatch are isolated so asset-protection evaluation stays deterministic when charger communication is slow.</li>
+                    <li><strong class="text-accent">Closed-loop verification:</strong> Every curtailment is dispatched as an OCPP charging profile (SetChargingProfile / ClearChargingProfile) and confirmed against subsequent telemetry rather than assumed.</li>
+                    <li><strong class="text-accent">Simulation before live control:</strong> Synthetic transformer load and mock OCPP exchanges were used to exercise overload, fallback, and error states before touching real hardware. AI coding tools accelerated scaffolding and test generation; design and correctness review stayed human.</li>
+                  </ul>
+                </div>
+
+                <div class="case-box case-box--diagram">
+                  <span class="case-box__label">CONTROL LOOP</span>
+                  <div class="arch-flow arch-flow--evlm">
+                    <div class="arch-step">
+                      <span class="arch-chip arch-chip--client">1. Transformer Telemetry</span>
+                      <span class="arch-sub">Load vs rated thresholds</span>
+                    </div>
+                    <div class="arch-arrow" aria-hidden="true">→</div>
+                    <div class="arch-step">
+                      <span class="arch-chip arch-chip--gw">2. Evaluate &amp; Forecast</span>
+                      <span class="arch-sub">Deficit (kW) computation</span>
+                    </div>
+                    <div class="arch-arrow" aria-hidden="true">→</div>
+                    <div class="arch-step arch-step--group">
+                      <div class="arch-chip arch-chip--srv">3. Allocate</div>
+                      <span class="arch-sub">Per-charger power limits</span>
+                    </div>
+                    <div class="arch-arrow" aria-hidden="true">→</div>
+                    <div class="arch-step arch-step--data">
+                      <div class="arch-chip arch-chip--db">4. Dispatch</div>
+                      <span class="arch-sub">OCPP charging profiles</span>
+                    </div>
+                    <div class="arch-arrow" aria-hidden="true">→</div>
+                    <div class="arch-step">
+                      <span class="arch-chip arch-chip--srv">5. Verify</span>
+                      <span class="arch-sub">Closed-loop telemetry</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="case-box case-box--metric">
+                  <span class="case-box__label">OUTCOME</span>
+                  <div class="outcome-stat-row">
+                    <div class="outcome-stat">
+                      <span class="outcome-stat__num">~3 Mo</span>
+                      <span class="outcome-stat__text">Scratch to production</span>
+                    </div>
+                    <div class="outcome-stat">
+                      <span class="outcome-stat__num">Shared</span>
+                      <span class="outcome-stat__text">Identity &amp; platform services reused</span>
+                    </div>
+                    <div class="outcome-stat">
+                      <span class="outcome-stat__num">Live</span>
+                      <span class="outcome-stat__text">Production deployment</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- 03 · Identity & security -->
+          <article class="case-card" id="case-identity">
+            <div class="case-card__header" role="button" tabindex="0" aria-expanded="false">
+              <div class="case-card__num">03</div>
+              <div class="case-card__meta">
+                <h3 class="case-card__title">Multi-Tenant Identity, Trust Boundaries &amp; Platform Security Review</h3>
+                <div class="case-card__tags">
+                  <span class="case-badge">Security Architecture</span>
+                  <span class="case-sep">·</span>
+                  <span class="case-corp">Shared AMS</span>
+                  <span class="case-sep">·</span>
+                  <span class="case-metric">JWT · RBAC · PostgreSQL RLS</span>
+                </div>
+              </div>
+              <div class="case-card__chevron" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+              </div>
+            </div>
+
+            <div class="case-card__drawer">
+              <div class="case-card__grid">
+                <div class="case-box">
+                  <span class="case-box__label">CONTEXT &amp; CHALLENGE</span>
+                  <h4 class="case-box__title">One Identity Service, Many Products and Tenants</h4>
+                  <p>The Account Management Service handles authentication, JWT issuance, social OAuth, RBAC, and tenant management for both the charging platform and EVLM. As services multiplied, how each one verified identity and enforced tenant isolation had drifted.</p>
+                </div>
+
+                <div class="case-box">
+                  <span class="case-box__label">OWNERSHIP &amp; ROLE</span>
+                  <h4 class="case-box__title">Built Core Auth; Led the Platform Review</h4>
+                  <p>Built authentication and RBAC modules as a senior engineer, then inventoried roughly 25 repositories and Helm releases to map service ownership, trust boundaries, and documentation gaps, producing a prioritised hardening roadmap.</p>
+                </div>
+
+                <div class="case-box case-box--wide">
+                  <span class="case-box__label">FINDINGS &amp; RECOMMENDATIONS</span>
+                  <ul class="case-check-list">
+                    <li><strong class="text-accent">Divergent token verification:</strong> Some services delegated RS256 signature checks to the Istio ingress gateway and trusted a forwarded <code>x-jwt-payload</code> header; EVLM verified tokens in-process. Recommended a single documented model and header-spoofing protections for in-mesh traffic.</li>
+                    <li><strong class="text-accent">Tenant isolation coverage:</strong> PostgreSQL row-level security policies existed, but many services relied on application-level <code>tenant_id</code> filtering instead. Recommended an RLS coverage assessment and consistent enforcement.</li>
+                    <li><strong class="text-accent">Operational gaps:</strong> Helm-declared services without matching repositories, no centralised OpenAPI specifications, and no backup and disaster-recovery runbook — each turned into a roadmap item with an owner.</li>
+                  </ul>
+                </div>
+
+                <div class="case-box case-box--metric">
+                  <span class="case-box__label">OUTPUT</span>
+                  <div class="outcome-stat-row">
+                    <div class="outcome-stat">
+                      <span class="outcome-stat__num">~25</span>
+                      <span class="outcome-stat__text">Repositories inventoried</span>
+                    </div>
+                    <div class="outcome-stat">
+                      <span class="outcome-stat__num">8</span>
+                      <span class="outcome-stat__text">Prioritised hardening items</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- 04 · Payments & billing -->
+          <article class="case-card" id="case-billing">
+            <div class="case-card__header" role="button" tabindex="0" aria-expanded="false">
+              <div class="case-card__num">04</div>
+              <div class="case-card__meta">
+                <h3 class="case-card__title">Payment State Machines, Tariffs &amp; Revenue-Share Billing</h3>
+                <div class="case-card__tags">
+                  <span class="case-badge">Financial Systems</span>
+                  <span class="case-sep">·</span>
+                  <span class="case-corp">Elocity</span>
+                  <span class="case-sep">·</span>
+                  <span class="case-metric">Correctness Over Convenience</span>
+                </div>
+              </div>
+              <div class="case-card__chevron" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+              </div>
+            </div>
+
+            <div class="case-card__drawer">
+              <div class="case-card__grid">
+                <div class="case-box">
+                  <span class="case-box__label">CONTEXT &amp; CHALLENGE</span>
+                  <h4 class="case-box__title">Money Moves Through Unreliable Networks</h4>
+                  <p>A charging session's price can combine energy (kWh), time-of-use rates, idle fees, and load-based dimensions, and the resulting revenue is split between operators and site hosts. Charger connectivity drops, webhooks retry, and payments must never be double-captured or silently lost.</p>
+                </div>
+
+                <div class="case-box">
+                  <span class="case-box__label">OWNERSHIP &amp; ROLE</span>
+                  <h4 class="case-box__title">Designed and Built the Billing Path</h4>
+                  <p>Built subscription billing and payment modules, and later led the redesign of payments and user management that enabled a 5&times; increase in concurrent sessions.</p>
+                </div>
+
+                <div class="case-box case-box--wide">
+                  <span class="case-box__label">ENGINEERING HIGHLIGHTS</span>
+                  <ul class="case-check-list">
+                    <li><strong class="text-accent">Explicit state machines:</strong> Payment and session states with defined transitions, so retries and late events resolve deterministically instead of overwriting each other.</li>
+                    <li><strong class="text-accent">Idempotency at the boundaries:</strong> Idempotency keys on payment operations and idempotent Kafka consumers so redelivery is safe.</li>
+                    <li><strong class="text-accent">Exact arithmetic:</strong> Integer and fixed-precision decimal maths for tariffs and revenue splits — no floating-point drift.</li>
+                    <li><strong class="text-accent">Reporting as a product:</strong> Revenue-share PDF exports and scheduled report subscriptions generated from the same ledger the billing engine writes.</li>
+                  </ul>
+                </div>
+
+                <div class="case-box case-box--metric">
+                  <span class="case-box__label">OUTCOME</span>
+                  <div class="outcome-stat-row">
+                    <div class="outcome-stat">
+                      <span class="outcome-stat__num">5&times;</span>
+                      <span class="outcome-stat__text">Concurrent sessions after payments &amp; user-management redesign</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- 05 · Protocols -->
+          <article class="case-card" id="case-ev-interop">
+            <div class="case-card__header" role="button" tabindex="0" aria-expanded="false">
+              <div class="case-card__num">05</div>
+              <div class="case-card__meta">
+                <h3 class="case-card__title">Device Protocol Engine: OCPP 1.6 / 2.0.1 &amp; OCPI Roaming</h3>
+                <div class="case-card__tags">
+                  <span class="case-badge">IoT &amp; Protocols</span>
+                  <span class="case-sep">·</span>
+                  <span class="case-corp">Hardware Interoperability</span>
+                  <span class="case-sep">·</span>
+                  <span class="case-metric">Stateful Connections</span>
+                </div>
+              </div>
+              <div class="case-card__chevron" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+              </div>
+            </div>
+
+            <div class="case-card__drawer">
+              <div class="case-card__grid">
+                <div class="case-box">
+                  <span class="case-box__label">CONTEXT &amp; CHALLENGE</span>
+                  <h4 class="case-box__title">Physical Hardware Does Not Follow the Spec</h4>
+                  <p>Chargers from multiple manufacturers, on different firmware versions, connect over long-lived WebSockets. Payloads deviate from the specification, connections drop mid-session, and devices reconnect with stale state.</p>
+                </div>
+
+                <div class="case-box">
+                  <span class="case-box__label">OWNERSHIP &amp; ROLE</span>
+                  <h4 class="case-box__title">Protocol Design &amp; Integration</h4>
+                  <p>Designed adapter boundaries that isolate core charging logic from vendor quirks, and worked through integration testing with physical chargers and an OCPP simulator.</p>
+                </div>
+
+                <div class="case-box case-box--wide">
+                  <span class="case-box__label">ENGINEERING HIGHLIGHTS</span>
+                  <ul class="case-check-list">
+                    <li><strong class="text-accent">Fault-tolerant session state machine:</strong> Reconciliation on reconnect so an offline event mid-charge resolves to a correct session and billing state.</li>
+                    <li><strong class="text-accent">Version translation:</strong> A message-translation layer between OCPP 1.6J and 2.0.1 so the core works with one internal model, including smart-charging profiles.</li>
+                    <li><strong class="text-accent">Security profiles:</strong> OCPP 1.6 security-profile behaviour, TLS, and certificate handling at the connection edge.</li>
+                    <li><strong class="text-accent">OCPI roaming:</strong> Token authorisation, session push, and CDR exchange with external e-mobility service providers.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- 06 · SAP -->
+          <article class="case-card" id="case-enterprise-sap">
+            <div class="case-card__header" role="button" tabindex="0" aria-expanded="false">
+              <div class="case-card__num">06</div>
+              <div class="case-card__meta">
+                <h3 class="case-card__title">Enterprise Concurrency &amp; Banking Connector Reliability at SAP Labs</h3>
+                <div class="case-card__tags">
+                  <span class="case-badge">Enterprise SaaS</span>
+                  <span class="case-sep">·</span>
+                  <span class="case-corp">SAP Labs</span>
+                  <span class="case-sep">·</span>
+                  <span class="case-metric">5&times; Module Performance</span>
+                </div>
+              </div>
+              <div class="case-card__chevron" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+              </div>
+            </div>
+
+            <div class="case-card__drawer">
+              <div class="case-card__grid">
+                <div class="case-box">
+                  <span class="case-box__label">CONTEXT &amp; CHALLENGE</span>
+                  <h4 class="case-box__title">Correctness Under Concurrency for Financial Customers</h4>
+                  <p>Enterprise insurance and banking customers relied on SAP applications where concurrent edits and batch processing had to remain correct, and on Multi-Bank Connectivity to exchange data with 115+ banks.</p>
+                </div>
+
+                <div class="case-box">
+                  <span class="case-box__label">OWNERSHIP &amp; ROLE</span>
+                  <h4 class="case-box__title">Software Developer</h4>
+                  <p>Built and optimised features with JavaScript, Node.js, and SQL; owned production hotfixes and root-cause analyses for the connector; delivered across four customer implementations, including on-site with a Belgium-based credit insurer.</p>
+                </div>
+
+                <div class="case-box case-box--wide">
+                  <span class="case-box__label">KEY ACHIEVEMENTS</span>
+                  <ul class="case-check-list">
+                    <li><strong class="text-accent">Concurrency control:</strong> Implemented concurrency control and multilingual support in the SAP PM module, improving its performance 5&times;.</li>
+                    <li><strong class="text-accent">Connector reliability:</strong> Production hotfixes and RCAs for Multi Bank Connectivity across 115+ connected banks.</li>
+                    <li><strong class="text-accent">Recognition:</strong> SAP Catalyst Award (2020).</li>
+                  </ul>
+                </div>
+
+                <div class="case-box case-box--metric">
+                  <span class="case-box__label">OUTCOME</span>
+                  <div class="outcome-stat-row">
+                    <div class="outcome-stat">
+                      <span class="outcome-stat__num">5&times;</span>
+                      <span class="outcome-stat__text">PM module performance</span>
+                    </div>
+                    <div class="outcome-stat">
+                      <span class="outcome-stat__num">115+</span>
+                      <span class="outcome-stat__text">Banks on the connector</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════ ENGINEERING PRINCIPLES ═══════════════ -->
+    <section class="section-editorial approach-section" id="approach">
+      <div class="section-container">
+        <header class="section-head">
+          <div class="section-tag-row">
+            <span class="section-index-badge">02</span>
+            <span class="pill-tag pill-tag--mint">ENGINEERING PRINCIPLES</span>
+          </div>
+          <h2 class="section-heading-editorial">How I Design &amp; Ship Systems</h2>
+          <p class="section-desc-editorial">
+            The working method behind the systems above — from first measurement to the on-call rotation.
+          </p>
+        </header>
+
+        <div class="approach-grid-editorial">
+          <div class="approach-card">
+            <div class="approach-card__num">01</div>
+            <span class="pill-tag pill-tag--mint">MEASURE</span>
+            <h3 class="approach-card__title">Start From Production Data</h3>
+            <p class="approach-card__desc">Profiles, query plans, consumer lag, and error logs decide where effort goes — not intuition about which code looks slow.</p>
+          </div>
+          <div class="approach-card">
+            <div class="approach-card__num">02</div>
+            <span class="pill-tag pill-tag--gold">MODEL</span>
+            <h3 class="approach-card__title">Estimate Capacity &amp; Failure Modes</h3>
+            <p class="approach-card__desc">Back-of-the-envelope throughput, storage, and connection estimates, plus an explicit list of what happens when each dependency is slow or down.</p>
+          </div>
+          <div class="approach-card">
+            <div class="approach-card__num">03</div>
+            <span class="pill-tag pill-tag--coral">CONTRACT</span>
+            <h3 class="approach-card__title">Define Interfaces First</h3>
+            <p class="approach-card__desc">API schemas, event payloads, state transitions, and data ownership agreed before implementation, so teams can build in parallel.</p>
+          </div>
+          <div class="approach-card">
+            <div class="approach-card__num">04</div>
+            <span class="pill-tag pill-tag--navy">SHIP</span>
+            <h3 class="approach-card__title">Deliver Incrementally &amp; Reversibly</h3>
+            <p class="approach-card__desc">Small changes through GitOps pipelines, backward-compatible schemas, and rollouts that can be undone without a data migration.</p>
+          </div>
+          <div class="approach-card">
+            <div class="approach-card__num">05</div>
+            <span class="pill-tag pill-tag--berry">OPERATE</span>
+            <h3 class="approach-card__title">Own It in Production</h3>
+            <p class="approach-card__desc">Dashboards, alerts, and runbooks ship with the feature. Incidents end with a blameless RCA and a tracked fix, not just a restart.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════ PLATFORM & RELIABILITY ═══════════════ -->
+    <section class="section-editorial ev-domain-section" id="platform">
+      <div class="section-container">
+        <header class="section-head">
+          <div class="section-tag-row">
+            <span class="section-index-badge">03</span>
+            <span class="pill-tag pill-tag--teal">PLATFORM ENGINEERING</span>
+          </div>
+          <h2 class="section-heading-editorial">Platform, Infrastructure &amp; Reliability</h2>
+          <p class="section-desc-editorial">
+            The layers underneath the product services — where most production incidents actually originate.
+          </p>
+        </header>
+
+        <div class="ev-grid-editorial">
+          <div class="domain-card">
+            <div class="domain-card__icon"><svg class="eng-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h11M4 12h16M4 17h8"/><path d="M15 4l3 3-3 3"/></svg></div>
+            <span class="pill-tag pill-tag--mint">EVENT STREAMING</span>
+            <h3 class="domain-card__title">Asynchronous Workflows</h3>
+            <p class="domain-card__desc">Kafka (KafkaJS) topics between charging, telemetry, payment, and notification services; idempotent consumers and redelivery-safe handlers.</p>
+          </div>
+          <div class="domain-card">
+            <div class="domain-card__icon"><svg class="eng-ico" viewBox="0 0 24 24" aria-hidden="true"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5"/><path d="M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></svg></div>
+            <span class="pill-tag pill-tag--gold">DATA LAYER</span>
+            <h3 class="domain-card__title">PostgreSQL, Redis &amp; OpenSearch</h3>
+            <p class="domain-card__desc">Index and query-plan tuning, TypeORM data models, Redis Sentinel for HA caching, and OpenSearch mappings and pagination for search and logs.</p>
+          </div>
+          <div class="domain-card">
+            <div class="domain-card__icon"><svg class="eng-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l8.5 5v10L12 22l-8.5-5V7z"/><circle cx="12" cy="12" r="3"/></svg></div>
+            <span class="pill-tag pill-tag--navy">ORCHESTRATION</span>
+            <h3 class="domain-card__title">Kubernetes &amp; GitOps</h3>
+            <p class="domain-card__desc">AWS EKS and OCI, Helm charts, Argo CD sync and access issues, horizontal pod autoscaling limits, and multi-environment configuration.</p>
+          </div>
+          <div class="domain-card">
+            <div class="domain-card__icon"><svg class="eng-ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg></div>
+            <span class="pill-tag pill-tag--coral">EDGE &amp; NETWORK</span>
+            <h3 class="domain-card__title">Ingress, TLS &amp; WAF</h3>
+            <p class="domain-card__desc">Cloudflare DNS/CDN/WAF, Route 53, CloudFront and ACM, NLB vs ALB trade-offs, client-IP preservation, Nginx ingress, and mTLS termination.</p>
+          </div>
+          <div class="domain-card">
+            <div class="domain-card__icon"><svg class="eng-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg></div>
+            <span class="pill-tag pill-tag--teal">SECURITY</span>
+            <h3 class="domain-card__title">Identity &amp; Tenant Isolation</h3>
+            <p class="domain-card__desc">RS256 JWTs, gateway vs in-process verification, Istio ingress authentication, RBAC, PostgreSQL RLS, and Firebase App Check for client apps.</p>
+          </div>
+          <div class="domain-card">
+            <div class="domain-card__icon"><svg class="eng-ico" viewBox="0 0 24 24" aria-hidden="true"><polyline points="3 12 7 12 10 5 14 19 17 12 21 12"/></svg></div>
+            <span class="pill-tag pill-tag--berry">RELIABILITY</span>
+            <h3 class="domain-card__title">Observability &amp; Incident Response</h3>
+            <p class="domain-card__desc">Log search and alerting, production debugging across DNS, TLS, and messaging failures, root-cause analysis, and disaster-recovery planning.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════ STACK ═══════════════ -->
+    <section class="section-editorial capabilities-section" id="capabilities">
+      <div class="section-container">
+        <header class="section-head">
+          <div class="section-tag-row">
+            <span class="section-index-badge">04</span>
+            <span class="pill-tag pill-tag--gold">STACK</span>
+          </div>
+          <h2 class="section-heading-editorial">Technical Stack &amp; Leadership</h2>
+          <p class="section-desc-editorial">
+            Tools I have used in production, and the technical leadership work that sits around them.
+          </p>
+        </header>
+
+        <div class="cap-grid-editorial">
+          <div class="cap-card">
+            <div class="cap-card__header">
+              <span class="cap-card__mark">▣</span>
+              <h3 class="cap-card__title">Languages &amp; Backend</h3>
+            </div>
+            <ul class="cap-pill-list">
+              <li><span class="kw-pill">TypeScript &amp; Node.js</span></li>
+              <li><span class="kw-pill">NestJS Microservices</span></li>
+              <li><span class="kw-pill">REST API Design</span></li>
+              <li>JavaScript</li>
+              <li>Python</li>
+              <li>SQL</li>
+              <li>Event-Driven Architecture</li>
+              <li>Concurrency Control</li>
+            </ul>
+          </div>
+
+          <div class="cap-card">
+            <div class="cap-card__header">
+              <span class="cap-card__mark">◈</span>
+              <h3 class="cap-card__title">Data &amp; Messaging</h3>
+            </div>
+            <ul class="cap-pill-list">
+              <li><span class="kw-pill">PostgreSQL &amp; TypeORM</span></li>
+              <li><span class="kw-pill">Apache Kafka (KafkaJS)</span></li>
+              <li><span class="kw-pill">Redis Sentinel</span></li>
+              <li>Elasticsearch / OpenSearch</li>
+              <li>AWS SNS</li>
+              <li>Indexing &amp; Query Plans</li>
+              <li>Row-Level Security</li>
+              <li>Firestore</li>
+            </ul>
+          </div>
+
+          <div class="cap-card">
+            <div class="cap-card__header">
+              <span class="cap-card__mark">☸</span>
+              <h3 class="cap-card__title">Cloud &amp; Infrastructure</h3>
+            </div>
+            <ul class="cap-pill-list">
+              <li><span class="kw-pill">AWS (EKS, S3, Route 53, CloudFront, ACM)</span></li>
+              <li><span class="kw-pill">Kubernetes, Helm &amp; Argo CD</span></li>
+              <li><span class="kw-pill">Istio &amp; Nginx Ingress</span></li>
+              <li>Oracle Cloud Infrastructure</li>
+              <li>Docker</li>
+              <li>Cloudflare DNS, CDN &amp; WAF</li>
+              <li>CI/CD Pipelines</li>
+              <li>Firebase Hosting</li>
+            </ul>
+          </div>
+
+          <div class="cap-card">
+            <div class="cap-card__header">
+              <span class="cap-card__mark">⌁</span>
+              <h3 class="cap-card__title">Protocols &amp; Domain</h3>
+            </div>
+            <ul class="cap-pill-list">
+              <li><span class="kw-pill">OCPP 1.6J &amp; 2.0.1</span></li>
+              <li><span class="kw-pill">OCPI Roaming</span></li>
+              <li><span class="kw-pill">Payments &amp; Billing</span></li>
+              <li>Smart Charging Profiles</li>
+              <li>Tariff Engines</li>
+              <li>Banking Connectivity</li>
+              <li>JWT, OAuth &amp; RBAC</li>
+              <li>TLS &amp; mTLS</li>
+            </ul>
+          </div>
+
+          <div class="cap-card cap-card--full">
+            <div class="cap-card__header">
+              <span class="cap-card__mark">✦</span>
+              <h3 class="cap-card__title">Technical Leadership &amp; Product Sense</h3>
+            </div>
+            <ul class="cap-pill-list">
+              <li><span class="kw-pill">Architecture Reviews &amp; Governance</span></li>
+              <li><span class="kw-pill">Mentored 10+ Engineers</span></li>
+              <li><span class="kw-pill">Code Review &amp; Reliability Standards</span></li>
+              <li><span class="kw-pill">Cross-Team Technical Direction</span></li>
+              <li><span class="kw-pill">AI-Assisted Engineering (Claude, Cursor)</span></li>
+              <li>Build vs Reuse Decisions</li>
+              <li>Requirements to Technical Specs</li>
+              <li>Incident Command &amp; RCA</li>
+            </ul>
+            <p class="cap-footnote">Having also run product for the same platform, I scope designs against the business outcome they serve — which usually means building less, sooner, and more reliably.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════ CAREER ═══════════════ -->
+    <section class="section-editorial career-section" id="career">
+      <div class="section-container">
+        <header class="section-head">
+          <div class="section-tag-row">
+            <span class="section-index-badge">05</span>
+            <span class="pill-tag pill-tag--navy">JOURNEY</span>
+          </div>
+          <h2 class="section-heading-editorial">Career Path &amp; Track Record</h2>
+          <p class="section-desc-editorial">
+            Enterprise systems engineering at SAP Labs, then end-to-end ownership of a multi-tenant EV charging platform.
+          </p>
+        </header>
+
+        <div class="editorial-timeline">
+          <div class="timeline-row timeline-row--active">
+            <div class="timeline-row__side">
+              <span class="timeline-badge timeline-badge--current">PRESENT</span>
+              <span class="timeline-year">2024 — Now</span>
+            </div>
+            <div class="timeline-row__node">
+              <div class="timeline-node-dot"></div>
+              <div class="timeline-node-line"></div>
+            </div>
+            <div class="timeline-row__card">
+              <div class="timeline-row__card-head">
+                <div>
+                  <h3 class="timeline-role">Staff Software Engineer</h3>
+                  <span class="timeline-corp">Elocity · Bangalore, India</span>
+                </div>
+                <span class="pill-tag pill-tag--mint">ARCHITECTURE</span>
+              </div>
+              <p class="timeline-desc">
+                Core distributed-systems architecture at a smart electric vehicle charging technology company, with a mandate that also covered technical product direction. Led EVLM from scratch to production, redesigned payments and user management for 5&times; concurrent sessions, ran the platform security and trust-boundary review, and set architecture governance across squads.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-row">
+            <div class="timeline-row__side">
+              <span class="timeline-year">2022 — 2024</span>
+            </div>
+            <div class="timeline-row__node">
+              <div class="timeline-node-dot"></div>
+              <div class="timeline-node-line"></div>
+            </div>
+            <div class="timeline-row__card">
+              <div class="timeline-row__card-head">
+                <div>
+                  <h3 class="timeline-role">Senior Software Engineer</h3>
+                  <span class="timeline-corp">Elocity · Bangalore, India</span>
+                </div>
+                <span class="pill-tag pill-tag--coral">DISTRIBUTED SYSTEMS</span>
+              </div>
+              <p class="timeline-desc">
+                Built core backend services in NestJS, TypeScript, PostgreSQL, Elasticsearch, and Kafka — authentication, RBAC, subscription billing, and event-driven charging and payment pipelines. Optimised Redis caching and queries on hot endpoints and scaled Kubernetes deployments on EKS to 500K+ daily transactions at 99.9% availability.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-row">
+            <div class="timeline-row__side">
+              <span class="timeline-year">2018 — 2022</span>
+            </div>
+            <div class="timeline-row__node">
+              <div class="timeline-node-dot"></div>
+              <div class="timeline-node-line"></div>
+            </div>
+            <div class="timeline-row__card">
+              <div class="timeline-row__card-head">
+                <div>
+                  <h3 class="timeline-role">Software Developer</h3>
+                  <span class="timeline-corp">SAP Labs · Bangalore, India</span>
+                </div>
+                <span class="pill-tag pill-tag--gold">SAP CATALYST AWARD</span>
+              </div>
+              <p class="timeline-desc">
+                Enterprise SaaS for insurance and banking customers in JavaScript, Node.js, and SQL. Concurrency control that improved SAP PM module performance 5&times;; hotfixes and RCAs for Multi Bank Connectivity across 115+ banks; four customer implementations including on-site delivery in Belgium.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-row">
+            <div class="timeline-row__side">
+              <span class="timeline-year">2014 — 2018</span>
+            </div>
+            <div class="timeline-row__node">
+              <div class="timeline-node-dot"></div>
+            </div>
+            <div class="timeline-row__card">
+              <div class="timeline-row__card-head">
+                <div>
+                  <h3 class="timeline-role">B.Tech, Computer Science &amp; Engineering</h3>
+                  <span class="timeline-corp">SJCE, Mysore · GPA 9.2 / 10.0</span>
+                </div>
+                <span class="pill-tag pill-tag--navy">FOUNDATIONS</span>
+              </div>
+              <p class="timeline-desc">
+                Computer science foundation in operating systems, algorithms, and databases. SAP Labs I-XP internship (chatbot proof of concept, Python email-listener adapter) and early data engineering at PiRuby (scraping automation over 5 GB of text and 1M metadata records).
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════ SIDE PROJECTS (ENGINEERING FRAMING) ═══════════════ -->
+    <section class="section-editorial ev-domain-section" id="builds">
+      <div class="section-container">
+        <header class="section-head">
+          <div class="section-tag-row">
+            <span class="section-index-badge">06</span>
+            <span class="pill-tag pill-tag--coral">SIDE PROJECTS</span>
+          </div>
+          <h2 class="section-heading-editorial">Built Outside Work</h2>
+          <p class="section-desc-editorial">
+            Systems I designed and built solo, end to end — payments, enterprise data integration, and real-time services, for real users.
+          </p>
+        </header>
+
+        <div class="ev-grid-editorial">
+          <div class="domain-card">
+            <div class="domain-card__icon"><svg class="eng-ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/><path d="M8 15h3"/></svg></div>
+            <span class="pill-tag pill-tag--mint">FULL-STACK · PAYMENTS</span>
+            <h3 class="domain-card__title">Event Booking Platform with Razorpay Payments</h3>
+            <p class="domain-card__desc">A complete event-registration application, comparable in scope to BookMyShow, for a dance studio's events: event discovery, day and time-slot selection, and online payment through a Razorpay integration. Designed and built solo, from data model and booking flow to payment integration.</p>
+            <p class="build-meta">Event catalogue · Slot inventory · Razorpay</p>
+          </div>
+
+          <div class="domain-card">
+            <div class="domain-card__icon"><svg class="eng-ico" viewBox="0 0 24 24" aria-hidden="true"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5"/><path d="M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></svg></div>
+            <span class="pill-tag pill-tag--gold">DATA ENGINEERING</span>
+            <h3 class="domain-card__title">SAP-Integrated Data Pipelines &amp; Dashboards (BIAL)</h3>
+            <p class="domain-card__desc">Automated, end-to-end data pipelines from SAP systems into data-visualisation dashboards for Bangalore International Airport (BIAL), with no manual exports in the loop.</p>
+            <p class="build-meta">SAP source systems → Automated ingestion → Dashboards</p>
+          </div>
+
+          <div class="domain-card">
+            <div class="domain-card__icon"><svg class="eng-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9l1.5-5h15L21 9"/><path d="M4 9v11h16V9"/><path d="M3 9h18"/><path d="M10 20v-6h4v6"/></svg></div>
+            <span class="pill-tag pill-tag--navy">SMALL-BUSINESS APPS</span>
+            <h3 class="domain-card__title">Applications for Early-Stage Businesses</h3>
+            <p class="domain-card__desc">Multiple applications for family members starting new businesses, each scoped, built, and delivered end to end as a one-person engineering team.</p>
+            <p class="build-meta">Requirements → Build → Delivery</p>
+          </div>
+
+          <div class="domain-card">
+            <div class="domain-card__icon"><svg class="eng-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l8.5 5v10L12 22l-8.5-5V7z"/><path d="M8 12h8"/></svg></div>
+            <span class="pill-tag pill-tag--teal">REAL-TIME SERVER</span>
+            <h3 class="domain-card__title">Poker &amp; Rummy Game Server</h3>
+            <p class="domain-card__desc">A customised multiplayer card-game server engine built on NestJS and Socket.io.</p>
+            <p class="build-meta">NestJS · Socket.io · WebSockets</p>
+          </div>
+
+          <div class="domain-card">
+            <div class="domain-card__icon"><svg class="eng-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h11M4 12h16M4 17h8"/><path d="M15 4l3 3-3 3"/></svg></div>
+            <span class="pill-tag pill-tag--berry">MERN STACK</span>
+            <h3 class="domain-card__title">Foodgasm — Food Delivery App</h3>
+            <p class="domain-card__desc">A food-delivery web application built on the MERN stack to work through a microservices-style delivery lifecycle end to end.</p>
+            <p class="build-meta">MongoDB · Express · React · Node.js</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════ ABOUT ═══════════════ -->
+    <section class="section-editorial about-section" id="about">
+      <div class="section-container">
+        <header class="section-head">
+          <div class="section-tag-row">
+            <span class="section-index-badge">07</span>
+            <span class="pill-tag pill-tag--berry">PHILOSOPHY</span>
+          </div>
+          <h2 class="section-heading-editorial">About &amp; Principles</h2>
+        </header>
+
+        <div class="about-grid-editorial">
+          <div class="about-bio-card">
+            <div class="about-profile-header">
+              <div class="about-avatar-frame">
+                <img src="assets/profile-pic.png" alt="Deepak Bharadwaj" width="80" height="80" loading="lazy">
+              </div>
+              <div>
+                <h3 class="about-name">Deepak Bharadwaj</h3>
+                <span class="about-creds">Backend &amp; platform engineer · Product-minded</span>
+                <div class="about-meta-row">
+                  <span class="about-loc">Bangalore, India</span>
+                  <span class="about-sep">·</span>
+                  <span class="about-exp">9 Years Building Systems</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="about-narrative">
+              <p>
+                I learned engineering discipline at <strong>SAP Labs</strong>, where correctness under concurrency mattered because the customers were banks and insurers.
+              </p>
+              <p>
+                At <strong>Elocity</strong> I took founding-engineer-style ownership of a multi-tenant EV charging platform: designing services, writing the code, running the infrastructure, and answering the page when it broke. That platform grew to 500K+ daily transactions, and I grew into setting its technical direction.
+              </p>
+              <p>
+                I also spent time running product for that same platform. It made me a better engineer: I now push hard on what actually needs to be built, and then build it to stay up.
+              </p>
+            </div>
+          </div>
+
+          <div class="about-side-stack">
+            <div class="about-side-card">
+              <h3 class="about-side-title">Engineering Principles</h3>
+              <ul class="principles-list">
+                <li><strong class="text-accent">Boring where possible:</strong> Proven components and simple designs, with novelty spent only where the problem demands it.</li>
+                <li><strong class="text-accent">Make failure explicit:</strong> Timeouts, retries, idempotency, and fallbacks are designed, not discovered in an incident.</li>
+                <li><strong class="text-accent">Data ownership is architecture:</strong> Clear owners for every table and topic prevent most cross-team coupling.</li>
+                <li><strong class="text-accent">Reliability is a feature:</strong> Throughput numbers mean little if the system degrades at peak.</li>
+                <li><strong class="text-accent">Raise the floor:</strong> Reviews, standards, and mentoring compound faster than individual heroics.</li>
+              </ul>
+            </div>
+
+            <div class="about-side-card">
+              <h3 class="about-side-title">Honors &amp; Recognition</h3>
+              <ul class="awards-list">
+                <li>
+                  <strong class="award-name">SAP Catalyst Award (2020)</strong>
+                  <span class="award-desc">Recognised for engineering delivery and banking-connector reliability.</span>
+                </li>
+                <li>
+                  <strong class="award-name">Appreciation Letter, RubyPixels (2017)</strong>
+                  <span class="award-desc">Commended for early technical contribution.</span>
+                </li>
+                <li>
+                  <strong class="award-name">Best Outgoing Student Award (2012)</strong>
+                  <span class="award-desc">Academic excellence and leadership.</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════ CONTACT ═══════════════ -->
+    <section class="section-editorial contact-section" id="contact">
+      <div class="section-container">
+        <header class="section-head">
+          <div class="section-tag-row">
+            <span class="section-index-badge">08</span>
+            <span class="pill-tag pill-tag--coral">CONNECT</span>
+          </div>
+          <h2 class="section-heading-editorial">Get in Touch</h2>
+          <p class="section-desc-editorial">
+            Open to Staff and Principal engineering, platform, and founding-engineer roles — Bangalore or remote.
+          </p>
+        </header>
+
+        <div class="contact-hub-card">
+          <div class="contact-hub-top">
+            <div class="contact-badge-pill">DIRECT INQUIRY · FASTEST RESPONSE</div>
+            <h3 class="contact-hub-title">Let's talk about the system you're building</h3>
+            <p class="contact-hub-sub">Scaling an event-driven platform, hardening multi-tenant infrastructure, or standing up a new system from zero — my inbox is open.</p>
+          </div>
+
+          <div class="contact-action-bar">
+            <a href="mailto:deepakbharadwaj14@gmail.com" class="contact-email-link" id="contact-email">
+              deepakbharadwaj14@gmail.com
+            </a>
+            <div class="contact-btn-pair">
+              <a href="mailto:deepakbharadwaj14@gmail.com?subject=Connecting%20via%20Website" class="btn-coral">
+                <span>Send Email</span>
+                <span class="btn-coral__icon">↗</span>
+              </a>
+              <button type="button" class="btn-ghost-editorial" id="copy-email-btn" data-email="deepakbharadwaj14@gmail.com" aria-label="Copy email address to clipboard">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect>
+                  <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path>
+                </svg>
+                <span class="copy-text">Copy Email</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="contact-secondary-channels">
+            <a href="https://www.linkedin.com/in/deepakbharadwaj14" target="_blank" rel="noopener noreferrer" class="contact-channel-item" id="contact-linkedin">
+              <div class="channel-icon-wrap">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                  <rect width="4" height="12" x="2" y="9"></rect>
+                  <circle cx="4" cy="4" r="2"></circle>
+                </svg>
+              </div>
+              <div class="channel-meta">
+                <span class="channel-badge">PROFESSIONAL NETWORK</span>
+                <h4 class="channel-title">LinkedIn Profile</h4>
+                <span class="channel-handle">in/deepakbharadwaj14</span>
+              </div>
+              <span class="channel-arrow">↗</span>
+            </a>
+
+            <div class="contact-channel-item" id="contact-location">
+              <div class="channel-icon-wrap">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+              </div>
+              <div class="channel-meta">
+                <span class="channel-badge">LOCATION &amp; TIMEZONE</span>
+                <h4 class="channel-title">Bangalore, India</h4>
+                <span class="channel-handle">IST (UTC +5:30) · Remote-friendly</span>
+              </div>
+            </div>
+
+            <a href="assets/Deepak%20Bharadwaj%20-%20Resume.pdf" download="Deepak Bharadwaj - Resume.pdf" class="contact-channel-item" id="contact-resume" target="_blank" rel="noopener noreferrer">
+              <div class="channel-icon-wrap">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                  <polyline points="14 2 14 8 20 8"></polyline>
+                  <line x1="16" y1="13" x2="8" y2="13"></line>
+                  <line x1="16" y1="17" x2="8" y2="17"></line>
+                </svg>
+              </div>
+              <div class="channel-meta">
+                <span class="channel-badge">RESUME</span>
+                <h4 class="channel-title">Curriculum Vitae</h4>
+                <span class="channel-handle">Download PDF Resume</span>
+              </div>
+              <span class="channel-arrow">↓</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══════════════ FOOTER ═══════════════ -->
+  <footer class="footer-editorial">
+    <div class="footer-container">
+      <div class="footer-top">
+        <a href="#hero" class="nav-brand" aria-label="Return to top">
+          <span class="nav-brand__mark">DB</span>
+          <div class="nav-brand__meta">
+            <span class="nav-brand__name">DEEPAK BHARADWAJ</span>
+            <span class="nav-brand__sub">SYSTEMS &times; PLATFORM</span>
+          </div>
+        </a>
+        <div class="footer-quick-links">
+          <a href="#projects">Systems</a>
+          <a href="#highlights">Highlights</a>
+          <a href="#approach">Principles</a>
+          <a href="#platform">Platform</a>
+          <a href="#career">Career</a>
+          <a href="#builds">Side Projects</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span class="footer-copy">&copy; 2026 Deepak Bharadwaj. All rights reserved.</span>
+        <span class="footer-credit">Semantic HTML5, modern CSS &amp; vanilla JS.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

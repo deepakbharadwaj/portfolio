@@ -1,6 +1,11 @@
 # Cloudflare Pages Routing & Rewrites
-# Enables accessing the portfolio at deepak-bharadwaj.com/portfolio seamlessly
+# Product-track page:     deepak-bharadwaj.com/portfolio  -> index.html
+# Engineering-track page: deepak-bharadwaj.com/website    -> website.html
+# (Cloudflare Pages serves website.html at /website automatically; the
+#  trailing-slash variant is normalised below so both links resolve.)
 
 /portfolio              /index.html             200
 /portfolio/             /index.html             200
 /portfolio/*            /:splat                 200
+
+/website/               /website                301
