@@ -2905,3 +2905,28 @@ body {
     gap: 1.25rem;
   }
 }
+
+/* ═══════════ Compact-by-default & small-screen fixes (shared by /portfolio and /website) ═══════════ */
+
+/* Collapsed case cards show a short teaser; full summary appears when opened */
+.case-card:not(.is-open) .case-card__subheading {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+@media (max-width: 640px) {
+  /* On phones, collapsed cards show title + badges only */
+  .case-card:not(.is-open) .case-card__subheading,
+  .case-card:not(.is-open) .case-card__tags {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Keep the menu button inside the nav pill: CTA collapses to its arrow icon */
+  .nav-cta-link .nav-cta-text { display: none; }
+  .nav-cta-link { padding: 0.4rem 0.6rem; }
+  .case-card__num { display: none; }
+}
